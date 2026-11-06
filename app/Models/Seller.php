@@ -55,4 +55,3 @@ class Seller extends Model
         return $this->status === SellerStatus::Approved;
     }
 }
-

@@ -7,21 +7,8 @@ use App\Enums\ReturnStatus;
 use App\Enums\SellerStatus;
 use App\Enums\SubOrderStatus;
 use App\Models\Address;
-use App\Models\Banner;
-use App\Models\Brand;
-use App\Models\Category;
 use App\Models\Coupon;
-use App\Models\Order;
-use App\Models\OrderItem;
-use App\Models\Payment;
-use App\Models\Product;
-use App\Models\ProductVariant;
-use App\Models\ReturnRequest;
-use App\Models\Review;
 use App\Models\Seller;
-use App\Models\SellerPayout;
-use App\Models\SubOrder;
-use App\Models\User;
 
 test('sub order status enum tum etiketleri dogru dondurur', function ()
 {
@@ -93,4 +80,3 @@ test('gelecek tarihli kupon icin isNotStarted true doner', function ()
 
     expect($coupon->isNotStarted())->toBeTrue();
 });
-

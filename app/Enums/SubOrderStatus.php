@@ -42,4 +42,3 @@ enum SubOrderStatus: string
         return in_array($target, $this->allowedTransitions(), true);
     }
 }
-

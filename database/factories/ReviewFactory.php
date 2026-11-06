@@ -24,4 +24,3 @@ class ReviewFactory extends Factory
         ];
     }
 }
-

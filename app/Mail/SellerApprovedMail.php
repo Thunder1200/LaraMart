@@ -14,14 +14,12 @@ class SellerApprovedMail extends Mailable implements ShouldQueue
 {
     use Queueable, SerializesModels;
 
-    public function __construct(public Seller $seller)
-    {
-    }
+    public function __construct(public Seller $seller) {}
 
     public function envelope(): Envelope
     {
         return new Envelope(
-            subject: 'LaraMart Satıcı Başvurunuz Onaylandı - ' . $this->seller->store_name,
+            subject: 'LaraMart Satıcı Başvurunuz Onaylandı - '.$this->seller->store_name,
         );
     }
 
@@ -32,4 +30,3 @@ class SellerApprovedMail extends Mailable implements ShouldQueue
         );
     }
 }
-

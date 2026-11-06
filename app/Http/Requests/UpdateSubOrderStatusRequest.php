@@ -20,4 +20,3 @@ class UpdateSubOrderStatusRequest extends FormRequest
         ];
     }
 }
-

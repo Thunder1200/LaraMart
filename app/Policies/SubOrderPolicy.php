@@ -37,4 +37,3 @@ class SubOrderPolicy
         return (int) $subOrder->seller_id === (int) $user->seller->id;
     }
 }
-

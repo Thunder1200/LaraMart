@@ -28,8 +28,7 @@ class CreateOrderAction
         private readonly CalculateCartTotalsService $cartTotalsService,
         private readonly CommissionCalculatorService $commissionService,
         private readonly IyzicoPaymentService $paymentService,
-    ) {
-    }
+    ) {}
 
     public function execute(User $user, Cart $cart, Address $address, array $paymentPayload = []): Order
     {
@@ -55,7 +54,7 @@ class CreateOrderAction
 
         $paymentResult = $this->paymentService->chargeSandbox([
             'amount' => $totals['total'],
-            'basket_id' => 'CART-' . $cart->id,
+            'basket_id' => 'CART-'.$cart->id,
             'card_number' => $paymentPayload['card_number'] ?? '5528790000000008',
             'simulate_failure' => $paymentPayload['simulate_failure'] ?? false,
         ]);
@@ -88,7 +87,7 @@ class CreateOrderAction
                 if (! $variant || $variant->stock < $cartItem->quantity)
                 {
                     $productTitle = $variant?->product?->name ?? 'Ürün';
-                    throw new RuntimeException("{$productTitle} için yeterli stok kalmadı (Kalan: " . ($variant?->stock ?? 0) . ').');
+                    throw new RuntimeException("{$productTitle} için yeterli stok kalmadı (Kalan: ".($variant?->stock ?? 0).').');
                 }
 
                 $lockedVariants[$variant->id] = $variant;
@@ -102,7 +101,7 @@ class CreateOrderAction
 
             $order = Order::create([
                 'user_id' => $user->id,
-                'order_number' => 'LM-' . strtoupper(Str::random(10)),
+                'order_number' => 'LM-'.strtoupper(Str::random(10)),
                 'idempotency_key' => $idempotencyKey,
                 'address' => $address->toSnapshot(),
                 'subtotal' => $totals['subtotal'],
@@ -190,4 +189,3 @@ class CreateOrderAction
         return $order;
     }
 }
-

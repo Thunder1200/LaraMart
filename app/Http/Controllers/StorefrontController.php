@@ -12,9 +12,7 @@ use Illuminate\View\View;
 
 class StorefrontController extends Controller
 {
-    public function __construct(private readonly CatalogService $catalogService)
-    {
-    }
+    public function __construct(private readonly CatalogService $catalogService) {}
 
     public function home(): View
     {
@@ -94,4 +92,3 @@ class StorefrontController extends Controller
         ]);
     }
 }
-

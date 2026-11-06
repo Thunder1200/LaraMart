@@ -64,4 +64,3 @@ class Coupon extends Model
         return false;
     }
 }
-

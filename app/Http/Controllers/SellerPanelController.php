@@ -26,8 +26,7 @@ class SellerPanelController extends Controller
     public function __construct(
         private readonly CatalogService $catalogService,
         private readonly ReportService $reportService,
-    ) {
-    }
+    ) {}
 
     public function dashboard(Request $request): View
     {
@@ -135,4 +134,3 @@ class SellerPanelController extends Controller
         return back()->with('success', 'İade talebi durumu güncellendi.');
     }
 }
-

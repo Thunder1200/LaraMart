@@ -14,14 +14,12 @@ class OrderConfirmedMail extends Mailable implements ShouldQueue
 {
     use Queueable, SerializesModels;
 
-    public function __construct(public Order $order)
-    {
-    }
+    public function __construct(public Order $order) {}
 
     public function envelope(): Envelope
     {
         return new Envelope(
-            subject: 'LaraMart Siparişiniz Alındı - #' . $this->order->order_number,
+            subject: 'LaraMart Siparişiniz Alındı - #'.$this->order->order_number,
         );
     }
 
@@ -32,4 +30,3 @@ class OrderConfirmedMail extends Mailable implements ShouldQueue
         );
     }
 }
-

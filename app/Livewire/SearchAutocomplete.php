@@ -20,4 +20,3 @@ class SearchAutocomplete extends Component
         ]);
     }
 }
-

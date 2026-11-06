@@ -23,10 +23,9 @@ class ProductFactory extends Factory
             'category_id' => Category::factory(),
             'brand_id' => Brand::factory(),
             'name' => $name,
-            'slug' => Str::slug($name) . '-' . fake()->unique()->numerify('#####'),
+            'slug' => Str::slug($name).'-'.fake()->unique()->numerify('#####'),
             'description' => fake()->paragraphs(2, true),
             'status' => ProductStatus::Active,
         ];
     }
 }
-

@@ -7,4 +7,3 @@ return [
     'token' => 'Bu şifre sıfırlama anahtarı geçersiz.',
     'user' => 'Bu e-posta adresine sahip bir kullanıcı bulunamadı.',
 ];
-

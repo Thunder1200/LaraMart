@@ -204,7 +204,7 @@ class CatalogService
                 'category_id' => $data['category_id'],
                 'brand_id' => $data['brand_id'] ?? Brand::first()?->id,
                 'name' => $data['name'],
-                'slug' => Str::slug($data['name']) . '-' . Str::lower(Str::random(5)),
+                'slug' => Str::slug($data['name']).'-'.Str::lower(Str::random(5)),
                 'description' => $data['description'],
                 'status' => ProductStatus::tryFrom($data['status'] ?? 'active') ?? ProductStatus::Active,
             ]);
@@ -286,4 +286,3 @@ class CatalogService
         });
     }
 }
-

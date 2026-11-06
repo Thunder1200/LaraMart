@@ -7,7 +7,6 @@ use App\Models\Coupon;
 use App\Models\Product;
 use App\Models\ProductVariant;
 use App\Models\Seller;
-use App\Models\User;
 use App\Services\CalculateCartTotalsService;
 use App\Services\CommissionCalculatorService;
 

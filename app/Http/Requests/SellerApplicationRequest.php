@@ -20,4 +20,3 @@ class SellerApplicationRequest extends FormRequest
         ];
     }
 }
-

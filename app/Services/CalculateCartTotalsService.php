@@ -14,6 +14,7 @@ use InvalidArgumentException;
 class CalculateCartTotalsService
 {
     public const FREE_SHIPPING_THRESHOLD = 300.00;
+
     public const STANDARD_SHIPPING_FEE = 49.90;
 
     public function resolveCart(?User $user = null, ?string $sessionId = null): Cart
@@ -203,8 +204,7 @@ class CalculateCartTotalsService
                 ! $coupon->isNotStarted() &&
                 ! $coupon->isUsageLimitReached() &&
                 $subtotal >= (float) $coupon->min_total
-            )
-            {
+            ) {
                 $appliedCoupon = $coupon;
 
                 if ($coupon->type === CouponType::Percentage)
@@ -231,4 +231,3 @@ class CalculateCartTotalsService
         ];
     }
 }
-

@@ -18,4 +18,3 @@ class StoreReturnRequest extends FormRequest
         ];
     }
 }
-

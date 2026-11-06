@@ -17,10 +17,9 @@ class CategoryFactory extends Factory
         return [
             'parent_id' => null,
             'name' => $name,
-            'slug' => Str::slug($name) . '-' . fake()->unique()->numerify('###'),
+            'slug' => Str::slug($name).'-'.fake()->unique()->numerify('###'),
             'commission_rate' => fake()->randomElement(['8.00', '10.00', '12.00', '15.00']),
             'sort' => fake()->numberBetween(1, 50),
         ];
     }
 }
-

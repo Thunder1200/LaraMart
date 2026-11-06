@@ -20,4 +20,3 @@ class CartItemFactory extends Factory
         ];
     }
 }
-

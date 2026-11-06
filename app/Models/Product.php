@@ -116,4 +116,3 @@ class Product extends Model implements HasMedia
         return round((float) $this->approvedReviews()->avg('rating'), 1);
     }
 }
-

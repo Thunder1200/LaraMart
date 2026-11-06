@@ -22,8 +22,7 @@ class MarketplaceApiController extends Controller
     public function __construct(
         private readonly CatalogService $catalogService,
         private readonly CalculateCartTotalsService $cartService,
-    ) {
-    }
+    ) {}
 
     public function login(Request $request): JsonResponse
     {
@@ -127,4 +126,3 @@ class MarketplaceApiController extends Controller
         return OrderResource::collection($orders);
     }
 }
-

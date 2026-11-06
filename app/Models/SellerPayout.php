@@ -34,4 +34,3 @@ class SellerPayout extends Model
         return $this->belongsTo(Seller::class);
     }
 }
-

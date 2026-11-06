@@ -12,13 +12,13 @@ use Livewire\Component;
 class CartManager extends Component
 {
     public string $couponCode = '';
+
     public ?string $statusMessage = null;
+
     public ?string $errorMessage = null;
 
     #[On('cart-updated')]
-    public function refreshCart(): void
-    {
-    }
+    public function refreshCart(): void {}
 
     public function updateQuantity(int $cartItemId, int $quantity, CalculateCartTotalsService $cartService): void
     {
@@ -87,4 +87,3 @@ class CartManager extends Component
         ]);
     }
 }
-

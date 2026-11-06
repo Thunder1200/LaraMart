@@ -27,7 +27,7 @@ class IyzicoPaymentService
             ];
         }
 
-        $transactionId = 'IYZ-SBX-' . strtoupper(Str::random(10));
+        $transactionId = 'IYZ-SBX-'.strtoupper(Str::random(10));
 
         return [
             'success' => true,
@@ -47,4 +47,3 @@ class IyzicoPaymentService
         ];
     }
 }
-

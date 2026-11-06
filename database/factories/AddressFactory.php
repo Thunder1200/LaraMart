@@ -17,9 +17,8 @@ class AddressFactory extends Factory
             'title' => fake()->randomElement(['Ev Adresim', 'İş Adresim', 'Yazlık']),
             'city' => fake()->randomElement(['İstanbul', 'Ankara', 'İzmir', 'Bursa', 'Antalya']),
             'district' => fake()->randomElement(['Kadıköy', 'Çankaya', 'Karşıyaka', 'Nilüfer', 'Muratpaşa']),
-            'full_address' => fake()->streetAddress() . ' No: ' . fake()->buildingNumber(),
+            'full_address' => fake()->streetAddress().' No: '.fake()->buildingNumber(),
             'is_default' => false,
         ];
     }
 }
-

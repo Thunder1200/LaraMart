@@ -42,4 +42,3 @@ class Address extends Model
         ];
     }
 }
-

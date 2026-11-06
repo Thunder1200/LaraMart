@@ -16,4 +16,3 @@ enum CouponType: string
         };
     }
 }
-

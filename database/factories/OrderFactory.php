@@ -16,7 +16,7 @@ class OrderFactory extends Factory
     {
         return [
             'user_id' => User::factory(),
-            'order_number' => 'LM-' . strtoupper(Str::random(10)),
+            'order_number' => 'LM-'.strtoupper(Str::random(10)),
             'idempotency_key' => (string) Str::uuid(),
             'address' => [
                 'title' => 'Ev Adresim',
@@ -33,4 +33,3 @@ class OrderFactory extends Factory
         ];
     }
 }
-

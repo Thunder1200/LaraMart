@@ -28,4 +28,3 @@ class EnsureApprovedSeller
         return $next($request);
     }
 }
-

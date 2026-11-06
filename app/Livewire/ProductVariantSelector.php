@@ -11,15 +11,25 @@ use Livewire\Component;
 class ProductVariantSelector extends Component
 {
     public Product $product;
+
     public int $selectedVariantId = 0;
+
     public string $selectedColor = '';
+
     public string $selectedSize = '';
+
     public string $currentPrice = '0.00';
+
     public ?string $originalPrice = null;
+
     public int $currentStock = 0;
+
     public string $sku = '';
+
     public int $quantity = 1;
+
     public ?string $feedbackMessage = null;
+
     public ?string $errorMessage = null;
 
     public function mount(Product $product): void
@@ -108,4 +118,3 @@ class ProductVariantSelector extends Component
         ]);
     }
 }
-

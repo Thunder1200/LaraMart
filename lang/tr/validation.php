@@ -100,4 +100,3 @@ return [
         'tracking_number' => 'Takip numarası',
     ],
 ];
-

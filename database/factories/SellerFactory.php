@@ -14,17 +14,16 @@ class SellerFactory extends Factory
 
     public function definition(): array
     {
-        $storeName = fake()->unique()->company() . ' Mağazası';
+        $storeName = fake()->unique()->company().' Mağazası';
 
         return [
             'user_id' => User::factory(),
             'store_name' => $storeName,
-            'slug' => Str::slug($storeName) . '-' . fake()->unique()->numerify('###'),
+            'slug' => Str::slug($storeName).'-'.fake()->unique()->numerify('###'),
             'tax_number' => fake()->numerify('##########'),
-            'iban' => 'TR' . fake()->numerify('########################'),
+            'iban' => 'TR'.fake()->numerify('########################'),
             'status' => SellerStatus::Approved,
             'commission_rate' => fake()->randomElement(['8.00', '10.00', '12.00', '15.00']),
         ];
     }
 }
-

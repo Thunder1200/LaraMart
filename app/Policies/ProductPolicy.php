@@ -47,4 +47,3 @@ class ProductPolicy
         return $this->update($user, $product);
     }
 }
-

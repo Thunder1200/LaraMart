@@ -55,4 +55,3 @@ class ProductVariant extends Model
         return (string) $this->price;
     }
 }
-

@@ -27,4 +27,3 @@ class ReviewPolicy
             ->exists();
     }
 }
-

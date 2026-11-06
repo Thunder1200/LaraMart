@@ -18,4 +18,3 @@ enum ReturnStatus: string
         };
     }
 }
-

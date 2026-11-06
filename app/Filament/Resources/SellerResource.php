@@ -29,4 +29,3 @@ class SellerResource extends Resource
             ]);
     }
 }
-

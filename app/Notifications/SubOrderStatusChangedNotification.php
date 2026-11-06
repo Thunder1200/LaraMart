@@ -12,9 +12,7 @@ class SubOrderStatusChangedNotification extends Notification implements ShouldQu
 {
     use Queueable;
 
-    public function __construct(public SubOrder $subOrder)
-    {
-    }
+    public function __construct(public SubOrder $subOrder) {}
 
     public function via(object $notifiable): array
     {
@@ -24,15 +22,15 @@ class SubOrderStatusChangedNotification extends Notification implements ShouldQu
     public function toMail(object $notifiable): MailMessage
     {
         return (new MailMessage)
-            ->subject('LaraMart Sipariş Durumu Güncellendi - #' . $this->subOrder->order->order_number)
-            ->greeting('Merhaba ' . $notifiable->name . ',')
-            ->line($this->subOrder->seller->store_name . ' mağazasından verdiğiniz alt siparişin durumu güncellendi.')
-            ->line('Yeni Durum: ' . $this->subOrder->status->label())
+            ->subject('LaraMart Sipariş Durumu Güncellendi - #'.$this->subOrder->order->order_number)
+            ->greeting('Merhaba '.$notifiable->name.',')
+            ->line($this->subOrder->seller->store_name.' mağazasından verdiğiniz alt siparişin durumu güncellendi.')
+            ->line('Yeni Durum: '.$this->subOrder->status->label())
             ->when($this->subOrder->tracking_number, function (MailMessage $mail)
             {
-                return $mail->line('Kargo: ' . $this->subOrder->cargo_company . ' - Takip No: ' . $this->subOrder->tracking_number);
+                return $mail->line('Kargo: '.$this->subOrder->cargo_company.' - Takip No: '.$this->subOrder->tracking_number);
             })
-            ->action('Siparişimi Görüntüle', url('/hesabim/siparisler/' . $this->subOrder->order_id));
+            ->action('Siparişimi Görüntüle', url('/hesabim/siparisler/'.$this->subOrder->order_id));
     }
 
     public function toArray(object $notifiable): array
@@ -49,4 +47,3 @@ class SubOrderStatusChangedNotification extends Notification implements ShouldQu
         ];
     }
 }
-

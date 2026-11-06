@@ -279,4 +279,3 @@ test('api uzerinden stoktan fazla urun eklenmek istendiginde 422 standart hata f
         ->assertStatus(422)
         ->assertJsonPath('status', 'error');
 });
-

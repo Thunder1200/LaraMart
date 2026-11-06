@@ -19,4 +19,3 @@ class AddToCartRequest extends FormRequest
         ];
     }
 }
-

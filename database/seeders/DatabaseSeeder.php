@@ -63,7 +63,7 @@ class DatabaseSeeder extends Seeder
             $sellerUser = User::factory()->create([
                 'name' => "Satıcı {$num} ({$def['name']})",
                 'email' => "satici{$num}@laramart.test",
-                'phone' => '0555100000' . $num,
+                'phone' => '0555100000'.$num,
                 'password' => Hash::make('password'),
             ]);
             $sellerUser->assignRole($sellerRole);
@@ -72,8 +72,8 @@ class DatabaseSeeder extends Seeder
                 'user_id' => $sellerUser->id,
                 'store_name' => $def['name'],
                 'slug' => $def['slug'],
-                'tax_number' => '100000000' . $num,
-                'iban' => 'TR00000000000000000000000' . $num,
+                'tax_number' => '100000000'.$num,
+                'iban' => 'TR00000000000000000000000'.$num,
                 'status' => SellerStatus::Approved,
                 'commission_rate' => $def['rate'],
             ]);
@@ -89,7 +89,7 @@ class DatabaseSeeder extends Seeder
             $customer = User::factory()->create([
                 'name' => $i === 1 ? 'Ahmet Yılmaz (Demo Müşteri)' : fake()->name(),
                 'email' => $email,
-                'phone' => '055520000' . str_pad((string) $i, 2, '0', STR_PAD_LEFT),
+                'phone' => '055520000'.str_pad((string) $i, 2, '0', STR_PAD_LEFT),
                 'password' => Hash::make('password'),
             ]);
             $customer->assignRole($customerRole);
@@ -99,7 +99,7 @@ class DatabaseSeeder extends Seeder
                 'title' => 'Ev Adresim',
                 'city' => 'İstanbul',
                 'district' => 'Kadıköy',
-                'full_address' => 'Caferağa Mah. Moda Cad. No: ' . $i,
+                'full_address' => 'Caferağa Mah. Moda Cad. No: '.$i,
                 'is_default' => true,
             ]);
 
@@ -164,7 +164,7 @@ class DatabaseSeeder extends Seeder
             $brands->push(Brand::create([
                 'name' => $brandName,
                 'slug' => Str::slug($brandName),
-                'logo' => 'https://placehold.co/200x80/e2e8f0/1e293b?text=' . urlencode($brandName),
+                'logo' => 'https://placehold.co/200x80/e2e8f0/1e293b?text='.urlencode($brandName),
             ]));
         }
 
@@ -186,7 +186,7 @@ class DatabaseSeeder extends Seeder
                 'category_id' => $category->id,
                 'brand_id' => $brand->id,
                 'name' => $productName,
-                'slug' => Str::slug($productName) . '-' . $i,
+                'slug' => Str::slug($productName).'-'.$i,
                 'description' => "{$productName} üstün malzeme kalitesi, hızlı kargo ve LaraMart güvencesiyle {$seller->store_name} mağazasında satışta.",
                 'status' => ProductStatus::Active,
             ]);

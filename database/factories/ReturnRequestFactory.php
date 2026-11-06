@@ -21,4 +21,3 @@ class ReturnRequestFactory extends Factory
         ];
     }
 }
-

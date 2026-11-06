@@ -18,7 +18,7 @@ class ProductVariantFactory extends Factory
 
         return [
             'product_id' => Product::factory(),
-            'sku' => 'SKU-' . strtoupper(fake()->unique()->bothify('????-#####')),
+            'sku' => 'SKU-'.strtoupper(fake()->unique()->bothify('????-#####')),
             'color' => fake()->randomElement(['Siyah', 'Beyaz', 'Lacivert', 'Gri', 'Kırmızı', 'Yeşil']),
             'size' => fake()->randomElement(['S', 'M', 'L', 'XL', 'Standart']),
             'price' => number_format($price, 2, '.', ''),
@@ -27,4 +27,3 @@ class ProductVariantFactory extends Factory
         ];
     }
 }
-

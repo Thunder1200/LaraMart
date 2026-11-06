@@ -49,4 +49,3 @@ class TransitionSubOrderStatusAction
         return $subOrder->fresh();
     }
 }
-

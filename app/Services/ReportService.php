@@ -113,7 +113,7 @@ class ReportService
         {
             $lines[] = implode(',', [
                 $order->order_number,
-                '"' . str_replace('"', '""', $order->user?->name ?? '') . '"',
+                '"'.str_replace('"', '""', $order->user?->name ?? '').'"',
                 $order->user?->email ?? '',
                 $order->subtotal,
                 $order->discount,
@@ -128,4 +128,3 @@ class ReportService
         return implode("\n", $lines);
     }
 }
-

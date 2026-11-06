@@ -46,4 +46,3 @@ class ReturnRequestPolicy
         return (int) $returnRequest->orderItem->subOrder->seller_id === (int) $user->seller->id;
     }
 }
-

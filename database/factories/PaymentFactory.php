@@ -16,11 +16,10 @@ class PaymentFactory extends Factory
         return [
             'order_id' => Order::factory(),
             'provider' => 'iyzico',
-            'transaction_id' => 'TRX-' . fake()->unique()->numerify('########'),
+            'transaction_id' => 'TRX-'.fake()->unique()->numerify('########'),
             'amount' => '500.00',
             'status' => PaymentStatus::Paid,
             'raw_response' => ['status' => 'success', 'sandbox' => true],
         ];
     }
 }
-

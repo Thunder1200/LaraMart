@@ -17,4 +17,3 @@ class OrderPolicy
         return (int) $order->user_id === (int) $user->id;
     }
 }
-

@@ -23,8 +23,7 @@ class AdminPanelController extends Controller
     public function __construct(
         private readonly ReportService $reportService,
         private readonly SellerManagementAction $sellerAction,
-    ) {
-    }
+    ) {}
 
     public function dashboard(): View
     {
@@ -72,7 +71,7 @@ class AdminPanelController extends Controller
         Category::create([
             'parent_id' => $data['parent_id'] ?? null,
             'name' => $data['name'],
-            'slug' => Str::slug($data['name']) . '-' . Str::lower(Str::random(3)),
+            'slug' => Str::slug($data['name']).'-'.Str::lower(Str::random(3)),
             'commission_rate' => number_format((float) $data['commission_rate'], 2, '.', ''),
             'sort' => (int) ($data['sort'] ?? 10),
         ]);
@@ -104,4 +103,3 @@ class AdminPanelController extends Controller
         ]);
     }
 }
-

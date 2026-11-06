@@ -14,7 +14,7 @@ class SellerManagementAction
 {
     public function apply(User $user, array $data): Seller
     {
-        $slug = Str::slug($data['store_name']) . '-' . $user->id;
+        $slug = Str::slug($data['store_name']).'-'.$user->id;
 
         return Seller::updateOrCreate(
             ['user_id' => $user->id],
@@ -51,4 +51,3 @@ class SellerManagementAction
         return $seller->fresh();
     }
 }
-

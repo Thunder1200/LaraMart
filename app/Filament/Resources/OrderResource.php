@@ -27,4 +27,3 @@ class OrderResource extends Resource
             ]);
     }
 }
-

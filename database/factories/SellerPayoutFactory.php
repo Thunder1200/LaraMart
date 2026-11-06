@@ -22,4 +22,3 @@ class SellerPayoutFactory extends Factory
         ];
     }
 }
-

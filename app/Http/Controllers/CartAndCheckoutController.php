@@ -6,7 +6,6 @@ use App\Actions\CreateOrderAction;
 use App\Http\Requests\AddToCartRequest;
 use App\Http\Requests\CheckoutRequest;
 use App\Models\Address;
-use App\Models\Coupon;
 use App\Models\ProductVariant;
 use App\Services\CalculateCartTotalsService;
 use Illuminate\Http\RedirectResponse;
@@ -21,8 +20,7 @@ class CartAndCheckoutController extends Controller
     public function __construct(
         private readonly CalculateCartTotalsService $cartService,
         private readonly CreateOrderAction $createOrderAction,
-    ) {
-    }
+    ) {}
 
     public function showCart(): View
     {
@@ -104,7 +102,7 @@ class CartAndCheckoutController extends Controller
                 $request->validated()
             );
 
-            return redirect('/hesabim/siparisler/' . $order->id)
+            return redirect('/hesabim/siparisler/'.$order->id)
                 ->with('success', "Siparişiniz (#{$order->order_number}) başarıyla oluşturuldu!");
         }
         catch (\Throwable $e)
@@ -120,4 +118,3 @@ class CartAndCheckoutController extends Controller
         ]);
     }
 }
-

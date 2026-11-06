@@ -47,4 +47,3 @@ class OrderItem extends Model
         return $this->hasOne(Review::class, 'order_item_id');
     }
 }
-

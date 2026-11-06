@@ -6,7 +6,6 @@ use App\Actions\PostOrderInteractionAction;
 use App\Actions\SellerManagementAction;
 use App\Actions\TransitionSubOrderStatusAction;
 use App\Enums\PaymentStatus;
-use App\Enums\ProductStatus;
 use App\Enums\ReturnStatus;
 use App\Enums\SellerStatus;
 use App\Enums\SubOrderStatus;
@@ -18,15 +17,11 @@ use App\Models\Banner;
 use App\Models\Brand;
 use App\Models\Cart;
 use App\Models\Category;
-use App\Models\Coupon;
 use App\Models\Favorite;
 use App\Models\Order;
 use App\Models\OrderItem;
-use App\Models\Payment;
 use App\Models\Product;
 use App\Models\ProductVariant;
-use App\Models\ReturnRequest;
-use App\Models\Review;
 use App\Models\Seller;
 use App\Models\SellerPayout;
 use App\Models\SubOrder;
@@ -38,7 +33,6 @@ use Database\Seeders\DatabaseSeeder;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Notification;
-use Illuminate\Support\Str;
 use Livewire\Livewire;
 use Spatie\Permission\Models\Role;
 
@@ -673,4 +667,3 @@ test('hafta 10: uctan uca final kabul senaryosu musteri uye olur 2 saticidan uru
         ->assertOk()
         ->assertSee('1000.00 TL');
 });
-
