@@ -2,8 +2,12 @@
 
 namespace App\Livewire\Storefront;
 
+use App\Actions\Favorites\ToggleFavoriteAction;
 use App\Models\Product;
 use App\Models\ProductVariant;
+use App\Services\CartService;
+use DomainException;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\View\View;
 use Livewire\Attributes\Computed;
 use Livewire\Component;
@@ -20,6 +24,10 @@ class ProductDetail extends Component
 
     public ?string $cartNotice = null;
 
+    public ?string $cartError = null;
+
+    public bool $isFavorited = false;
+
     public function mount(Product $product): void
     {
         $this->product = $product->loadMissing(['seller', 'category.parent', 'brand', 'variants', 'media']);
@@ -29,6 +37,10 @@ class ProductDetail extends Component
             ?? $this->product->variants->first();
 
         $this->selectedVariantId = $defaultVariant?->id;
+
+        $user = Auth::user();
+        $this->isFavorited = $user !== null
+            && $user->favorites()->where('product_id', $this->product->id)->exists();
     }
 
     public function selectVariant(int $variantId): void
@@ -42,6 +54,7 @@ class ProductDetail extends Component
         $this->selectedVariantId = $variant->id;
         $this->quantity = 1;
         $this->cartNotice = null;
+        $this->cartError = null;
     }
 
     public function selectImage(int $index): void
@@ -49,26 +62,43 @@ class ProductDetail extends Component
         $this->activeImageIndex = $index;
     }
 
-    public function addToCart(): void
+    public function addToCart(CartService $cartService): void
     {
+        $this->cartNotice = null;
+        $this->cartError = null;
+
         $variant = $this->selectedVariant();
 
         if (! $variant || $variant->stock < 1) {
-            $this->cartNotice = 'Seçilen varyant şu an stokta bulunmuyor.';
+            $this->cartError = 'Seçilen varyant şu an stokta bulunmuyor.';
 
             return;
         }
 
-        if ($this->quantity > $variant->stock) {
-            $this->quantity = $variant->stock;
+        try {
+            $cartService->addItem(Auth::user(), $variant, max(1, $this->quantity));
+            $this->cartNotice = sprintf(
+                '%s (%s) — %d adet sepetinize eklendi.',
+                $this->product->name,
+                $variant->label(),
+                max(1, $this->quantity)
+            );
+        } catch (DomainException $exception) {
+            $this->cartError = $exception->getMessage();
+        }
+    }
+
+    public function toggleFavorite(ToggleFavoriteAction $action): void
+    {
+        $user = Auth::user();
+
+        if ($user === null) {
+            $this->redirect(route('login'));
+
+            return;
         }
 
-        $this->cartNotice = sprintf(
-            '%s (%s) — %d adet sepete eklenmek üzere seçildi. (Tam sepet ve ödeme akışı Hafta 5–6’da aktif edilecektir.)',
-            $this->product->name,
-            $variant->label(),
-            $this->quantity
-        );
+        $this->isFavorited = $action->execute($user, $this->product);
     }
 
     #[Computed]

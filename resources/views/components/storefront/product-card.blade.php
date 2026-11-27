@@ -6,16 +6,19 @@
     $discountPercent = ($variant && $variant->hasDiscount() && (float) $variant->price > 0)
         ? (int) round((1 - ((float) $variant->discount_price / (float) $variant->price)) * 100)
         : null;
+    $isFavorited = in_array($product->id, $favoriteProductIds ?? [], true);
 @endphp
 
 <article class="group flex flex-col overflow-hidden rounded-xl border border-slate-200 bg-white shadow-sm hover:border-indigo-300 hover:shadow-md transition">
-    <a href="{{ route('products.show', $product->slug) }}" class="relative aspect-square overflow-hidden bg-slate-100">
-        <img
-            src="{{ $product->thumbnailUrl() }}"
-            alt="{{ $product->name }}"
-            loading="lazy"
-            class="h-full w-full object-cover group-hover:scale-105 transition duration-300"
-        >
+    <div class="relative aspect-square overflow-hidden bg-slate-100">
+        <a href="{{ route('products.show', $product->slug) }}" class="block h-full w-full">
+            <img
+                src="{{ $product->thumbnailUrl() }}"
+                alt="{{ $product->name }}"
+                loading="lazy"
+                class="h-full w-full object-cover group-hover:scale-105 transition duration-300"
+            >
+        </a>
 
         @if ($discountPercent)
             <span class="absolute top-2.5 left-2.5 rounded-full bg-rose-600 px-2.5 py-0.5 text-xs font-bold text-white shadow">
@@ -23,12 +26,33 @@
             </span>
         @endif
 
+        @auth
+            <form method="POST" action="{{ route('customer.favorites.toggle', $product) }}" class="absolute top-2.5 right-2.5">
+                @csrf
+                <button
+                    type="submit"
+                    aria-label="{{ $isFavorited ? 'Favorilerden çıkar' : 'Favorilere ekle' }}"
+                    class="flex h-8 w-8 items-center justify-center rounded-full bg-white/95 shadow hover:scale-105 transition {{ $isFavorited ? 'text-rose-600' : 'text-slate-400 hover:text-rose-500' }}"
+                >
+                    <span class="text-base leading-none">{{ $isFavorited ? '♥' : '♡' }}</span>
+                </button>
+            </form>
+        @else
+            <a
+                href="{{ route('login') }}"
+                aria-label="Favorilere eklemek için giriş yapın"
+                class="absolute top-2.5 right-2.5 flex h-8 w-8 items-center justify-center rounded-full bg-white/95 text-slate-400 shadow hover:text-rose-500 transition"
+            >
+                <span class="text-base leading-none">♡</span>
+            </a>
+        @endauth
+
         @if ($totalStock === 0)
-            <span class="absolute top-2.5 right-2.5 rounded-full bg-slate-900/80 px-2.5 py-0.5 text-xs font-semibold text-white">
+            <span class="absolute bottom-2.5 right-2.5 rounded-full bg-slate-900/80 px-2.5 py-0.5 text-xs font-semibold text-white">
                 Tükendi
             </span>
         @endif
-    </a>
+    </div>
 
     <div class="flex flex-1 flex-col p-4">
         <div class="flex items-center justify-between gap-2 text-xs text-slate-500">

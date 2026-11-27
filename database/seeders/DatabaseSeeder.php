@@ -164,6 +164,17 @@ class DatabaseSeeder extends Seeder
             'used_count' => 0,
         ]);
 
+        Coupon::create([
+            'code' => 'ESKIKUPON',
+            'type' => 'percentage',
+            'value' => 20.00,
+            'min_total' => 100.00,
+            'starts_at' => now()->subMonths(2),
+            'ends_at' => now()->subDay(),
+            'usage_limit' => 100,
+            'used_count' => 0,
+        ]);
+
         // Örnek Ana Sayfa Bannerları
         Banner::create([
             'title' => 'Elektronikte Süper İndirimler',

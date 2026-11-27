@@ -30,10 +30,10 @@ GitHub deposunda **Projects → New Project → Board** seçerek aşağıdaki s�
 - [x] Satıcı başvuru formu ve `/satici` paneli ürün CRUD + Policy
 - [x] Herkese açık mağaza sayfası (`/magaza/{slug}`)
 
-## Hafta 5 — Sepet, Favoriler, Adres ve Kupon
-- [ ] Misafir/üye sepeti, girişte birleştirme, satıcı bazlı kargo gruplama, stok limiti
-- [ ] Favoriler ve il/ilçe seçimli adres defteri
-- [ ] Kupon sistemi ve sepet hesabı için en az 5 birim test
+## Hafta 5 — Sepet, Favoriler, Adres ve Kupon (`Done`)
+- [x] Misafir/üye sepeti, girişte birleştirme, satıcı bazlı kargo gruplama, stok limiti
+- [x] Favoriler ve il/ilçe seçimli adres defteri
+- [x] Kupon sistemi ve sepet hesabı için en az 5 birim test
 
 ## Hafta 6 — Ödeme ve Sipariş Oluşturma
 - [ ] Checkout sayfası ve iyzico sandbox (3D Secure) entegrasyonu

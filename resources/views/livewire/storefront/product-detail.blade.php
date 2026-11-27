@@ -49,7 +49,18 @@
                 </span>
             </div>
 
-            <h1 class="mt-2 text-2xl sm:text-3xl font-extrabold text-slate-900">{{ $product->name }}</h1>
+            <div class="mt-2 flex items-start justify-between gap-4">
+                <h1 class="text-2xl sm:text-3xl font-extrabold text-slate-900">{{ $product->name }}</h1>
+                <button
+                    type="button"
+                    wire:click="toggleFavorite"
+                    aria-label="{{ $isFavorited ? 'Favorilerden çıkar' : 'Favorilere ekle' }}"
+                    class="inline-flex items-center gap-1.5 rounded-lg border px-3 py-2 text-xs font-bold transition shrink-0 {{ $isFavorited ? 'border-rose-300 bg-rose-50 text-rose-600' : 'border-slate-200 bg-white text-slate-600 hover:border-rose-300 hover:text-rose-600' }}"
+                >
+                    <span class="text-base leading-none">{{ $isFavorited ? '♥' : '♡' }}</span>
+                    <span>{{ $isFavorited ? 'Favoride' : 'Favorile' }}</span>
+                </button>
+            </div>
 
             <div class="mt-2 flex items-center gap-2 text-sm text-slate-600">
                 <span class="text-amber-500">★</span>
@@ -150,8 +161,15 @@
         </div>
 
         @if ($cartNotice)
-            <div class="rounded-lg border border-indigo-200 bg-indigo-50 px-4 py-3 text-xs font-medium text-indigo-800">
-                {{ $cartNotice }}
+            <div class="rounded-lg border border-emerald-200 bg-emerald-50 px-4 py-3 text-xs font-medium text-emerald-800 flex flex-wrap items-center justify-between gap-2">
+                <span>{{ $cartNotice }}</span>
+                <a href="{{ route('cart.index') }}" class="font-bold underline hover:text-emerald-950">Sepete Git →</a>
+            </div>
+        @endif
+
+        @if ($cartError)
+            <div class="rounded-lg border border-rose-200 bg-rose-50 px-4 py-3 text-xs font-medium text-rose-800">
+                {{ $cartError }}
             </div>
         @endif
 

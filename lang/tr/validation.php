@@ -124,5 +124,11 @@ return [
         'discount_price' => 'İndirimli fiyat',
         'stock' => 'Stok adedi',
         'images' => 'Ürün görselleri',
+        'title' => 'Adres başlığı',
+        'city' => 'İl',
+        'district' => 'İlçe',
+        'full_address' => 'Açık adres',
+        'code' => 'Kupon kodu',
+        'quantity' => 'Adet',
     ],
 ];

@@ -52,7 +52,7 @@
                 {{-- Sepet ve Hesabım Menüsü --}}
                 <div class="flex items-center justify-end gap-3">
                     <a
-                        href="{{ route('home') }}#sepet"
+                        href="{{ route('cart.index') }}"
                         class="inline-flex items-center gap-2 rounded-lg border border-slate-200 bg-white px-3.5 py-2 text-sm font-medium text-slate-700 hover:border-indigo-300 hover:text-indigo-700 transition"
                         aria-label="Sepetim"
                     >
@@ -60,7 +60,7 @@
                             <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" />
                         </svg>
                         <span>Sepet</span>
-                        <span class="rounded-full bg-indigo-100 px-2 py-0.5 text-xs font-bold text-indigo-700">0</span>
+                        <span class="rounded-full bg-indigo-100 px-2 py-0.5 text-xs font-bold text-indigo-700">{{ $cartItemCount ?? 0 }}</span>
                     </a>
 
                     @auth
@@ -81,6 +81,8 @@
                                     <p class="text-sm font-semibold text-slate-900 truncate">{{ auth()->user()->email }}</p>
                                 </div>
                                 <a href="{{ route('customer.account') }}" class="block px-4 py-2 text-sm text-slate-700 hover:bg-slate-50">Hesabım (/hesabim)</a>
+                                <a href="{{ route('customer.favorites.index') }}" class="block px-4 py-2 text-sm text-slate-700 hover:bg-slate-50">Favorilerim</a>
+                                <a href="{{ route('customer.addresses.index') }}" class="block px-4 py-2 text-sm text-slate-700 hover:bg-slate-50">Adres Defterim</a>
                                 @if (auth()->user()->hasRole('seller') && auth()->user()->seller?->status === 'approved')
                                     <a href="{{ route('seller.dashboard') }}" class="block px-4 py-2 text-sm text-emerald-700 font-medium hover:bg-emerald-50">Satıcı Paneli (/satici)</a>
                                 @endif
