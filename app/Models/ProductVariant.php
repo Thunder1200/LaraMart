@@ -50,4 +50,23 @@ class ProductVariant extends Model
     {
         return $this->hasMany(OrderItem::class, 'variant_id');
     }
+
+    public function effectivePrice(): float
+    {
+        return $this->hasDiscount()
+            ? (float) $this->discount_price
+            : (float) $this->price;
+    }
+
+    public function hasDiscount(): bool
+    {
+        return $this->discount_price !== null && (float) $this->discount_price < (float) $this->price;
+    }
+
+    public function label(): string
+    {
+        return collect([$this->color, $this->size])
+            ->filter()
+            ->implode(' / ') ?: $this->sku;
+    }
 }

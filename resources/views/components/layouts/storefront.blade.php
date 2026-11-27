@@ -8,6 +8,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>{{ $title }}</title>
     @vite(['resources/css/app.css', 'resources/js/app.js'])
+    @livewireStyles
 </head>
 <body class="min-h-screen flex flex-col bg-slate-50 text-slate-900 antialiased">
     {{-- Üst Bilgi Şeridi --}}
@@ -123,7 +124,7 @@
                     @forelse ($megaMenuCategories as $category)
                         <li class="relative group">
                             <a
-                                href="{{ route('home', ['kategori' => $category->slug]) }}"
+                                href="{{ route('categories.show', $category->slug) }}"
                                 class="inline-flex items-center gap-1 rounded-md px-3 py-1.5 font-semibold text-slate-700 hover:bg-white hover:text-indigo-700 transition"
                             >
                                 <span>{{ $category->name }}</span>
@@ -141,7 +142,7 @@
                                         @foreach ($category->children as $child)
                                             <li>
                                                 <a
-                                                    href="{{ route('home', ['kategori' => $child->slug]) }}"
+                                                    href="{{ route('categories.show', $child->slug) }}"
                                                     class="block rounded-md px-2.5 py-1.5 text-sm text-slate-700 hover:bg-indigo-50 hover:text-indigo-700"
                                                 >
                                                     {{ $child->name }}
@@ -203,5 +204,7 @@
             &copy; {{ date('Y') }} LaraMart — Tüm hakları saklıdır.
         </div>
     </footer>
+
+    @livewireScripts
 </body>
 </html>

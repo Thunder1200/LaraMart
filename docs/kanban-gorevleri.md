@@ -18,11 +18,11 @@ GitHub deposunda **Projects → New Project → Board** seçerek aşağıdaki s�
 - [x] Admin Kategori CRUD (alt kategori, slug, sıralama)
 - [x] Ortak layout (header, arama, sepet, hesabım, footer, DB mega menü) + Türkçe doğrulama (`lang/tr`)
 
-## Hafta 3 — Ürün Kataloğu ve Vitrin
-- [ ] Ürün/varyant yönetimi ve MediaLibrary çoklu görsel/thumbnail
-- [ ] Ana sayfa (banner slider, öne çıkan kategoriler, çok satanlar, yeni gelenler)
-- [ ] Kategori sayfası (24 ürün sayfalama, sıralama) ve SEO URL'ler
-- [ ] Ürün detay (galeri, Livewire varyant seçimi, N+1 kontrolü)
+## Hafta 3 — Ürün Kataloğu ve Vitrin (`Done`)
+- [x] Ürün/varyant yönetimi ve MediaLibrary çoklu görsel/thumbnail
+- [x] Ana sayfa (banner slider, öne çıkan kategoriler, çok satanlar, yeni gelenler)
+- [x] Kategori sayfası (24 ürün sayfalama, sıralama) ve SEO URL'ler
+- [x] Ürün detay (galeri, Livewire varyant seçimi, N+1 kontrolü)
 
 ## Hafta 4 — Arama, Filtreleme ve Satıcı Paneli
 - [ ] Arama kutusu (ürün + marka) ve yazarken öneri (autocomplete)
