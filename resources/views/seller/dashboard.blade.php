@@ -6,6 +6,14 @@
                 <h1 class="mt-2 text-2xl font-bold text-slate-900">{{ $seller->store_name }} — Satıcı Paneli</h1>
                 <p class="text-sm text-slate-600">Vergi No: {{ $seller->tax_number }} • Mağaza Slug: {{ $seller->slug }}</p>
             </div>
+            <div class="flex flex-wrap items-center gap-3">
+                <a href="{{ route('stores.show', $seller->slug) }}" class="rounded-lg border border-slate-300 bg-white px-4 py-2.5 text-sm font-semibold text-slate-700 hover:bg-slate-50 transition">
+                    Mağazamı Gör (/magaza/{{ $seller->slug }})
+                </a>
+                <a href="{{ route('seller.products.index') }}" class="rounded-lg bg-indigo-600 px-4 py-2.5 text-sm font-semibold text-white hover:bg-indigo-700 transition">
+                    Ürünlerimi Yönet →
+                </a>
+            </div>
         </div>
 
         <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">

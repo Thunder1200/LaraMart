@@ -21,6 +21,11 @@
             </div>
 
             <form method="GET" action="{{ route('categories.show', $category->slug) }}" class="flex items-center gap-2">
+                @foreach (['marka', 'min', 'max', 'renk', 'beden', 'puan'] as $param)
+                    @if (! empty($filters[$param]))
+                        <input type="hidden" name="{{ $param }}" value="{{ $filters[$param] }}">
+                    @endif
+                @endforeach
                 <label for="sirala" class="text-xs font-semibold text-slate-600">Sırala:</label>
                 <select
                     id="sirala"
@@ -51,24 +56,36 @@
             </div>
         @endif
 
-        {{-- Ürün Grid (24 ürün / sayfa) --}}
-        @if ($products->isNotEmpty())
-            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-                @foreach ($products as $product)
-                    <x-storefront.product-card :product="$product" />
-                @endforeach
-            </div>
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+            <aside class="lg:col-span-3">
+                <x-storefront.filter-sidebar
+                    :action="route('categories.show', $category->slug)"
+                    :filters="$filters"
+                    :filter-options="$filterOptions"
+                    :show-category-filter="false"
+                />
+            </aside>
 
-            <div class="pt-4">
-                {{ $products->links() }}
+            <div class="lg:col-span-9 space-y-6">
+                @if ($products->isNotEmpty())
+                    <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6">
+                        @foreach ($products as $product)
+                            <x-storefront.product-card :product="$product" />
+                        @endforeach
+                    </div>
+
+                    <div class="pt-4">
+                        {{ $products->links() }}
+                    </div>
+                @else
+                    <div class="rounded-xl border border-slate-200 bg-white p-12 text-center">
+                        <p class="text-base font-semibold text-slate-700">Bu kategoride seçilen filtrelere uygun ürün bulunmuyor.</p>
+                        <a href="{{ route('categories.show', $category->slug) }}" class="mt-4 inline-block rounded-lg bg-indigo-600 px-4 py-2 text-sm font-semibold text-white hover:bg-indigo-700">
+                            Filtreleri Temizle
+                        </a>
+                    </div>
+                @endif
             </div>
-        @else
-            <div class="rounded-xl border border-slate-200 bg-white p-12 text-center">
-                <p class="text-base font-semibold text-slate-700">Bu kategoride henüz aktif ürün bulunmuyor.</p>
-                <a href="{{ route('home') }}" class="mt-4 inline-block rounded-lg bg-indigo-600 px-4 py-2 text-sm font-semibold text-white hover:bg-indigo-700">
-                    Ana Sayfaya Dön
-                </a>
-            </div>
-        @endif
+        </div>
     </div>
 </x-layouts.storefront>

@@ -42,7 +42,10 @@
                     <span class="rounded-full bg-indigo-50 px-2.5 py-1 font-bold text-indigo-700">{{ $product->brand->name }}</span>
                 @endif
                 <span class="text-slate-500">
-                    Satıcı: <strong class="text-slate-800">{{ $product->seller->store_name }}</strong>
+                    Satıcı:
+                    <a href="{{ route('stores.show', $product->seller->slug) }}" class="font-bold text-indigo-700 hover:underline">
+                        {{ $product->seller->store_name }}
+                    </a>
                 </span>
             </div>
 

@@ -24,11 +24,11 @@ GitHub deposunda **Projects → New Project → Board** seçerek aşağıdaki s�
 - [x] Kategori sayfası (24 ürün sayfalama, sıralama) ve SEO URL'ler
 - [x] Ürün detay (galeri, Livewire varyant seçimi, N+1 kontrolü)
 
-## Hafta 4 — Arama, Filtreleme ve Satıcı Paneli
-- [ ] Arama kutusu (ürün + marka) ve yazarken öneri (autocomplete)
-- [ ] URL'de saklanan filtreler (kategori, marka, fiyat, renk, beden, puan)
-- [ ] Satıcı başvuru formu ve `/satici` paneli ürün CRUD + Policy
-- [ ] Herkese açık mağaza sayfası (`/magaza/{slug}`)
+## Hafta 4 — Arama, Filtreleme ve Satıcı Paneli (`Done`)
+- [x] Arama kutusu (ürün + marka) ve yazarken öneri (autocomplete)
+- [x] URL'de saklanan filtreler (kategori, marka, fiyat, renk, beden, puan)
+- [x] Satıcı başvuru formu ve `/satici` paneli ürün CRUD + Policy
+- [x] Herkese açık mağaza sayfası (`/magaza/{slug}`)
 
 ## Hafta 5 — Sepet, Favoriler, Adres ve Kupon
 - [ ] Misafir/üye sepeti, girişte birleştirme, satıcı bazlı kargo gruplama, stok limiti

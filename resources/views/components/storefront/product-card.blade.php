@@ -33,7 +33,11 @@
     <div class="flex flex-1 flex-col p-4">
         <div class="flex items-center justify-between gap-2 text-xs text-slate-500">
             <span class="font-semibold text-indigo-600 truncate">{{ $product->brand?->name ?? 'LaraMart' }}</span>
-            <span class="truncate">{{ $product->seller?->store_name }}</span>
+            @if ($product->seller)
+                <a href="{{ route('stores.show', $product->seller->slug) }}" class="truncate hover:text-indigo-700 hover:underline">
+                    {{ $product->seller->store_name }}
+                </a>
+            @endif
         </div>
 
         <a href="{{ route('products.show', $product->slug) }}" class="mt-1.5 line-clamp-2 text-sm font-bold text-slate-900 group-hover:text-indigo-700">

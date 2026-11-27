@@ -22,6 +22,8 @@
                     @endif
                     @if (auth()->user()->hasRole('seller') && auth()->user()->seller?->status === 'approved')
                         <a href="{{ route('seller.dashboard') }}" class="text-emerald-300 hover:text-emerald-200 font-medium">Satıcı Paneli (/satici)</a>
+                    @else
+                        <a href="{{ route('seller.apply.create') }}" class="text-emerald-300 hover:text-emerald-200 font-medium">Satıcı Ol</a>
                     @endif
                     <a href="{{ route('customer.account') }}" class="hover:text-white">Hesabım</a>
                 @else
@@ -44,24 +46,8 @@
                     </a>
                 </div>
 
-                {{-- Arama Kutusu --}}
-                <form action="{{ route('home') }}" method="GET" class="flex-1 max-w-2xl">
-                    <div class="relative flex items-center">
-                        <input
-                            type="search"
-                            name="q"
-                            value="{{ request('q') }}"
-                            placeholder="Ürün, kategori veya marka ara..."
-                            class="w-full rounded-lg border border-slate-300 bg-slate-50 py-2.5 pl-4 pr-24 text-sm text-slate-900 placeholder:text-slate-400 focus:border-indigo-500 focus:bg-white focus:outline-none focus:ring-2 focus:ring-indigo-200"
-                        >
-                        <button
-                            type="submit"
-                            class="absolute right-1.5 rounded-md bg-indigo-600 px-4 py-1.5 text-sm font-semibold text-white hover:bg-indigo-700 transition"
-                        >
-                            Ara
-                        </button>
-                    </div>
-                </form>
+                {{-- Arama Kutusu (Livewire Autocomplete) --}}
+                <livewire:storefront.search-bar />
 
                 {{-- Sepet ve Hesabım Menüsü --}}
                 <div class="flex items-center justify-end gap-3">
