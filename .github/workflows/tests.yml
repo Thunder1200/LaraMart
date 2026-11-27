@@ -13,7 +13,6 @@ on:
 jobs:
   ci:
     runs-on: ubuntu-latest
-    environment: Testing
 
     steps:
       - name: Checkout
@@ -22,9 +21,10 @@ jobs:
       - name: Setup PHP
         uses: shivammathur/setup-php@v2
         with:
-          php-version: 8.4
+          php-version: '8.3'
+          extensions: pdo_sqlite, sqlite3, gd, mbstring, intl
           tools: composer:v2
-          coverage: xdebug
+          coverage: none
 
       - name: Setup Node
         uses: actions/setup-node@v4
@@ -33,7 +33,7 @@ jobs:
           cache: 'npm'
 
       - name: Install Node Dependencies
-        run: npm i
+        run: npm ci
 
       - name: Create SQLite Database
         run: touch database/database.sqlite
@@ -51,4 +51,4 @@ jobs:
         run: npm run build
 
       - name: Run Tests
-        run: ./vendor/bin/phpunit
+        run: php artisan test
