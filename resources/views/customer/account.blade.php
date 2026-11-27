@@ -28,11 +28,11 @@
                 <span class="mt-3 inline-block text-xs font-bold text-rose-600">Favorilerimi Gör →</span>
             </a>
 
-            <div class="rounded-xl border border-slate-200 bg-white p-6 shadow-sm">
+            <a href="{{ route('customer.orders.index') }}" class="rounded-xl border border-slate-200 bg-white p-6 shadow-sm hover:border-indigo-400 transition block">
                 <p class="text-xs font-semibold uppercase text-slate-500">Siparişlerim</p>
-                <p class="mt-2 text-3xl font-extrabold text-slate-900">{{ $user->orders_count }}</p>
-                <span class="mt-3 inline-block text-xs text-slate-500">Ödeme &amp; sipariş takibi Hafta 6'da</span>
-            </div>
+                <p class="mt-2 text-3xl font-extrabold text-indigo-700">{{ $user->orders_count }}</p>
+                <span class="mt-3 inline-block text-xs font-bold text-indigo-600">Siparişlerimi Gör →</span>
+            </a>
         </div>
     </section>
 </x-layouts.storefront>

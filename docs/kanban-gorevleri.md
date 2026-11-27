@@ -35,10 +35,10 @@ GitHub deposunda **Projects → New Project → Board** seçerek aşağıdaki s�
 - [x] Favoriler ve il/ilçe seçimli adres defteri
 - [x] Kupon sistemi ve sepet hesabı için en az 5 birim test
 
-## Hafta 6 — Ödeme ve Sipariş Oluşturma
-- [ ] Checkout sayfası ve iyzico sandbox (3D Secure) entegrasyonu
-- [ ] Tek DB transaction'da sipariş + alt sipariş + stok kilidi (`lockForUpdate`) + idempotency
-- [ ] Kuyruklu sipariş onay e-postası, Siparişlerim sayfası ve 2 kritik feature test
+## Hafta 6 — Ödeme ve Sipariş Oluşturma (`Done`)
+- [x] Checkout sayfası ve iyzico sandbox (3D Secure) entegrasyonu
+- [x] Tek DB transaction'da sipariş + alt sipariş + stok kilidi (`lockForUpdate`) + idempotency
+- [x] Kuyruklu sipariş onay e-postası, Siparişlerim sayfası ve 2 kritik feature test
 
 ## Hafta 7 — Sipariş Yönetimi, Kargo, İade ve Yorumlar
 - [ ] Enum ile alt sipariş durum makinesi ve geçersiz geçiş testi

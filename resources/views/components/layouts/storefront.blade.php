@@ -81,6 +81,7 @@
                                     <p class="text-sm font-semibold text-slate-900 truncate">{{ auth()->user()->email }}</p>
                                 </div>
                                 <a href="{{ route('customer.account') }}" class="block px-4 py-2 text-sm text-slate-700 hover:bg-slate-50">Hesabım (/hesabim)</a>
+                                <a href="{{ route('customer.orders.index') }}" class="block px-4 py-2 text-sm text-slate-700 hover:bg-slate-50">Siparişlerim</a>
                                 <a href="{{ route('customer.favorites.index') }}" class="block px-4 py-2 text-sm text-slate-700 hover:bg-slate-50">Favorilerim</a>
                                 <a href="{{ route('customer.addresses.index') }}" class="block px-4 py-2 text-sm text-slate-700 hover:bg-slate-50">Adres Defterim</a>
                                 @if (auth()->user()->hasRole('seller') && auth()->user()->seller?->status === 'approved')

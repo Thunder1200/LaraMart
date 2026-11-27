@@ -192,9 +192,9 @@
                                 Satın Almak İçin Giriş Yap
                             </a>
                         @else
-                            <div class="rounded-lg bg-indigo-50 border border-indigo-200 px-3.5 py-2.5 text-xs text-indigo-800">
-                                Adres seçimi ve iyzico 3D Secure ödeme akışı Hafta 6'da aktif edilecektir.
-                            </div>
+                            <a href="{{ route('checkout.index') }}" class="block w-full rounded-lg bg-indigo-600 py-3 text-center text-sm font-bold text-white hover:bg-indigo-700 transition shadow">
+                                Ödemeye Geç →
+                            </a>
                         @endguest
                     </div>
                 </aside>

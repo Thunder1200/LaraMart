@@ -17,6 +17,10 @@ return Application::configure(basePath: dirname(__DIR__))
             'role' => EnsureUserHasRole::class,
             'approved.seller' => EnsureApprovedSeller::class,
         ]);
+
+        $middleware->validateCsrfTokens(except: [
+            'odeme/iyzico/callback',
+        ]);
     })
     ->withExceptions(function (Exceptions $exceptions) {
         //

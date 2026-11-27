@@ -130,5 +130,12 @@ return [
         'full_address' => 'Açık adres',
         'code' => 'Kupon kodu',
         'quantity' => 'Adet',
+        'address_id' => 'Teslimat adresi',
+        'distance_sales_agreement' => 'Mesafeli satış sözleşmesi',
+        'card_holder' => 'Kart sahibi adı',
+        'card_number' => 'Kart numarası',
+        'expire_month' => 'Son kullanma ayı',
+        'expire_year' => 'Son kullanma yılı',
+        'cvc' => 'Güvenlik kodu (CVC)',
     ],
 ];

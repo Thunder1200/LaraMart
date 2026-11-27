@@ -5,11 +5,13 @@ use App\Http\Controllers\Admin\DashboardController as AdminDashboardController;
 use App\Http\Controllers\Customer\AccountController;
 use App\Http\Controllers\Customer\AddressController;
 use App\Http\Controllers\Customer\FavoriteController;
+use App\Http\Controllers\Customer\OrderController as CustomerOrderController;
 use App\Http\Controllers\Seller\ApplicationController as SellerApplicationController;
 use App\Http\Controllers\Seller\DashboardController as SellerDashboardController;
 use App\Http\Controllers\Seller\ProductController as SellerProductController;
 use App\Http\Controllers\Storefront\CartController;
 use App\Http\Controllers\Storefront\CategoryController as StorefrontCategoryController;
+use App\Http\Controllers\Storefront\CheckoutController;
 use App\Http\Controllers\Storefront\HomeController;
 use App\Http\Controllers\Storefront\ProductController as StorefrontProductController;
 use App\Http\Controllers\Storefront\SearchController;
@@ -33,14 +35,25 @@ Route::prefix('sepet')->name('cart.')->group(function () {
     Route::delete('/kupon', [CartController::class, 'removeCoupon'])->name('coupon.remove');
 });
 
+// 3D Secure iyzico dönüş adresi ve hata ekranı
+Route::post('/odeme/iyzico/callback', [CheckoutController::class, 'callback'])->name('checkout.iyzico.callback');
+Route::get('/odeme/hata', [CheckoutController::class, 'error'])->name('checkout.error');
+
 Route::view('dashboard', 'dashboard')
     ->middleware(['auth', 'verified'])
     ->name('dashboard');
 
 Route::middleware(['auth', 'verified'])->group(function () {
+    Route::get('/odeme', [CheckoutController::class, 'show'])->name('checkout.index');
+    Route::post('/odeme', [CheckoutController::class, 'start'])->name('checkout.start');
+    Route::get('/odeme/3d-secure/{token}', [CheckoutController::class, 'threeDsChallenge'])->name('checkout.3ds');
+
     Route::get('/hesabim', AccountController::class)->name('customer.account');
     Route::get('/hesabim/favoriler', [FavoriteController::class, 'index'])->name('customer.favorites.index');
     Route::post('/favoriler/{product}/degistir', [FavoriteController::class, 'toggle'])->name('customer.favorites.toggle');
+
+    Route::get('/hesabim/siparisler', [CustomerOrderController::class, 'index'])->name('customer.orders.index');
+    Route::get('/hesabim/siparisler/{order}', [CustomerOrderController::class, 'show'])->name('customer.orders.show');
 
     Route::prefix('hesabim/adresler')->name('customer.addresses.')->group(function () {
         Route::get('/', [AddressController::class, 'index'])->name('index');
