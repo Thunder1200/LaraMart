@@ -12,11 +12,11 @@ GitHub deposunda **Projects → New Project → Board** seçerek aşağıdaki s�
 - [x] Factory ve seeder (1 admin, 5 satıcı, 20 müşteri, 15 kategori, 100 ürün)
 - [x] Ana sayfa wireframe tasarımı ve kurulum README dokümanı
 
-## Hafta 2 — Kimlik Doğrulama, Roller ve Kategoriler
-- [ ] Kayıt, giriş, şifre sıfırlama, e-posta doğrulama (Mailpit)
-- [ ] `spatie/laravel-permission` rolleri (`admin`, `seller`, `customer`) ve middleware
-- [ ] Admin Kategori CRUD (alt kategori, slug, sıralama)
-- [ ] Ortak layout (header, arama, sepet, hesabım, footer, DB mega menü) + Türkçe doğrulama (`lang/tr`)
+## Hafta 2 — Kimlik Doğrulama, Roller ve Kategoriler (`Done`)
+- [x] Kayıt, giriş, şifre sıfırlama, e-posta doğrulama (Mailpit)
+- [x] `spatie/laravel-permission` rolleri (`admin`, `seller`, `customer`) ve middleware
+- [x] Admin Kategori CRUD (alt kategori, slug, sıralama)
+- [x] Ortak layout (header, arama, sepet, hesabım, footer, DB mega menü) + Türkçe doğrulama (`lang/tr`)
 
 ## Hafta 3 — Ürün Kataloğu ve Vitrin
 - [ ] Ürün/varyant yönetimi ve MediaLibrary çoklu görsel/thumbnail

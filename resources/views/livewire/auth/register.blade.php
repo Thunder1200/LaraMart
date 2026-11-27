@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Validation\Rules;
 use Livewire\Attributes\Layout;
 use Livewire\Volt\Component;
+use Spatie\Permission\Models\Role;
 
 new #[Layout('components.layouts.auth')] class extends Component {
     public string $name = '';
@@ -27,7 +28,10 @@ new #[Layout('components.layouts.auth')] class extends Component {
 
         $validated['password'] = Hash::make($validated['password']);
 
-        event(new Registered(($user = User::create($validated))));
+        $user = User::create($validated);
+        $user->assignRole(Role::firstOrCreate(['name' => 'customer']));
+
+        event(new Registered($user));
 
         Auth::login($user);
 
