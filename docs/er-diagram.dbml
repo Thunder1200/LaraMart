@@ -1,0 +1,248 @@
+// LaraMart — 20 Zorunlu Tablo ER Diyagramı (dbdiagram.io için DBML)
+// Kullanım: https://dbdiagram.io/d adresine yapıştırın.
+
+Table users {
+  id bigint [pk, increment]
+  name varchar(255) [not null]
+  email varchar(255) [not null, unique]
+  phone varchar(20)
+  email_verified_at timestamp
+  password varchar(255) [not null]
+  remember_token varchar(100)
+  created_at timestamp
+  updated_at timestamp
+  Note: 'Kullanıcı rolleri (admin, seller, customer) spatie/laravel-permission tablolarında tutulur.'
+}
+
+Table addresses {
+  id bigint [pk, increment]
+  user_id bigint [not null, ref: > users.id]
+  title varchar(100) [not null]
+  city varchar(100) [not null]
+  district varchar(100) [not null]
+  full_address text [not null]
+  is_default boolean [not null, default: false]
+  created_at timestamp
+  updated_at timestamp
+}
+
+Table sellers {
+  id bigint [pk, increment]
+  user_id bigint [not null, unique, ref: - users.id]
+  store_name varchar(255) [not null]
+  slug varchar(255) [not null, unique]
+  tax_number varchar(50) [not null]
+  iban varchar(34) [not null]
+  status varchar(20) [not null, default: 'pending', note: 'pending (beklemede), approved (onayli), rejected (reddedildi)']
+  commission_rate decimal(5,2) [note: 'Boş ise kategori komisyon oranı geçerlidir']
+  created_at timestamp
+  updated_at timestamp
+}
+
+Table categories {
+  id bigint [pk, increment]
+  parent_id bigint [ref: > categories.id]
+  name varchar(255) [not null]
+  slug varchar(255) [not null, unique]
+  commission_rate decimal(5,2) [not null, default: 10.00]
+  sort int [not null, default: 0]
+  created_at timestamp
+  updated_at timestamp
+}
+
+Table brands {
+  id bigint [pk, increment]
+  name varchar(255) [not null]
+  slug varchar(255) [not null, unique]
+  logo varchar(255)
+  created_at timestamp
+  updated_at timestamp
+}
+
+Table products {
+  id bigint [pk, increment]
+  seller_id bigint [not null, ref: > sellers.id]
+  category_id bigint [not null, ref: > categories.id]
+  brand_id bigint [ref: > brands.id]
+  name varchar(255) [not null]
+  slug varchar(255) [not null, unique]
+  description text
+  status varchar(20) [not null, default: 'active', note: 'draft, active, inactive']
+  created_at timestamp
+  updated_at timestamp
+}
+
+Table product_variants {
+  id bigint [pk, increment]
+  product_id bigint [not null, ref: > products.id]
+  sku varchar(100) [not null, unique]
+  color varchar(50)
+  size varchar(50)
+  price decimal(10,2) [not null]
+  discount_price decimal(10,2)
+  stock int [not null, default: 0, note: 'Ödeme onayında transaction + lockForUpdate() ile düşülür']
+  created_at timestamp
+  updated_at timestamp
+}
+
+Table media {
+  id bigint [pk, increment]
+  model_type varchar(255) [not null]
+  model_id bigint [not null]
+  uuid char(36) [unique]
+  collection_name varchar(255) [not null]
+  name varchar(255) [not null]
+  file_name varchar(255) [not null]
+  mime_type varchar(255)
+  disk varchar(255) [not null]
+  conversions_disk varchar(255)
+  size bigint [not null]
+  manipulations json [not null]
+  custom_properties json [not null]
+  generated_conversions json [not null]
+  responsive_images json [not null]
+  order_column int
+  created_at timestamp
+  updated_at timestamp
+  Note: 'spatie/laravel-medialibrary polimorfik tablosu (products 1-N)'
+}
+
+Table carts {
+  id bigint [pk, increment]
+  user_id bigint [unique, ref: - users.id]
+  session_id varchar(255) [unique]
+  created_at timestamp
+  updated_at timestamp
+}
+
+Table cart_items {
+  id bigint [pk, increment]
+  cart_id bigint [not null, ref: > carts.id]
+  variant_id bigint [not null, ref: > product_variants.id]
+  quantity int [not null, default: 1]
+  created_at timestamp
+  updated_at timestamp
+}
+
+Table favorites {
+  id bigint [pk, increment]
+  user_id bigint [not null, ref: > users.id]
+  product_id bigint [not null, ref: > products.id]
+  created_at timestamp
+  updated_at timestamp
+  indexes {
+    (user_id, product_id) [unique]
+  }
+}
+
+Table coupons {
+  id bigint [pk, increment]
+  code varchar(50) [not null, unique]
+  type varchar(20) [not null, note: 'percentage (yuzde), fixed (tutar)']
+  value decimal(10,2) [not null]
+  min_total decimal(10,2) [not null, default: 0.00]
+  starts_at timestamp
+  ends_at timestamp
+  usage_limit int
+  used_count int [not null, default: 0]
+  created_at timestamp
+  updated_at timestamp
+}
+
+Table orders {
+  id bigint [pk, increment]
+  user_id bigint [not null, ref: > users.id]
+  coupon_id bigint [ref: > coupons.id]
+  order_number varchar(50) [not null, unique]
+  idempotency_key varchar(100) [unique]
+  address json [not null, note: 'Sipariş anındaki adres kopyası (snapshot)']
+  subtotal decimal(10,2) [not null]
+  discount decimal(10,2) [not null, default: 0.00]
+  shipping decimal(10,2) [not null, default: 0.00]
+  total decimal(10,2) [not null]
+  payment_status varchar(20) [not null, default: 'pending', note: 'pending, paid, failed, refunded']
+  created_at timestamp
+  updated_at timestamp
+}
+
+Table sub_orders {
+  id bigint [pk, increment]
+  order_id bigint [not null, ref: > orders.id]
+  seller_id bigint [not null, ref: > sellers.id]
+  status varchar(30) [not null, default: 'pending_approval', note: 'pending_approval, preparing, shipped, delivered, cancelled, returned']
+  cargo_company varchar(100)
+  tracking_number varchar(100)
+  subtotal decimal(10,2) [not null, default: 0.00]
+  shipping_amount decimal(10,2) [not null, default: 0.00]
+  commission_amount decimal(10,2) [not null, default: 0.00]
+  created_at timestamp
+  updated_at timestamp
+}
+
+Table order_items {
+  id bigint [pk, increment]
+  sub_order_id bigint [not null, ref: > sub_orders.id]
+  variant_id bigint [ref: > product_variants.id]
+  product_name varchar(255) [not null, note: 'Sipariş anındaki ürün adı kopyası']
+  price decimal(10,2) [not null, note: 'Sipariş anındaki birim fiyat kopyası']
+  quantity int [not null]
+  created_at timestamp
+  updated_at timestamp
+}
+
+Table payments {
+  id bigint [pk, increment]
+  order_id bigint [not null, ref: > orders.id]
+  provider varchar(50) [not null, default: 'iyzico']
+  transaction_id varchar(255)
+  amount decimal(10,2) [not null]
+  status varchar(20) [not null, default: 'pending']
+  raw_response json
+  created_at timestamp
+  updated_at timestamp
+}
+
+Table returns {
+  id bigint [pk, increment]
+  order_item_id bigint [not null, unique, ref: - order_items.id]
+  reason text [not null]
+  status varchar(20) [not null, default: 'pending', note: 'pending, approved, rejected, completed']
+  refund_amount decimal(10,2) [not null]
+  created_at timestamp
+  updated_at timestamp
+}
+
+Table reviews {
+  id bigint [pk, increment]
+  user_id bigint [not null, ref: > users.id]
+  product_id bigint [not null, ref: > products.id]
+  order_item_id bigint [not null, unique, ref: - order_items.id]
+  rating tinyint [not null, note: '1 ile 5 arası']
+  comment text
+  is_approved boolean [not null, default: false]
+  created_at timestamp
+  updated_at timestamp
+}
+
+Table seller_payouts {
+  id bigint [pk, increment]
+  seller_id bigint [not null, ref: > sellers.id]
+  period varchar(20) [not null, note: 'Örn: 2026-11']
+  gross decimal(10,2) [not null]
+  commission decimal(10,2) [not null]
+  net decimal(10,2) [not null]
+  paid_at timestamp
+  created_at timestamp
+  updated_at timestamp
+}
+
+Table banners {
+  id bigint [pk, increment]
+  title varchar(255) [not null]
+  image varchar(255) [not null]
+  url varchar(255)
+  sort int [not null, default: 0]
+  is_active boolean [not null, default: true]
+  created_at timestamp
+  updated_at timestamp
+}
