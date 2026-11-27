@@ -1,0 +1,59 @@
+GOOGLE FLOW AGENT MODU — PAKET 9 (18 BENZERSİZ ÜRÜN / RENK GÖRSELİ: #193–#210)
+==========================================================================================
+
+Aşağıdaki listedeki her bir madde için 1:1 kare, temiz açık gri/beyaz stüdyo fonlu, metinsiz ve filigransız
+gerçekçi bir e-ticaret ürün fotoğrafı üret. Her ürün kendi tasarımına ve belirtilen tam renk varyantına uygun, benzersiz olsun:
+
+[193] DOSYA: p092-50-ml-sise.jpg | ÜRÜN: VeloStyle Velvet Rose Eau de Parfum | RENK: 50 ml Şişe
+PROMPT: Studio e-commerce product photograph (1:1 square, clean seamless soft off-white background, crisp natural studio lighting, no text, no logos, no watermarks). Product: "VeloStyle Velvet Rose Eau de Parfum" (Parfüm category, distinct unique design #92). Exact color variant: "50 ml Şişe". Visual/material details: Koku Ailesi: Çiçeksi & Pudralı, Hacim: 50 ml. High-resolution commercial catalog photography.
+
+[194] DOSYA: p092-100-ml-buyuk-boy.jpg | ÜRÜN: VeloStyle Velvet Rose Eau de Parfum | RENK: 100 ml Büyük Boy
+PROMPT: Studio e-commerce product photograph (1:1 square, clean seamless soft off-white background, crisp natural studio lighting, no text, no logos, no watermarks). Product: "VeloStyle Velvet Rose Eau de Parfum" (Parfüm category, distinct unique design #92). Exact color variant: "100 ml Büyük Boy". Visual/material details: Koku Ailesi: Çiçeksi & Pudralı, Hacim: 50 ml. High-resolution commercial catalog photography.
+
+[195] DOSYA: p093-50-ml-sise.jpg | ÜRÜN: PureGlow Citrus Breeze Eau de Parfum | RENK: 50 ml Şişe
+PROMPT: Studio e-commerce product photograph (1:1 square, clean seamless soft off-white background, crisp natural studio lighting, no text, no logos, no watermarks). Product: "PureGlow Citrus Breeze Eau de Parfum" (Parfüm category, distinct unique design #93). Exact color variant: "50 ml Şişe". Visual/material details: Koku Ailesi: Fresh & Narenciye, Hacim: 100 ml. High-resolution commercial catalog photography.
+
+[196] DOSYA: p093-100-ml-buyuk-boy.jpg | ÜRÜN: PureGlow Citrus Breeze Eau de Parfum | RENK: 100 ml Büyük Boy
+PROMPT: Studio e-commerce product photograph (1:1 square, clean seamless soft off-white background, crisp natural studio lighting, no text, no logos, no watermarks). Product: "PureGlow Citrus Breeze Eau de Parfum" (Parfüm category, distinct unique design #93). Exact color variant: "100 ml Büyük Boy". Visual/material details: Koku Ailesi: Fresh & Narenciye, Hacim: 100 ml. High-resolution commercial catalog photography.
+
+[197] DOSYA: p094-50-ml-sise.jpg | ÜRÜN: VeloStyle Oud Royale Intense Parfüm | RENK: 50 ml Şişe
+PROMPT: Studio e-commerce product photograph (1:1 square, clean seamless soft off-white background, crisp natural studio lighting, no text, no logos, no watermarks). Product: "VeloStyle Oud Royale Intense Parfüm" (Parfüm category, distinct unique design #94). Exact color variant: "50 ml Şişe". Visual/material details: Koku Ailesi: Odunsu & Amber, Hacim: 100 ml. High-resolution commercial catalog photography.
+
+[198] DOSYA: p094-100-ml-buyuk-boy.jpg | ÜRÜN: VeloStyle Oud Royale Intense Parfüm | RENK: 100 ml Büyük Boy
+PROMPT: Studio e-commerce product photograph (1:1 square, clean seamless soft off-white background, crisp natural studio lighting, no text, no logos, no watermarks). Product: "VeloStyle Oud Royale Intense Parfüm" (Parfüm category, distinct unique design #94). Exact color variant: "100 ml Büyük Boy". Visual/material details: Koku Ailesi: Odunsu & Amber, Hacim: 100 ml. High-resolution commercial catalog photography.
+
+[199] DOSYA: p095-50-ml-sise.jpg | ÜRÜN: PureGlow Jasmine Bloom Eau de Parfum | RENK: 50 ml Şişe
+PROMPT: Studio e-commerce product photograph (1:1 square, clean seamless soft off-white background, crisp natural studio lighting, no text, no logos, no watermarks). Product: "PureGlow Jasmine Bloom Eau de Parfum" (Parfüm category, distinct unique design #95). Exact color variant: "50 ml Şişe". Visual/material details: Koku Ailesi: Çiçeksi & Pudralı, Hacim: 50 ml. High-resolution commercial catalog photography.
+
+[200] DOSYA: p095-100-ml-buyuk-boy.jpg | ÜRÜN: PureGlow Jasmine Bloom Eau de Parfum | RENK: 100 ml Büyük Boy
+PROMPT: Studio e-commerce product photograph (1:1 square, clean seamless soft off-white background, crisp natural studio lighting, no text, no logos, no watermarks). Product: "PureGlow Jasmine Bloom Eau de Parfum" (Parfüm category, distinct unique design #95). Exact color variant: "100 ml Büyük Boy". Visual/material details: Koku Ailesi: Çiçeksi & Pudralı, Hacim: 50 ml. High-resolution commercial catalog photography.
+
+[201] DOSYA: p096-50-ml-sise.jpg | ÜRÜN: VeloStyle Bergamot & Cedarwood EDP | RENK: 50 ml Şişe
+PROMPT: Studio e-commerce product photograph (1:1 square, clean seamless soft off-white background, crisp natural studio lighting, no text, no logos, no watermarks). Product: "VeloStyle Bergamot & Cedarwood EDP" (Parfüm category, distinct unique design #96). Exact color variant: "50 ml Şişe". Visual/material details: Koku Ailesi: Fresh & Narenciye, Hacim: 100 ml. High-resolution commercial catalog photography.
+
+[202] DOSYA: p096-100-ml-buyuk-boy.jpg | ÜRÜN: VeloStyle Bergamot & Cedarwood EDP | RENK: 100 ml Büyük Boy
+PROMPT: Studio e-commerce product photograph (1:1 square, clean seamless soft off-white background, crisp natural studio lighting, no text, no logos, no watermarks). Product: "VeloStyle Bergamot & Cedarwood EDP" (Parfüm category, distinct unique design #96). Exact color variant: "100 ml Büyük Boy". Visual/material details: Koku Ailesi: Fresh & Narenciye, Hacim: 100 ml. High-resolution commercial catalog photography.
+
+[203] DOSYA: p097-50-ml-sise.jpg | ÜRÜN: PureGlow Santal Gold Eau de Parfum | RENK: 50 ml Şişe
+PROMPT: Studio e-commerce product photograph (1:1 square, clean seamless soft off-white background, crisp natural studio lighting, no text, no logos, no watermarks). Product: "PureGlow Santal Gold Eau de Parfum" (Parfüm category, distinct unique design #97). Exact color variant: "50 ml Şişe". Visual/material details: Koku Ailesi: Odunsu & Amber, Hacim: 100 ml. High-resolution commercial catalog photography.
+
+[204] DOSYA: p097-100-ml-buyuk-boy.jpg | ÜRÜN: PureGlow Santal Gold Eau de Parfum | RENK: 100 ml Büyük Boy
+PROMPT: Studio e-commerce product photograph (1:1 square, clean seamless soft off-white background, crisp natural studio lighting, no text, no logos, no watermarks). Product: "PureGlow Santal Gold Eau de Parfum" (Parfüm category, distinct unique design #97). Exact color variant: "100 ml Büyük Boy". Visual/material details: Koku Ailesi: Odunsu & Amber, Hacim: 100 ml. High-resolution commercial catalog photography.
+
+[205] DOSYA: p098-50-ml-sise.jpg | ÜRÜN: VeloStyle White Musk & Peony EDP | RENK: 50 ml Şişe
+PROMPT: Studio e-commerce product photograph (1:1 square, clean seamless soft off-white background, crisp natural studio lighting, no text, no logos, no watermarks). Product: "VeloStyle White Musk & Peony EDP" (Parfüm category, distinct unique design #98). Exact color variant: "50 ml Şişe". Visual/material details: Koku Ailesi: Çiçeksi & Pudralı, Hacim: 50 ml. High-resolution commercial catalog photography.
+
+[206] DOSYA: p098-100-ml-buyuk-boy.jpg | ÜRÜN: VeloStyle White Musk & Peony EDP | RENK: 100 ml Büyük Boy
+PROMPT: Studio e-commerce product photograph (1:1 square, clean seamless soft off-white background, crisp natural studio lighting, no text, no logos, no watermarks). Product: "VeloStyle White Musk & Peony EDP" (Parfüm category, distinct unique design #98). Exact color variant: "100 ml Büyük Boy". Visual/material details: Koku Ailesi: Çiçeksi & Pudralı, Hacim: 50 ml. High-resolution commercial catalog photography.
+
+[207] DOSYA: p099-50-ml-sise.jpg | ÜRÜN: PureGlow Mediterranean Sea Salt EDP | RENK: 50 ml Şişe
+PROMPT: Studio e-commerce product photograph (1:1 square, clean seamless soft off-white background, crisp natural studio lighting, no text, no logos, no watermarks). Product: "PureGlow Mediterranean Sea Salt EDP" (Parfüm category, distinct unique design #99). Exact color variant: "50 ml Şişe". Visual/material details: Koku Ailesi: Fresh & Narenciye, Hacim: 100 ml. High-resolution commercial catalog photography.
+
+[208] DOSYA: p099-100-ml-buyuk-boy.jpg | ÜRÜN: PureGlow Mediterranean Sea Salt EDP | RENK: 100 ml Büyük Boy
+PROMPT: Studio e-commerce product photograph (1:1 square, clean seamless soft off-white background, crisp natural studio lighting, no text, no logos, no watermarks). Product: "PureGlow Mediterranean Sea Salt EDP" (Parfüm category, distinct unique design #99). Exact color variant: "100 ml Büyük Boy". Visual/material details: Koku Ailesi: Fresh & Narenciye, Hacim: 100 ml. High-resolution commercial catalog photography.
+
+[209] DOSYA: p100-50-ml-sise.jpg | ÜRÜN: VeloStyle Midnight Vanilla & Amber EDP | RENK: 50 ml Şişe
+PROMPT: Studio e-commerce product photograph (1:1 square, clean seamless soft off-white background, crisp natural studio lighting, no text, no logos, no watermarks). Product: "VeloStyle Midnight Vanilla & Amber EDP" (Parfüm category, distinct unique design #100). Exact color variant: "50 ml Şişe". Visual/material details: Koku Ailesi: Odunsu & Amber, Hacim: 100 ml. High-resolution commercial catalog photography.
+
+[210] DOSYA: p100-100-ml-buyuk-boy.jpg | ÜRÜN: VeloStyle Midnight Vanilla & Amber EDP | RENK: 100 ml Büyük Boy
+PROMPT: Studio e-commerce product photograph (1:1 square, clean seamless soft off-white background, crisp natural studio lighting, no text, no logos, no watermarks). Product: "VeloStyle Midnight Vanilla & Amber EDP" (Parfüm category, distinct unique design #100). Exact color variant: "100 ml Büyük Boy". Visual/material details: Koku Ailesi: Odunsu & Amber, Hacim: 100 ml. High-resolution commercial catalog photography.

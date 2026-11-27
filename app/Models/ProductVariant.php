@@ -18,6 +18,7 @@ class ProductVariant extends Model
         'sku',
         'color',
         'size',
+        'image_path',
         'price',
         'discount_price',
         'stock',
@@ -68,5 +69,42 @@ class ProductVariant extends Model
         return collect([$this->color, $this->size])
             ->filter()
             ->implode(' / ') ?: $this->sku;
+    }
+
+    public function hasUniqueImageFile(): bool
+    {
+        return is_string($this->image_path)
+            && $this->image_path !== ''
+            && is_file(public_path($this->image_path));
+    }
+
+    public function imageUrl(): ?string
+    {
+        if (! $this->hasUniqueImageFile()) {
+            return null;
+        }
+
+        return asset((string) $this->image_path);
+    }
+
+    /**
+     * Renk adına karşılık gelen arayüz renk kodu (swatch gösterimi için).
+     */
+    public function swatchHex(): string
+    {
+        $color = mb_strtolower((string) $this->color);
+
+        return match (true) {
+            str_contains($color, 'siyah') || str_contains($color, 'antrasit') => '#18181b',
+            str_contains($color, 'beyaz') => '#f8fafc',
+            str_contains($color, 'gümüş') || str_contains($color, 'gri') || str_contains($color, 'titanyum') || str_contains($color, 'inoks') || str_contains($color, 'krom') => '#94a3b8',
+            str_contains($color, 'lacivert') || str_contains($color, 'mavi') => '#1e3a8a',
+            str_contains($color, 'bej') || str_contains($color, 'taş') => '#d6c7b2',
+            str_contains($color, 'yeşil') || str_contains($color, 'haki') => '#3f6212',
+            str_contains($color, 'kırmızı') => '#dc2626',
+            str_contains($color, 'amber') || str_contains($color, 'pirinç') || str_contains($color, 'meşe') || str_contains($color, 'altın') => '#b45309',
+            str_contains($color, 'turuncu') => '#ea580c',
+            default => '#4f46e5',
+        };
     }
 }

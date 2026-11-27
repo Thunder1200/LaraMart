@@ -1,0 +1,77 @@
+GOOGLE FLOW AGENT MODU — PAKET 5 (24 BENZERSİZ ÜRÜN / RENK GÖRSELİ: #097–#120)
+==========================================================================================
+
+Aşağıdaki listedeki her bir madde için 1:1 kare, temiz açık gri/beyaz stüdyo fonlu, metinsiz ve filigransız
+gerçekçi bir e-ticaret ürün fotoğrafı üret. Her ürün kendi tasarımına ve belirtilen tam renk varyantına uygun, benzersiz olsun:
+
+[097] DOSYA: p044-inoks-celik.jpg | ÜRÜN: ZenLiving BrewPro Cam Karaf Kahve Makinesi | RENK: İnoks Çelik
+PROMPT: Studio e-commerce product photograph (1:1 square, clean seamless soft off-white background, crisp natural studio lighting, no text, no logos, no watermarks). Product: "ZenLiving BrewPro Cam Karaf Kahve Makinesi" (Mutfak Gereçleri category, distinct unique design #44). Exact color variant: "İnoks Çelik". Visual/material details: Materyal: Mat Siyah Çelik, Güç / Teknoloji: 1200W Filtre, Garanti Süresi: 24 Ay. High-resolution commercial catalog photography.
+
+[098] DOSYA: p044-mat-siyah.jpg | ÜRÜN: ZenLiving BrewPro Cam Karaf Kahve Makinesi | RENK: Mat Siyah
+PROMPT: Studio e-commerce product photograph (1:1 square, clean seamless soft off-white background, crisp natural studio lighting, no text, no logos, no watermarks). Product: "ZenLiving BrewPro Cam Karaf Kahve Makinesi" (Mutfak Gereçleri category, distinct unique design #44). Exact color variant: "Mat Siyah". Visual/material details: Materyal: Mat Siyah Çelik, Güç / Teknoloji: 1200W Filtre, Garanti Süresi: 24 Ay. High-resolution commercial catalog photography.
+
+[099] DOSYA: p045-inoks-celik.jpg | ÜRÜN: HomeCraft Compact Espresso & Cappuccino Makinesi | RENK: İnoks Çelik
+PROMPT: Studio e-commerce product photograph (1:1 square, clean seamless soft off-white background, crisp natural studio lighting, no text, no logos, no watermarks). Product: "HomeCraft Compact Espresso & Cappuccino Makinesi" (Mutfak Gereçleri category, distinct unique design #45). Exact color variant: "İnoks Çelik". Visual/material details: Materyal: Mat Siyah Çelik, Güç / Teknoloji: 15 Bar / 1450W, Garanti Süresi: 24 Ay. High-resolution commercial catalog photography.
+
+[100] DOSYA: p045-mat-siyah.jpg | ÜRÜN: HomeCraft Compact Espresso & Cappuccino Makinesi | RENK: Mat Siyah
+PROMPT: Studio e-commerce product photograph (1:1 square, clean seamless soft off-white background, crisp natural studio lighting, no text, no logos, no watermarks). Product: "HomeCraft Compact Espresso & Cappuccino Makinesi" (Mutfak Gereçleri category, distinct unique design #45). Exact color variant: "Mat Siyah". Visual/material details: Materyal: Mat Siyah Çelik, Güç / Teknoloji: 15 Bar / 1450W, Garanti Süresi: 24 Ay. High-resolution commercial catalog photography.
+
+[101] DOSYA: p046-inoks-celik.jpg | ÜRÜN: ZenLiving ThermalPot Zamanlayıcılı Filtre Kahve | RENK: İnoks Çelik
+PROMPT: Studio e-commerce product photograph (1:1 square, clean seamless soft off-white background, crisp natural studio lighting, no text, no logos, no watermarks). Product: "ZenLiving ThermalPot Zamanlayıcılı Filtre Kahve" (Mutfak Gereçleri category, distinct unique design #46). Exact color variant: "İnoks Çelik". Visual/material details: Materyal: Fırçalanmış Krom, Güç / Teknoloji: 1200W Filtre, Garanti Süresi: 24 Ay. High-resolution commercial catalog photography.
+
+[102] DOSYA: p046-mat-siyah.jpg | ÜRÜN: ZenLiving ThermalPot Zamanlayıcılı Filtre Kahve | RENK: Mat Siyah
+PROMPT: Studio e-commerce product photograph (1:1 square, clean seamless soft off-white background, crisp natural studio lighting, no text, no logos, no watermarks). Product: "ZenLiving ThermalPot Zamanlayıcılı Filtre Kahve" (Mutfak Gereçleri category, distinct unique design #46). Exact color variant: "Mat Siyah". Visual/material details: Materyal: Fırçalanmış Krom, Güç / Teknoloji: 1200W Filtre, Garanti Süresi: 24 Ay. High-resolution commercial catalog photography.
+
+[103] DOSYA: p047-inoks-celik.jpg | ÜRÜN: HomeCraft Artisan Dual Boiler Espresso Makinesi | RENK: İnoks Çelik
+PROMPT: Studio e-commerce product photograph (1:1 square, clean seamless soft off-white background, crisp natural studio lighting, no text, no logos, no watermarks). Product: "HomeCraft Artisan Dual Boiler Espresso Makinesi" (Mutfak Gereçleri category, distinct unique design #47). Exact color variant: "İnoks Çelik". Visual/material details: Materyal: Paslanmaz Çelik, Güç / Teknoloji: 20 Bar / 1600W, Garanti Süresi: 36 Ay. High-resolution commercial catalog photography.
+
+[104] DOSYA: p047-mat-siyah.jpg | ÜRÜN: HomeCraft Artisan Dual Boiler Espresso Makinesi | RENK: Mat Siyah
+PROMPT: Studio e-commerce product photograph (1:1 square, clean seamless soft off-white background, crisp natural studio lighting, no text, no logos, no watermarks). Product: "HomeCraft Artisan Dual Boiler Espresso Makinesi" (Mutfak Gereçleri category, distinct unique design #47). Exact color variant: "Mat Siyah". Visual/material details: Materyal: Paslanmaz Çelik, Güç / Teknoloji: 20 Bar / 1600W, Garanti Süresi: 36 Ay. High-resolution commercial catalog photography.
+
+[105] DOSYA: p048-inoks-celik.jpg | ÜRÜN: ZenLiving MorningCup Dijital Filtre Kahve | RENK: İnoks Çelik
+PROMPT: Studio e-commerce product photograph (1:1 square, clean seamless soft off-white background, crisp natural studio lighting, no text, no logos, no watermarks). Product: "ZenLiving MorningCup Dijital Filtre Kahve" (Mutfak Gereçleri category, distinct unique design #48). Exact color variant: "İnoks Çelik". Visual/material details: Materyal: Mat Siyah Çelik, Güç / Teknoloji: 1200W Filtre, Garanti Süresi: 24 Ay. High-resolution commercial catalog photography.
+
+[106] DOSYA: p048-mat-siyah.jpg | ÜRÜN: ZenLiving MorningCup Dijital Filtre Kahve | RENK: Mat Siyah
+PROMPT: Studio e-commerce product photograph (1:1 square, clean seamless soft off-white background, crisp natural studio lighting, no text, no logos, no watermarks). Product: "ZenLiving MorningCup Dijital Filtre Kahve" (Mutfak Gereçleri category, distinct unique design #48). Exact color variant: "Mat Siyah". Visual/material details: Materyal: Mat Siyah Çelik, Güç / Teknoloji: 1200W Filtre, Garanti Süresi: 24 Ay. High-resolution commercial catalog photography.
+
+[107] DOSYA: p049-inoks-celik.jpg | ÜRÜN: HomeCraft Milano Chrome 15 Bar Espresso | RENK: İnoks Çelik
+PROMPT: Studio e-commerce product photograph (1:1 square, clean seamless soft off-white background, crisp natural studio lighting, no text, no logos, no watermarks). Product: "HomeCraft Milano Chrome 15 Bar Espresso" (Mutfak Gereçleri category, distinct unique design #49). Exact color variant: "İnoks Çelik". Visual/material details: Materyal: Fırçalanmış Krom, Güç / Teknoloji: 15 Bar / 1450W, Garanti Süresi: 24 Ay. High-resolution commercial catalog photography.
+
+[108] DOSYA: p049-mat-siyah.jpg | ÜRÜN: HomeCraft Milano Chrome 15 Bar Espresso | RENK: Mat Siyah
+PROMPT: Studio e-commerce product photograph (1:1 square, clean seamless soft off-white background, crisp natural studio lighting, no text, no logos, no watermarks). Product: "HomeCraft Milano Chrome 15 Bar Espresso" (Mutfak Gereçleri category, distinct unique design #49). Exact color variant: "Mat Siyah". Visual/material details: Materyal: Fırçalanmış Krom, Güç / Teknoloji: 15 Bar / 1450W, Garanti Süresi: 24 Ay. High-resolution commercial catalog photography.
+
+[109] DOSYA: p050-inoks-celik.jpg | ÜRÜN: ZenLiving CafeLine Pro 20 Bar Espresso Makinesi | RENK: İnoks Çelik
+PROMPT: Studio e-commerce product photograph (1:1 square, clean seamless soft off-white background, crisp natural studio lighting, no text, no logos, no watermarks). Product: "ZenLiving CafeLine Pro 20 Bar Espresso Makinesi" (Mutfak Gereçleri category, distinct unique design #50). Exact color variant: "İnoks Çelik". Visual/material details: Materyal: Paslanmaz Çelik, Güç / Teknoloji: 20 Bar / 1600W, Garanti Süresi: 36 Ay. High-resolution commercial catalog photography.
+
+[110] DOSYA: p050-mat-siyah.jpg | ÜRÜN: ZenLiving CafeLine Pro 20 Bar Espresso Makinesi | RENK: Mat Siyah
+PROMPT: Studio e-commerce product photograph (1:1 square, clean seamless soft off-white background, crisp natural studio lighting, no text, no logos, no watermarks). Product: "ZenLiving CafeLine Pro 20 Bar Espresso Makinesi" (Mutfak Gereçleri category, distinct unique design #50). Exact color variant: "Mat Siyah". Visual/material details: Materyal: Paslanmaz Çelik, Güç / Teknoloji: 20 Bar / 1600W, Garanti Süresi: 36 Ay. High-resolution commercial catalog photography.
+
+[111] DOSYA: p051-mat-siyah.jpg | ÜRÜN: ZenLiving Nordic Meşe & Metal LED Masa Lambası | RENK: Mat Siyah
+PROMPT: Studio e-commerce product photograph (1:1 square, clean seamless soft off-white background, crisp natural studio lighting, no text, no logos, no watermarks). Product: "ZenLiving Nordic Meşe & Metal LED Masa Lambası" (Aydınlatma & Dekor category, distinct unique design #51). Exact color variant: "Mat Siyah". Visual/material details: Materyal: Alüminyum & Meşe Ahşap, Güç / Teknoloji: LED 12W Sıcak Işık, Garanti Süresi: 24 Ay. High-resolution commercial catalog photography.
+
+[112] DOSYA: p051-pirinc-mese.jpg | ÜRÜN: ZenLiving Nordic Meşe & Metal LED Masa Lambası | RENK: Pirinç / Meşe
+PROMPT: Studio e-commerce product photograph (1:1 square, clean seamless soft off-white background, crisp natural studio lighting, no text, no logos, no watermarks). Product: "ZenLiving Nordic Meşe & Metal LED Masa Lambası" (Aydınlatma & Dekor category, distinct unique design #51). Exact color variant: "Pirinç / Meşe". Visual/material details: Materyal: Alüminyum & Meşe Ahşap, Güç / Teknoloji: LED 12W Sıcak Işık, Garanti Süresi: 24 Ay. High-resolution commercial catalog photography.
+
+[113] DOSYA: p052-mat-siyah.jpg | ÜRÜN: HomeCraft Lumina Dimmerli Çalışma Lambası | RENK: Mat Siyah
+PROMPT: Studio e-commerce product photograph (1:1 square, clean seamless soft off-white background, crisp natural studio lighting, no text, no logos, no watermarks). Product: "HomeCraft Lumina Dimmerli Çalışma Lambası" (Aydınlatma & Dekor category, distinct unique design #52). Exact color variant: "Mat Siyah". Visual/material details: Materyal: Mat Metal, Güç / Teknoloji: LED 18W Dimmerli, Garanti Süresi: 24 Ay. High-resolution commercial catalog photography.
+
+[114] DOSYA: p052-pirinc-mese.jpg | ÜRÜN: HomeCraft Lumina Dimmerli Çalışma Lambası | RENK: Pirinç / Meşe
+PROMPT: Studio e-commerce product photograph (1:1 square, clean seamless soft off-white background, crisp natural studio lighting, no text, no logos, no watermarks). Product: "HomeCraft Lumina Dimmerli Çalışma Lambası" (Aydınlatma & Dekor category, distinct unique design #52). Exact color variant: "Pirinç / Meşe". Visual/material details: Materyal: Mat Metal, Güç / Teknoloji: LED 18W Dimmerli, Garanti Süresi: 24 Ay. High-resolution commercial catalog photography.
+
+[115] DOSYA: p053-mat-siyah.jpg | ÜRÜN: ZenLiving Aura Pirinç & Buzlu Cam Abajur | RENK: Mat Siyah
+PROMPT: Studio e-commerce product photograph (1:1 square, clean seamless soft off-white background, crisp natural studio lighting, no text, no logos, no watermarks). Product: "ZenLiving Aura Pirinç & Buzlu Cam Abajur" (Aydınlatma & Dekor category, distinct unique design #53). Exact color variant: "Mat Siyah". Visual/material details: Materyal: Pirinç & Buzlu Cam, Güç / Teknoloji: LED 12W Sıcak Işık, Garanti Süresi: 24 Ay. High-resolution commercial catalog photography.
+
+[116] DOSYA: p053-pirinc-mese.jpg | ÜRÜN: ZenLiving Aura Pirinç & Buzlu Cam Abajur | RENK: Pirinç / Meşe
+PROMPT: Studio e-commerce product photograph (1:1 square, clean seamless soft off-white background, crisp natural studio lighting, no text, no logos, no watermarks). Product: "ZenLiving Aura Pirinç & Buzlu Cam Abajur" (Aydınlatma & Dekor category, distinct unique design #53). Exact color variant: "Pirinç / Meşe". Visual/material details: Materyal: Pirinç & Buzlu Cam, Güç / Teknoloji: LED 12W Sıcak Işık, Garanti Süresi: 24 Ay. High-resolution commercial catalog photography.
+
+[117] DOSYA: p054-mat-siyah.jpg | ÜRÜN: HomeCraft StudioDesk Dokunmatik LED Lamba | RENK: Mat Siyah
+PROMPT: Studio e-commerce product photograph (1:1 square, clean seamless soft off-white background, crisp natural studio lighting, no text, no logos, no watermarks). Product: "HomeCraft StudioDesk Dokunmatik LED Lamba" (Aydınlatma & Dekor category, distinct unique design #54). Exact color variant: "Mat Siyah". Visual/material details: Materyal: Mat Metal, Güç / Teknoloji: LED 18W Dimmerli, Garanti Süresi: 24 Ay. High-resolution commercial catalog photography.
+
+[118] DOSYA: p054-pirinc-mese.jpg | ÜRÜN: HomeCraft StudioDesk Dokunmatik LED Lamba | RENK: Pirinç / Meşe
+PROMPT: Studio e-commerce product photograph (1:1 square, clean seamless soft off-white background, crisp natural studio lighting, no text, no logos, no watermarks). Product: "HomeCraft StudioDesk Dokunmatik LED Lamba" (Aydınlatma & Dekor category, distinct unique design #54). Exact color variant: "Pirinç / Meşe". Visual/material details: Materyal: Mat Metal, Güç / Teknoloji: LED 18W Dimmerli, Garanti Süresi: 24 Ay. High-resolution commercial catalog photography.
+
+[119] DOSYA: p055-mat-siyah.jpg | ÜRÜN: ZenLiving Oslo Doğal Ahşap Gövdeli Masa Lambası | RENK: Mat Siyah
+PROMPT: Studio e-commerce product photograph (1:1 square, clean seamless soft off-white background, crisp natural studio lighting, no text, no logos, no watermarks). Product: "ZenLiving Oslo Doğal Ahşap Gövdeli Masa Lambası" (Aydınlatma & Dekor category, distinct unique design #55). Exact color variant: "Mat Siyah". Visual/material details: Materyal: Alüminyum & Meşe Ahşap, Güç / Teknoloji: LED 12W Sıcak Işık, Garanti Süresi: 24 Ay. High-resolution commercial catalog photography.
+
+[120] DOSYA: p055-pirinc-mese.jpg | ÜRÜN: ZenLiving Oslo Doğal Ahşap Gövdeli Masa Lambası | RENK: Pirinç / Meşe
+PROMPT: Studio e-commerce product photograph (1:1 square, clean seamless soft off-white background, crisp natural studio lighting, no text, no logos, no watermarks). Product: "ZenLiving Oslo Doğal Ahşap Gövdeli Masa Lambası" (Aydınlatma & Dekor category, distinct unique design #55). Exact color variant: "Pirinç / Meşe". Visual/material details: Materyal: Alüminyum & Meşe Ahşap, Güç / Teknoloji: LED 12W Sıcak Işık, Garanti Süresi: 24 Ay. High-resolution commercial catalog photography.

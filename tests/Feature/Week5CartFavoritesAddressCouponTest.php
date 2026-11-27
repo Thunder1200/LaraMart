@@ -2,11 +2,13 @@
 
 use App\Models\Address;
 use App\Models\Cart;
+use App\Models\Category;
 use App\Models\Coupon;
 use App\Models\Product;
 use App\Models\ProductVariant;
 use App\Models\Seller;
 use App\Models\User;
+use Illuminate\Support\Facades\DB;
 use Livewire\Volt\Volt;
 
 test('user cannot add more items to cart than available stock', function () {
@@ -137,6 +139,17 @@ test('expired coupon returns error message while valid coupon applies discount t
         ->assertOk()
         ->assertSee('-50,00 TL')
         ->assertSee('450,00 TL');
+
+    $this->actingAs($user)
+        ->delete(route('cart.coupon.remove'))
+        ->assertRedirect(route('cart.index'))
+        ->assertSessionHas('status', 'Kupon sepetten kaldırıldı.');
+
+    $this->actingAs($user)
+        ->get(route('cart.index'))
+        ->assertOk()
+        ->assertDontSee('-50,00 TL')
+        ->assertSee('500,00 TL');
 });
 
 test('customer can toggle favorites and view them in account favorites page', function () {
@@ -158,6 +171,99 @@ test('customer can toggle favorites and view them in account favorites page', fu
         ->assertSessionHas('status');
 
     expect($user->favorites()->count())->toBe(0);
+});
+
+test('favorite toggle supports AJAX JSON requests and product cards render active heart state without N+1 queries', function () {
+    $user = User::factory()->create();
+    $category = Category::factory()->create(['slug' => 'favori-test-kat']);
+    $productA = Product::factory()->create([
+        'category_id' => $category->id,
+        'name' => 'Favori Ürün A',
+        'status' => 'active',
+    ]);
+    $productB = Product::factory()->create([
+        'category_id' => $category->id,
+        'name' => 'Normal Ürün B',
+        'status' => 'active',
+    ]);
+    ProductVariant::factory()->create(['product_id' => $productA->id]);
+    ProductVariant::factory()->create(['product_id' => $productB->id]);
+
+    // AJAX ile favoriye ekle
+    $this->actingAs($user)
+        ->postJson(route('customer.favorites.toggle', $productA))
+        ->assertOk()
+        ->assertJson([
+            'favorited' => true,
+            'product_id' => $productA->id,
+        ]);
+
+    // Kategori sayfasında ürün kartında kalp aktif (dolu) render edilmeli ve N+1 oluşmamalı
+    for ($i = 1; $i <= 6; $i++) {
+        $extra = Product::factory()->create([
+            'category_id' => $category->id,
+            'name' => "Ekstra Ürün {$i}",
+            'status' => 'active',
+        ]);
+        ProductVariant::factory()->create(['product_id' => $extra->id]);
+    }
+
+    DB::flushQueryLog();
+    DB::enableQueryLog();
+
+    $response = $this->actingAs($user)
+        ->get(route('categories.show', $category->slug))
+        ->assertOk();
+
+    $queries = DB::getQueryLog();
+    DB::disableQueryLog();
+
+    $favoriteQueries = collect($queries)->filter(
+        fn (array $q): bool => str_contains(strtolower((string) ($q['query'] ?? '')), 'favorites')
+    );
+
+    $response
+        ->assertSee('data-test="favorite-toggle-'.$productA->id.'"', false)
+        ->assertSee('favorited: true,', false)
+        ->assertSee('aria-pressed="true"', false)
+        ->assertSee('fill="currentColor"', false)
+        ->assertSee('data-test="favorite-toggle-'.$productB->id.'"', false)
+        ->assertSee('favorited: false,', false)
+        ->assertSee('fill="none"', false)
+        ->assertSee('data-test="theme-toggle"', false)
+        ->assertSee('laramart-theme', false);
+
+    expect($favoriteQueries)->toHaveCount(1);
+    expect(count($queries))->toBeLessThan(20);
+
+    // Favorilerim sayfası anlık DOM kaldırma ve boş durum konteynerlerini render etmeli
+    $this->actingAs($user)
+        ->get(route('customer.favorites.index'))
+        ->assertOk()
+        ->assertSee('data-favorite-card-id="'.$productA->id.'"', false)
+        ->assertSee('data-test="favorites-grid"', false)
+        ->assertSee('data-test="favorites-empty-state"', false)
+        ->assertSee('Favori ürününüz bulunmuyor.');
+
+    // AJAX ile favoriden çıkar
+    $this->actingAs($user)
+        ->postJson(route('customer.favorites.toggle', $productA))
+        ->assertOk()
+        ->assertJson([
+            'favorited' => false,
+            'product_id' => $productA->id,
+        ]);
+
+    expect($user->favorites()->count())->toBe(0);
+});
+
+test('login page renders demo account fill micro-interaction and theme toggle', function () {
+    $this->get(route('login'))
+        ->assertOk()
+        ->assertSee('triggerDemoFill', false)
+        ->assertSee('Dolduruldu')
+        ->assertSee('data-test="theme-toggle"', false)
+        ->assertSee('laramart-theme', false);
 });
 
 test('customer can manage own addresses with city/district and default selection while others get 403', function () {

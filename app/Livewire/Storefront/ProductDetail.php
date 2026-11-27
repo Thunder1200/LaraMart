@@ -52,6 +52,7 @@ class ProductDetail extends Component
         }
 
         $this->selectedVariantId = $variant->id;
+        $this->activeImageIndex = 0;
         $this->quantity = 1;
         $this->cartNotice = null;
         $this->cartError = null;
@@ -113,12 +114,12 @@ class ProductDetail extends Component
     }
 
     /**
-     * @return list<array{id: int, url: string, thumb: string}>
+     * @return list<array{id: int, url: string, thumb: string, color?: string, variant_id?: int}>
      */
     #[Computed]
     public function gallery(): array
     {
-        return $this->product->galleryImages();
+        return $this->product->galleryImages($this->selectedVariant());
     }
 
     public function render(): View

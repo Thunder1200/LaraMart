@@ -21,6 +21,7 @@ class SearchController extends Controller
             'beden',
             'puan',
             'sirala',
+            'ozellik',
         ]);
 
         $result = $action->execute($filters);

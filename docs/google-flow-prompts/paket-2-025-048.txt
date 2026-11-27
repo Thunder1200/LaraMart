@@ -1,0 +1,77 @@
+GOOGLE FLOW AGENT MODU — PAKET 2 (24 BENZERSİZ ÜRÜN / RENK GÖRSELİ: #025–#048)
+==========================================================================================
+
+Aşağıdaki listedeki her bir madde için 1:1 kare, temiz açık gri/beyaz stüdyo fonlu, metinsiz ve filigransız
+gerçekçi bir e-ticaret ürün fotoğrafı üret. Her ürün kendi tasarımına ve belirtilen tam renk varyantına uygun, benzersiz olsun:
+
+[025] DOSYA: p013-antrasit.jpg | ÜRÜN: NovaTech Compact White Mekanik Klavye | RENK: Antrasit
+PROMPT: Studio e-commerce product photograph (1:1 square, clean seamless soft off-white background, crisp natural studio lighting, no text, no logos, no watermarks). Product: "NovaTech Compact White Mekanik Klavye" (Bilgisayar & Tablet category, distinct unique design #13). Exact color variant: "Antrasit". Visual/material details: Bellek (RAM): 8 GB, Depolama Kapasitesi: 256 GB SSD, Bağlantı Teknolojisi: Kablosuz 2.4 GHz & Bluetooth, Garanti Süresi: 24 Ay. High-resolution commercial catalog photography.
+
+[026] DOSYA: p013-mat-beyaz.jpg | ÜRÜN: NovaTech Compact White Mekanik Klavye | RENK: Mat Beyaz
+PROMPT: Studio e-commerce product photograph (1:1 square, clean seamless soft off-white background, crisp natural studio lighting, no text, no logos, no watermarks). Product: "NovaTech Compact White Mekanik Klavye" (Bilgisayar & Tablet category, distinct unique design #13). Exact color variant: "Mat Beyaz". Visual/material details: Bellek (RAM): 8 GB, Depolama Kapasitesi: 256 GB SSD, Bağlantı Teknolojisi: Kablosuz 2.4 GHz & Bluetooth, Garanti Süresi: 24 Ay. High-resolution commercial catalog photography.
+
+[027] DOSYA: p014-antrasit.jpg | ÜRÜN: NovaTech Creator Pro Alüminyum Klavye Seti | RENK: Antrasit
+PROMPT: Studio e-commerce product photograph (1:1 square, clean seamless soft off-white background, crisp natural studio lighting, no text, no logos, no watermarks). Product: "NovaTech Creator Pro Alüminyum Klavye Seti" (Bilgisayar & Tablet category, distinct unique design #14). Exact color variant: "Antrasit". Visual/material details: Bellek (RAM): 32 GB, Depolama Kapasitesi: 1 TB SSD, Bağlantı Teknolojisi: Wi-Fi 6E & USB-C, Garanti Süresi: 36 Ay. High-resolution commercial catalog photography.
+
+[028] DOSYA: p014-mat-beyaz.jpg | ÜRÜN: NovaTech Creator Pro Alüminyum Klavye Seti | RENK: Mat Beyaz
+PROMPT: Studio e-commerce product photograph (1:1 square, clean seamless soft off-white background, crisp natural studio lighting, no text, no logos, no watermarks). Product: "NovaTech Creator Pro Alüminyum Klavye Seti" (Bilgisayar & Tablet category, distinct unique design #14). Exact color variant: "Mat Beyaz". Visual/material details: Bellek (RAM): 32 GB, Depolama Kapasitesi: 1 TB SSD, Bağlantı Teknolojisi: Wi-Fi 6E & USB-C, Garanti Süresi: 36 Ay. High-resolution commercial catalog photography.
+
+[029] DOSYA: p015-antrasit.jpg | ÜRÜN: AeroSound SilentSwitch Ofis Mekanik Klavye | RENK: Antrasit
+PROMPT: Studio e-commerce product photograph (1:1 square, clean seamless soft off-white background, crisp natural studio lighting, no text, no logos, no watermarks). Product: "AeroSound SilentSwitch Ofis Mekanik Klavye" (Bilgisayar & Tablet category, distinct unique design #15). Exact color variant: "Antrasit". Visual/material details: Bellek (RAM): 8 GB, Depolama Kapasitesi: 512 GB SSD, Bağlantı Teknolojisi: Kablosuz 2.4 GHz & Bluetooth, Garanti Süresi: 24 Ay. High-resolution commercial catalog photography.
+
+[030] DOSYA: p015-mat-beyaz.jpg | ÜRÜN: AeroSound SilentSwitch Ofis Mekanik Klavye | RENK: Mat Beyaz
+PROMPT: Studio e-commerce product photograph (1:1 square, clean seamless soft off-white background, crisp natural studio lighting, no text, no logos, no watermarks). Product: "AeroSound SilentSwitch Ofis Mekanik Klavye" (Bilgisayar & Tablet category, distinct unique design #15). Exact color variant: "Mat Beyaz". Visual/material details: Bellek (RAM): 8 GB, Depolama Kapasitesi: 512 GB SSD, Bağlantı Teknolojisi: Kablosuz 2.4 GHz & Bluetooth, Garanti Süresi: 24 Ay. High-resolution commercial catalog photography.
+
+[031] DOSYA: p016-antrasit.jpg | ÜRÜN: NovaTech HotSwap 82 Tuşlu Mekanik Klavye | RENK: Antrasit
+PROMPT: Studio e-commerce product photograph (1:1 square, clean seamless soft off-white background, crisp natural studio lighting, no text, no logos, no watermarks). Product: "NovaTech HotSwap 82 Tuşlu Mekanik Klavye" (Bilgisayar & Tablet category, distinct unique design #16). Exact color variant: "Antrasit". Visual/material details: Bellek (RAM): 16 GB, Depolama Kapasitesi: 512 GB SSD, Bağlantı Teknolojisi: USB-C Kablolu, Garanti Süresi: 24 Ay. High-resolution commercial catalog photography.
+
+[032] DOSYA: p016-mat-beyaz.jpg | ÜRÜN: NovaTech HotSwap 82 Tuşlu Mekanik Klavye | RENK: Mat Beyaz
+PROMPT: Studio e-commerce product photograph (1:1 square, clean seamless soft off-white background, crisp natural studio lighting, no text, no logos, no watermarks). Product: "NovaTech HotSwap 82 Tuşlu Mekanik Klavye" (Bilgisayar & Tablet category, distinct unique design #16). Exact color variant: "Mat Beyaz". Visual/material details: Bellek (RAM): 16 GB, Depolama Kapasitesi: 512 GB SSD, Bağlantı Teknolojisi: USB-C Kablolu, Garanti Süresi: 24 Ay. High-resolution commercial catalog photography.
+
+[033] DOSYA: p017-antrasit.jpg | ÜRÜN: AeroSound StudioDesk Pro Kablosuz Klavye | RENK: Antrasit
+PROMPT: Studio e-commerce product photograph (1:1 square, clean seamless soft off-white background, crisp natural studio lighting, no text, no logos, no watermarks). Product: "AeroSound StudioDesk Pro Kablosuz Klavye" (Bilgisayar & Tablet category, distinct unique design #17). Exact color variant: "Antrasit". Visual/material details: Bellek (RAM): 32 GB, Depolama Kapasitesi: 1 TB SSD, Bağlantı Teknolojisi: Wi-Fi 6E & USB-C, Garanti Süresi: 36 Ay. High-resolution commercial catalog photography.
+
+[034] DOSYA: p017-mat-beyaz.jpg | ÜRÜN: AeroSound StudioDesk Pro Kablosuz Klavye | RENK: Mat Beyaz
+PROMPT: Studio e-commerce product photograph (1:1 square, clean seamless soft off-white background, crisp natural studio lighting, no text, no logos, no watermarks). Product: "AeroSound StudioDesk Pro Kablosuz Klavye" (Bilgisayar & Tablet category, distinct unique design #17). Exact color variant: "Mat Beyaz". Visual/material details: Bellek (RAM): 32 GB, Depolama Kapasitesi: 1 TB SSD, Bağlantı Teknolojisi: Wi-Fi 6E & USB-C, Garanti Süresi: 36 Ay. High-resolution commercial catalog photography.
+
+[035] DOSYA: p018-antrasit.jpg | ÜRÜN: NovaTech Mini65 Taşınabilir Mekanik Klavye | RENK: Antrasit
+PROMPT: Studio e-commerce product photograph (1:1 square, clean seamless soft off-white background, crisp natural studio lighting, no text, no logos, no watermarks). Product: "NovaTech Mini65 Taşınabilir Mekanik Klavye" (Bilgisayar & Tablet category, distinct unique design #18). Exact color variant: "Antrasit". Visual/material details: Bellek (RAM): 8 GB, Depolama Kapasitesi: 256 GB SSD, Bağlantı Teknolojisi: Kablosuz 2.4 GHz & Bluetooth, Garanti Süresi: 24 Ay. High-resolution commercial catalog photography.
+
+[036] DOSYA: p018-mat-beyaz.jpg | ÜRÜN: NovaTech Mini65 Taşınabilir Mekanik Klavye | RENK: Mat Beyaz
+PROMPT: Studio e-commerce product photograph (1:1 square, clean seamless soft off-white background, crisp natural studio lighting, no text, no logos, no watermarks). Product: "NovaTech Mini65 Taşınabilir Mekanik Klavye" (Bilgisayar & Tablet category, distinct unique design #18). Exact color variant: "Mat Beyaz". Visual/material details: Bellek (RAM): 8 GB, Depolama Kapasitesi: 256 GB SSD, Bağlantı Teknolojisi: Kablosuz 2.4 GHz & Bluetooth, Garanti Süresi: 24 Ay. High-resolution commercial catalog photography.
+
+[037] DOSYA: p019-antrasit.jpg | ÜRÜN: NovaTech Carbon Series Oyuncu Mekanik Klavye | RENK: Antrasit
+PROMPT: Studio e-commerce product photograph (1:1 square, clean seamless soft off-white background, crisp natural studio lighting, no text, no logos, no watermarks). Product: "NovaTech Carbon Series Oyuncu Mekanik Klavye" (Bilgisayar & Tablet category, distinct unique design #19). Exact color variant: "Antrasit". Visual/material details: Bellek (RAM): 32 GB, Depolama Kapasitesi: 1 TB SSD, Bağlantı Teknolojisi: USB-C Kablolu, Garanti Süresi: 24 Ay. High-resolution commercial catalog photography.
+
+[038] DOSYA: p019-mat-beyaz.jpg | ÜRÜN: NovaTech Carbon Series Oyuncu Mekanik Klavye | RENK: Mat Beyaz
+PROMPT: Studio e-commerce product photograph (1:1 square, clean seamless soft off-white background, crisp natural studio lighting, no text, no logos, no watermarks). Product: "NovaTech Carbon Series Oyuncu Mekanik Klavye" (Bilgisayar & Tablet category, distinct unique design #19). Exact color variant: "Mat Beyaz". Visual/material details: Bellek (RAM): 32 GB, Depolama Kapasitesi: 1 TB SSD, Bağlantı Teknolojisi: USB-C Kablolu, Garanti Süresi: 24 Ay. High-resolution commercial catalog photography.
+
+[039] DOSYA: p020-antrasit.jpg | ÜRÜN: AeroSound UltraSlim Bluetooth Klavye | RENK: Antrasit
+PROMPT: Studio e-commerce product photograph (1:1 square, clean seamless soft off-white background, crisp natural studio lighting, no text, no logos, no watermarks). Product: "AeroSound UltraSlim Bluetooth Klavye" (Bilgisayar & Tablet category, distinct unique design #20). Exact color variant: "Antrasit". Visual/material details: Bellek (RAM): 16 GB, Depolama Kapasitesi: 512 GB SSD, Bağlantı Teknolojisi: Wi-Fi 6E & USB-C, Garanti Süresi: 24 Ay. High-resolution commercial catalog photography.
+
+[040] DOSYA: p020-mat-beyaz.jpg | ÜRÜN: AeroSound UltraSlim Bluetooth Klavye | RENK: Mat Beyaz
+PROMPT: Studio e-commerce product photograph (1:1 square, clean seamless soft off-white background, crisp natural studio lighting, no text, no logos, no watermarks). Product: "AeroSound UltraSlim Bluetooth Klavye" (Bilgisayar & Tablet category, distinct unique design #20). Exact color variant: "Mat Beyaz". Visual/material details: Bellek (RAM): 16 GB, Depolama Kapasitesi: 512 GB SSD, Bağlantı Teknolojisi: Wi-Fi 6E & USB-C, Garanti Süresi: 24 Ay. High-resolution commercial catalog photography.
+
+[041] DOSYA: p021-bej.jpg | ÜRÜN: UrbanWear Klasik Kemerli Bej Trençkot | RENK: Bej
+PROMPT: Studio e-commerce product photograph (1:1 square, clean seamless soft off-white background, crisp natural studio lighting, no text, no logos, no watermarks). Product: "UrbanWear Klasik Kemerli Bej Trençkot" (Kadın Giyim category, distinct unique design #21). Exact color variant: "Bej". Visual/material details: Kumaş / Üst Yüzey: Su İtici Gabardin, Kalıp: Regular Fit. High-resolution commercial catalog photography.
+
+[042] DOSYA: p021-lacivert.jpg | ÜRÜN: UrbanWear Klasik Kemerli Bej Trençkot | RENK: Lacivert
+PROMPT: Studio e-commerce product photograph (1:1 square, clean seamless soft off-white background, crisp natural studio lighting, no text, no logos, no watermarks). Product: "UrbanWear Klasik Kemerli Bej Trençkot" (Kadın Giyim category, distinct unique design #21). Exact color variant: "Lacivert". Visual/material details: Kumaş / Üst Yüzey: Su İtici Gabardin, Kalıp: Regular Fit. High-resolution commercial catalog photography.
+
+[043] DOSYA: p022-bej.jpg | ÜRÜN: VeloStyle Oversize Yün Karışım Blazer Ceket | RENK: Bej
+PROMPT: Studio e-commerce product photograph (1:1 square, clean seamless soft off-white background, crisp natural studio lighting, no text, no logos, no watermarks). Product: "VeloStyle Oversize Yün Karışım Blazer Ceket" (Kadın Giyim category, distinct unique design #22). Exact color variant: "Bej". Visual/material details: Kumaş / Üst Yüzey: Yün Karışım, Kalıp: Oversize. High-resolution commercial catalog photography.
+
+[044] DOSYA: p022-lacivert.jpg | ÜRÜN: VeloStyle Oversize Yün Karışım Blazer Ceket | RENK: Lacivert
+PROMPT: Studio e-commerce product photograph (1:1 square, clean seamless soft off-white background, crisp natural studio lighting, no text, no logos, no watermarks). Product: "VeloStyle Oversize Yün Karışım Blazer Ceket" (Kadın Giyim category, distinct unique design #22). Exact color variant: "Lacivert". Visual/material details: Kumaş / Üst Yüzey: Yün Karışım, Kalıp: Oversize. High-resolution commercial catalog photography.
+
+[045] DOSYA: p023-bej.jpg | ÜRÜN: UrbanWear Kruvaze Düğmeli Lacivert Ceket | RENK: Bej
+PROMPT: Studio e-commerce product photograph (1:1 square, clean seamless soft off-white background, crisp natural studio lighting, no text, no logos, no watermarks). Product: "UrbanWear Kruvaze Düğmeli Lacivert Ceket" (Kadın Giyim category, distinct unique design #23). Exact color variant: "Bej". Visual/material details: Kumaş / Üst Yüzey: Yün Karışım, Kalıp: Slim Fit. High-resolution commercial catalog photography.
+
+[046] DOSYA: p023-lacivert.jpg | ÜRÜN: UrbanWear Kruvaze Düğmeli Lacivert Ceket | RENK: Lacivert
+PROMPT: Studio e-commerce product photograph (1:1 square, clean seamless soft off-white background, crisp natural studio lighting, no text, no logos, no watermarks). Product: "UrbanWear Kruvaze Düğmeli Lacivert Ceket" (Kadın Giyim category, distinct unique design #23). Exact color variant: "Lacivert". Visual/material details: Kumaş / Üst Yüzey: Yün Karışım, Kalıp: Slim Fit. High-resolution commercial catalog photography.
+
+[047] DOSYA: p024-bej.jpg | ÜRÜN: VeloStyle Mevsimlik Pamuklu Trençkot | RENK: Bej
+PROMPT: Studio e-commerce product photograph (1:1 square, clean seamless soft off-white background, crisp natural studio lighting, no text, no logos, no watermarks). Product: "VeloStyle Mevsimlik Pamuklu Trençkot" (Kadın Giyim category, distinct unique design #24). Exact color variant: "Bej". Visual/material details: Kumaş / Üst Yüzey: %100 Pamuk, Kalıp: Regular Fit. High-resolution commercial catalog photography.
+
+[048] DOSYA: p024-lacivert.jpg | ÜRÜN: VeloStyle Mevsimlik Pamuklu Trençkot | RENK: Lacivert
+PROMPT: Studio e-commerce product photograph (1:1 square, clean seamless soft off-white background, crisp natural studio lighting, no text, no logos, no watermarks). Product: "VeloStyle Mevsimlik Pamuklu Trençkot" (Kadın Giyim category, distinct unique design #24). Exact color variant: "Lacivert". Visual/material details: Kumaş / Üst Yüzey: %100 Pamuk, Kalıp: Regular Fit. High-resolution commercial catalog photography.

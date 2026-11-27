@@ -12,7 +12,14 @@ class ProductController extends Controller
     {
         abort_if($product->status !== 'active', 404);
 
-        $product->load(['seller', 'category.parent', 'brand', 'variants', 'media'])
+        $product->load([
+            'seller',
+            'category.parent',
+            'brand',
+            'variants',
+            'media',
+            'approvedReviews.user',
+        ])
             ->loadCount('approvedReviews')
             ->loadAvg('approvedReviews', 'rating');
 

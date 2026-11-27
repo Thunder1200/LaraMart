@@ -34,15 +34,36 @@ class AppServiceProvider extends ServiceProvider
             $user = Auth::user();
             $cartItemCount = app(CartService::class)->totalItemCount($user);
 
-            $favoriteProductIds = $user !== null
-                ? $user->favorites()->pluck('product_id')->all()
-                : [];
-
             $view->with([
                 'megaMenuCategories' => $megaMenuCategories,
                 'cartItemCount' => $cartItemCount,
-                'favoriteProductIds' => $favoriteProductIds,
             ]);
         });
+
+        ViewFacade::composer(
+            ['components.layouts.storefront', 'components.storefront.product-card'],
+            function (View $view): void {
+                $user = Auth::user();
+
+                if ($user === null) {
+                    $view->with('favoriteProductIds', []);
+
+                    return;
+                }
+
+                $cacheKey = 'laramart.favorite_product_ids.'.$user->getAuthIdentifier();
+                $request = request();
+
+                if (! $request->attributes->has($cacheKey)) {
+                    $favoriteIds = array_map(
+                        static fn (mixed $id): int => (int) $id,
+                        $user->favorites()->pluck('product_id')->all(),
+                    );
+                    $request->attributes->set($cacheKey, $favoriteIds);
+                }
+
+                $view->with('favoriteProductIds', $request->attributes->get($cacheKey));
+            }
+        );
     }
 }

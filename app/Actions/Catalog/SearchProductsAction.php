@@ -6,6 +6,7 @@ use App\Models\Brand;
 use App\Models\Category;
 use App\Models\Product;
 use App\Models\ProductVariant;
+use App\Support\CategoryFilterSchema;
 use Illuminate\Contracts\Pagination\LengthAwarePaginator;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Support\Collection;
@@ -20,7 +21,9 @@ class SearchProductsAction
      *         categories: Collection<int, Category>,
      *         brands: Collection<int, Brand>,
      *         colors: list<string>,
-     *         sizes: list<string>
+     *         sizes: list<string>,
+     *         supports_size: bool,
+     *         attribute_filters: array<string, array{label: string, options: list<string>}>
      *     }
      * }
      */
@@ -51,16 +54,20 @@ class SearchProductsAction
         $categorySlug = trim((string) ($filters['kategori'] ?? ''));
         $targetCategory = $scopedCategory;
         if ($targetCategory === null && $categorySlug !== '') {
-            $targetCategory = Category::query()->with('children')->where('slug', $categorySlug)->first();
+            $targetCategory = Category::query()->with(['parent', 'children'])->where('slug', $categorySlug)->first();
         }
 
+        $categoryIds = null;
         if ($targetCategory !== null) {
-            $targetCategory->loadMissing('children');
+            $targetCategory->loadMissing(['parent', 'children']);
             $categoryIds = $targetCategory->children->pluck('id')->prepend($targetCategory->id)->all();
             $query->whereIn('products.category_id', $categoryIds);
         } elseif ($categorySlug !== '') {
             $query->whereRaw('1 = 0');
         }
+
+        $supportsSize = CategoryFilterSchema::supportsSize($targetCategory);
+        $attributeFilters = CategoryFilterSchema::attributeFiltersFor($targetCategory);
 
         $brandSlug = trim((string) ($filters['marka'] ?? ''));
         if ($brandSlug !== '') {
@@ -72,7 +79,7 @@ class SearchProductsAction
         $minPrice = $filters['min'] ?? null;
         $maxPrice = $filters['max'] ?? null;
         $color = trim((string) ($filters['renk'] ?? ''));
-        $size = trim((string) ($filters['beden'] ?? ''));
+        $size = $supportsSize ? trim((string) ($filters['beden'] ?? '')) : '';
 
         if (($minPrice !== null && $minPrice !== '') || ($maxPrice !== null && $maxPrice !== '') || $color !== '' || $size !== '') {
             $query->whereHas('variants', function (Builder $variantQuery) use ($minPrice, $maxPrice, $color, $size): void {
@@ -92,6 +99,21 @@ class SearchProductsAction
                     $variantQuery->where('size', $size);
                 }
             });
+        }
+
+        // Kategoriye özel teknik özellik filtreleri (ozellik[ram]=16 GB vb.)
+        $selectedAttributes = $filters['ozellik'] ?? [];
+        if (is_array($selectedAttributes) && $attributeFilters !== []) {
+            foreach ($selectedAttributes as $attrKey => $attrValue) {
+                if (! is_string($attrKey) || ! array_key_exists($attrKey, $attributeFilters)) {
+                    continue;
+                }
+
+                $value = trim((string) $attrValue);
+                if ($value !== '') {
+                    $query->where("products.attributes->{$attrKey}", $value);
+                }
+            }
         }
 
         $minRating = $filters['puan'] ?? null;
@@ -117,10 +139,16 @@ class SearchProductsAction
 
         $products = $query->paginate(24)->withQueryString();
 
-        $variantPairs = ProductVariant::query()
-            ->select(['color', 'size'])
-            ->distinct()
-            ->get();
+        $variantPairsQuery = ProductVariant::query()->select(['color', 'size'])->distinct();
+        if ($categoryIds !== null) {
+            $variantPairsQuery->whereHas('product', fn (Builder $p) => $p->active()->whereIn('category_id', $categoryIds));
+        }
+        $variantPairs = $variantPairsQuery->get();
+
+        $brandsQuery = Brand::query()->orderBy('name');
+        if ($categoryIds !== null) {
+            $brandsQuery->whereHas('products', fn (Builder $p) => $p->active()->whereIn('category_id', $categoryIds));
+        }
 
         return [
             'products' => $products,
@@ -128,9 +156,13 @@ class SearchProductsAction
                 'categories' => $scopedCategory === null
                     ? Category::query()->orderBy('sort')->orderBy('name')->get()
                     : collect(),
-                'brands' => Brand::query()->orderBy('name')->get(),
+                'brands' => $brandsQuery->get(),
                 'colors' => $variantPairs->pluck('color')->filter()->unique()->sort()->values()->all(),
-                'sizes' => $variantPairs->pluck('size')->filter()->unique()->sort()->values()->all(),
+                'sizes' => $supportsSize
+                    ? $variantPairs->pluck('size')->filter(fn (mixed $s): bool => is_string($s) && $s !== '' && $s !== 'Standart')->unique()->sort()->values()->all()
+                    : [],
+                'supports_size' => $supportsSize,
+                'attribute_filters' => $attributeFilters,
             ],
         ];
     }

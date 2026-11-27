@@ -20,14 +20,24 @@
                 @foreach ($images as $index => $image)
                     <button
                         type="button"
-                        wire:click="selectImage({{ $index }})"
-                        class="aspect-square overflow-hidden rounded-lg border-2 transition {{ $activeImageIndex === $index ? 'border-indigo-600 ring-2 ring-indigo-200' : 'border-slate-200 hover:border-slate-400' }}"
+                        @if (! empty($image['variant_id']))
+                            wire:click="selectVariant({{ $image['variant_id'] }})"
+                        @else
+                            wire:click="selectImage({{ $index }})"
+                        @endif
+                        title="{{ $image['color'] ?? ($product->name . ' önizleme') }}"
+                        class="group relative aspect-square overflow-hidden rounded-lg border-2 transition {{ $activeImageIndex === $index ? 'border-indigo-600 ring-2 ring-indigo-200' : 'border-slate-200 hover:border-slate-400' }}"
                     >
                         <img
                             src="{{ $image['thumb'] }}"
-                            alt="{{ $product->name }} önizleme {{ $index + 1 }}"
+                            alt="{{ $product->name }} {{ $image['color'] ?? ('önizleme ' . ($index + 1)) }}"
                             class="h-full w-full object-cover"
                         >
+                        @if (! empty($image['color']))
+                            <span class="absolute inset-x-0 bottom-0 bg-slate-900/70 px-1 py-0.5 text-[10px] font-semibold text-white truncate">
+                                {{ $image['color'] }}
+                            </span>
+                        @endif
                     </button>
                 @endforeach
             </div>
@@ -55,9 +65,18 @@
                     type="button"
                     wire:click="toggleFavorite"
                     aria-label="{{ $isFavorited ? 'Favorilerden çıkar' : 'Favorilere ekle' }}"
-                    class="inline-flex items-center gap-1.5 rounded-lg border px-3 py-2 text-xs font-bold transition shrink-0 {{ $isFavorited ? 'border-rose-300 bg-rose-50 text-rose-600' : 'border-slate-200 bg-white text-slate-600 hover:border-rose-300 hover:text-rose-600' }}"
+                    aria-pressed="{{ $isFavorited ? 'true' : 'false' }}"
+                    class="inline-flex items-center gap-1.5 rounded-lg border px-3 py-2 text-xs font-bold transition shrink-0 cursor-pointer {{ $isFavorited ? 'border-rose-300 bg-rose-50 text-rose-600' : 'border-slate-200 bg-white text-slate-600 hover:border-rose-300 hover:text-rose-600' }}"
                 >
-                    <span class="text-base leading-none">{{ $isFavorited ? '♥' : '♡' }}</span>
+                    <svg
+                        class="h-4 w-4 {{ $isFavorited ? 'fill-rose-600 text-rose-600' : 'fill-none text-current' }}"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        aria-hidden="true"
+                    >
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
+                    </svg>
                     <span>{{ $isFavorited ? 'Favoride' : 'Favorile' }}</span>
                 </button>
             </div>
@@ -121,10 +140,16 @@
                         wire:click="selectVariant({{ $item->id }})"
                         class="rounded-xl border px-3 py-2.5 text-left transition {{ $isSelected ? 'border-indigo-600 bg-indigo-50 ring-2 ring-indigo-200' : 'border-slate-200 bg-white hover:border-indigo-300' }}"
                     >
-                        <p class="text-xs font-bold {{ $isSelected ? 'text-indigo-800' : 'text-slate-900' }}">
-                            {{ $item->label() }}
-                        </p>
-                        <p class="mt-0.5 text-xs text-slate-600">
+                        <div class="flex items-center gap-2">
+                            <span
+                                class="h-3.5 w-3.5 rounded-full border border-slate-300 shrink-0"
+                                style="background-color: {{ $item->swatchHex() }};"
+                            ></span>
+                            <p class="text-xs font-bold truncate {{ $isSelected ? 'text-indigo-800' : 'text-slate-900' }}">
+                                {{ $item->label() }}
+                            </p>
+                        </div>
+                        <p class="mt-1 text-xs text-slate-600">
                             {{ number_format($item->effectivePrice(), 2, ',', '.') }} TL
                         </p>
                         <p class="mt-0.5 text-[11px] {{ $item->stock > 0 ? 'text-emerald-700' : 'text-rose-600 font-semibold' }}">

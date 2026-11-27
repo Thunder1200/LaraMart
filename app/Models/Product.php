@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Support\CategoryFilterSchema;
 use Database\Factories\ProductFactory;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -25,9 +26,19 @@ class Product extends Model implements HasMedia
         'brand_id',
         'name',
         'slug',
+        'image_key',
         'description',
+        'attributes',
         'status',
     ];
+
+    /** @return array<string, string> */
+    protected function casts(): array
+    {
+        return [
+            'attributes' => 'array',
+        ];
+    }
 
     public function registerMediaCollections(): void
     {
@@ -117,6 +128,28 @@ class Product extends Model implements HasMedia
         return (int) $variants->sum('stock');
     }
 
+    /**
+     * @return array<string, string>
+     */
+    public function formattedAttributes(): array
+    {
+        $raw = $this->getAttribute('attributes');
+
+        if (! is_array($raw) || $raw === []) {
+            return [];
+        }
+
+        $formatted = [];
+        foreach ($raw as $key => $value) {
+            if (! is_string($key) || $value === null || $value === '') {
+                continue;
+            }
+            $formatted[CategoryFilterSchema::labelFor($key)] = (string) $value;
+        }
+
+        return $formatted;
+    }
+
     public function thumbnailUrl(): string
     {
         $media = $this->getMedia('products')->first();
@@ -127,13 +160,60 @@ class Product extends Model implements HasMedia
                 : $media->getUrl();
         }
 
+        $displayVariant = $this->displayVariant();
+        if ($displayVariant !== null && $displayVariant->imageUrl() !== null) {
+            return $displayVariant->imageUrl();
+        }
+
+        $variants = $this->relationLoaded('variants') ? $this->variants : $this->variants()->get();
+        foreach ($variants as $variant) {
+            if ($variant->imageUrl() !== null) {
+                return $variant->imageUrl();
+            }
+        }
+
+        $studioImages = $this->resolveStudioImages();
+        if ($studioImages !== []) {
+            return $studioImages[0]['thumb'];
+        }
+
         return $this->placeholderSvgDataUri($this->name, 0);
     }
 
     /**
-     * @return list<array{id: int, url: string, thumb: string}>
+     * Ürün kartlarında anlık renk değişimi için benzersiz renk seçenekleri ve görsellerini döndürür.
+     *
+     * @return list<array{color: string, hex: string, image: string, variant_id: int}>
      */
-    public function galleryImages(): array
+    public function colorSwatches(): array
+    {
+        $variants = $this->relationLoaded('variants') ? $this->variants : $this->variants()->get();
+        $fallbackImage = $this->thumbnailUrl();
+        $seen = [];
+        $swatches = [];
+
+        foreach ($variants as $variant) {
+            $colorName = trim((string) ($variant->color ?? ''));
+            if ($colorName === '' || isset($seen[$colorName])) {
+                continue;
+            }
+
+            $seen[$colorName] = true;
+            $swatches[] = [
+                'color' => $colorName,
+                'hex' => $variant->swatchHex(),
+                'image' => $variant->imageUrl() ?? $fallbackImage,
+                'variant_id' => $variant->id,
+            ];
+        }
+
+        return $swatches;
+    }
+
+    /**
+     * @return list<array{id: int, url: string, thumb: string, color?: string, variant_id?: int}>
+     */
+    public function galleryImages(?ProductVariant $selectedVariant = null): array
     {
         $mediaItems = $this->getMedia('products');
 
@@ -143,6 +223,46 @@ class Product extends Model implements HasMedia
                 'url' => $media->hasGeneratedConversion('gallery') ? $media->getUrl('gallery') : $media->getUrl(),
                 'thumb' => $media->hasGeneratedConversion('thumb') ? $media->getUrl('thumb') : $media->getUrl(),
             ])->all();
+        }
+
+        // Renk varyantlarına özel benzersiz görseller varsa galeri bunlardan oluşur
+        $variants = $this->relationLoaded('variants') ? $this->variants : $this->variants()->get();
+        $variantImages = [];
+        $seenPaths = [];
+
+        foreach ($variants as $variant) {
+            $url = $variant->imageUrl();
+            if ($url === null || isset($seenPaths[$url])) {
+                continue;
+            }
+
+            $seenPaths[$url] = true;
+            $variantImages[] = [
+                'id' => count($variantImages),
+                'url' => $url,
+                'thumb' => $url,
+                'color' => (string) ($variant->color ?? ''),
+                'variant_id' => $variant->id,
+            ];
+        }
+
+        if ($variantImages !== []) {
+            if ($selectedVariant !== null && $selectedVariant->imageUrl() !== null) {
+                $selectedUrl = $selectedVariant->imageUrl();
+                usort($variantImages, fn (array $a, array $b): int => ($b['url'] === $selectedUrl ? 1 : 0) <=> ($a['url'] === $selectedUrl ? 1 : 0));
+                $variantImages = array_map(function (array $item, int $idx): array {
+                    $item['id'] = $idx;
+
+                    return $item;
+                }, $variantImages, array_keys($variantImages));
+            }
+
+            return $variantImages;
+        }
+
+        $studioImages = $this->resolveStudioImages();
+        if ($studioImages !== []) {
+            return $studioImages;
         }
 
         return [
@@ -157,6 +277,63 @@ class Product extends Model implements HasMedia
                 'thumb' => $this->placeholderSvgDataUri($this->name.' — Detay', 1),
             ],
         ];
+    }
+
+    /**
+     * @return list<array{id: int, url: string, thumb: string}>
+     */
+    private function resolveStudioImages(): array
+    {
+        $key = $this->resolveImageKey();
+        if ($key === null) {
+            return [];
+        }
+
+        $primaryIndex = ($this->id % 2 === 0) ? 2 : 1;
+        $secondaryIndex = $primaryIndex === 1 ? 2 : 1;
+
+        $images = [];
+        foreach ([$primaryIndex, $secondaryIndex] as $order => $angle) {
+            foreach (['jpg', 'png', 'webp'] as $ext) {
+                $relativePath = "images/products/{$key}-{$angle}.{$ext}";
+                if (is_file(public_path($relativePath))) {
+                    $url = asset($relativePath);
+                    $images[] = [
+                        'id' => $order,
+                        'url' => $url,
+                        'thumb' => $url,
+                    ];
+                    break;
+                }
+            }
+        }
+
+        return $images;
+    }
+
+    private function resolveImageKey(): ?string
+    {
+        if (is_string($this->image_key) && $this->image_key !== '') {
+            return $this->image_key;
+        }
+
+        $name = mb_strtolower($this->name);
+
+        return match (true) {
+            str_contains($name, 'kulakl') => 'kulaklik',
+            str_contains($name, 'saat') => 'akilli-saat',
+            str_contains($name, 'laptop') || str_contains($name, 'dizüstü') || str_contains($name, 'notebook') || str_contains($name, 'tablet') => 'laptop',
+            str_contains($name, 'klavye') => 'klavye',
+            str_contains($name, 'ceket') || str_contains($name, 'trençkot') || str_contains($name, 'blazer') || str_contains($name, 'kaban') => 'ceket',
+            str_contains($name, 'tişört') || str_contains($name, 'tisort') || str_contains($name, 'polo') => 'tisort',
+            str_contains($name, 'ayakkab') || str_contains($name, 'sneaker') => 'ayakkabi',
+            str_contains($name, 'kahve') || str_contains($name, 'espresso') => 'kahve-makinesi',
+            str_contains($name, 'lamba') || str_contains($name, 'abajur') => 'masa-lambasi',
+            str_contains($name, 'çanta') || str_contains($name, 'canta') || str_contains($name, 'kamp') => 'sirt-cantasi',
+            str_contains($name, 'serum') || str_contains($name, 'krem') || str_contains($name, 'cilt') => 'cilt-bakim',
+            str_contains($name, 'parfüm') || str_contains($name, 'parfum') || str_contains($name, 'edp') => 'parfum',
+            default => null,
+        };
     }
 
     private function placeholderSvgDataUri(string $label, int $variantIndex): string

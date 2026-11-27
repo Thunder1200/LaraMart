@@ -22,6 +22,7 @@ class CategoryController extends Controller
             'beden',
             'puan',
             'sirala',
+            'ozellik',
         ]);
 
         $sort = (string) ($filters['sirala'] ?? 'en-yeni');

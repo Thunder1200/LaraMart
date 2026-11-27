@@ -26,6 +26,11 @@
                         <input type="hidden" name="{{ $param }}" value="{{ $filters[$param] }}">
                     @endif
                 @endforeach
+                @foreach (is_array($filters['ozellik'] ?? null) ? $filters['ozellik'] : [] as $attrKey => $attrVal)
+                    @if ($attrVal !== null && $attrVal !== '')
+                        <input type="hidden" name="ozellik[{{ $attrKey }}]" value="{{ $attrVal }}">
+                    @endif
+                @endforeach
                 <label for="sirala" class="text-xs font-semibold text-slate-600">Sırala:</label>
                 <select
                     id="sirala"

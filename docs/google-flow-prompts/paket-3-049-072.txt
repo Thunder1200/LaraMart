@@ -1,0 +1,77 @@
+GOOGLE FLOW AGENT MODU — PAKET 3 (24 BENZERSİZ ÜRÜN / RENK GÖRSELİ: #049–#072)
+==========================================================================================
+
+Aşağıdaki listedeki her bir madde için 1:1 kare, temiz açık gri/beyaz stüdyo fonlu, metinsiz ve filigransız
+gerçekçi bir e-ticaret ürün fotoğrafı üret. Her ürün kendi tasarımına ve belirtilen tam renk varyantına uygun, benzersiz olsun:
+
+[049] DOSYA: p025-bej.jpg | ÜRÜN: UrbanWear Minimalist Keten Yazlık Ceket | RENK: Bej
+PROMPT: Studio e-commerce product photograph (1:1 square, clean seamless soft off-white background, crisp natural studio lighting, no text, no logos, no watermarks). Product: "UrbanWear Minimalist Keten Yazlık Ceket" (Kadın Giyim category, distinct unique design #25). Exact color variant: "Bej". Visual/material details: Kumaş / Üst Yüzey: Keten Dokuma, Kalıp: Oversize. High-resolution commercial catalog photography.
+
+[050] DOSYA: p025-lacivert.jpg | ÜRÜN: UrbanWear Minimalist Keten Yazlık Ceket | RENK: Lacivert
+PROMPT: Studio e-commerce product photograph (1:1 square, clean seamless soft off-white background, crisp natural studio lighting, no text, no logos, no watermarks). Product: "UrbanWear Minimalist Keten Yazlık Ceket" (Kadın Giyim category, distinct unique design #25). Exact color variant: "Lacivert". Visual/material details: Kumaş / Üst Yüzey: Keten Dokuma, Kalıp: Oversize. High-resolution commercial catalog photography.
+
+[051] DOSYA: p026-bej.jpg | ÜRÜN: VeloStyle Astarlı Taş Rengi Trençkot | RENK: Bej
+PROMPT: Studio e-commerce product photograph (1:1 square, clean seamless soft off-white background, crisp natural studio lighting, no text, no logos, no watermarks). Product: "VeloStyle Astarlı Taş Rengi Trençkot" (Kadın Giyim category, distinct unique design #26). Exact color variant: "Bej". Visual/material details: Kumaş / Üst Yüzey: Su İtici Gabardin, Kalıp: Regular Fit. High-resolution commercial catalog photography.
+
+[052] DOSYA: p026-lacivert.jpg | ÜRÜN: VeloStyle Astarlı Taş Rengi Trençkot | RENK: Lacivert
+PROMPT: Studio e-commerce product photograph (1:1 square, clean seamless soft off-white background, crisp natural studio lighting, no text, no logos, no watermarks). Product: "VeloStyle Astarlı Taş Rengi Trençkot" (Kadın Giyim category, distinct unique design #26). Exact color variant: "Lacivert". Visual/material details: Kumaş / Üst Yüzey: Su İtici Gabardin, Kalıp: Regular Fit. High-resolution commercial catalog photography.
+
+[053] DOSYA: p027-bej.jpg | ÜRÜN: UrbanWear Belden Bağlamalı Şık Blazer | RENK: Bej
+PROMPT: Studio e-commerce product photograph (1:1 square, clean seamless soft off-white background, crisp natural studio lighting, no text, no logos, no watermarks). Product: "UrbanWear Belden Bağlamalı Şık Blazer" (Kadın Giyim category, distinct unique design #27). Exact color variant: "Bej". Visual/material details: Kumaş / Üst Yüzey: %100 Pamuk, Kalıp: Slim Fit. High-resolution commercial catalog photography.
+
+[054] DOSYA: p027-lacivert.jpg | ÜRÜN: UrbanWear Belden Bağlamalı Şık Blazer | RENK: Lacivert
+PROMPT: Studio e-commerce product photograph (1:1 square, clean seamless soft off-white background, crisp natural studio lighting, no text, no logos, no watermarks). Product: "UrbanWear Belden Bağlamalı Şık Blazer" (Kadın Giyim category, distinct unique design #27). Exact color variant: "Lacivert". Visual/material details: Kumaş / Üst Yüzey: %100 Pamuk, Kalıp: Slim Fit. High-resolution commercial catalog photography.
+
+[055] DOSYA: p028-bej.jpg | ÜRÜN: VeloStyle Çift Cepli Keten Blazer Ceket | RENK: Bej
+PROMPT: Studio e-commerce product photograph (1:1 square, clean seamless soft off-white background, crisp natural studio lighting, no text, no logos, no watermarks). Product: "VeloStyle Çift Cepli Keten Blazer Ceket" (Kadın Giyim category, distinct unique design #28). Exact color variant: "Bej". Visual/material details: Kumaş / Üst Yüzey: Keten Dokuma, Kalıp: Regular Fit. High-resolution commercial catalog photography.
+
+[056] DOSYA: p028-lacivert.jpg | ÜRÜN: VeloStyle Çift Cepli Keten Blazer Ceket | RENK: Lacivert
+PROMPT: Studio e-commerce product photograph (1:1 square, clean seamless soft off-white background, crisp natural studio lighting, no text, no logos, no watermarks). Product: "VeloStyle Çift Cepli Keten Blazer Ceket" (Kadın Giyim category, distinct unique design #28). Exact color variant: "Lacivert". Visual/material details: Kumaş / Üst Yüzey: Keten Dokuma, Kalıp: Regular Fit. High-resolution commercial catalog photography.
+
+[057] DOSYA: p029-bej.jpg | ÜRÜN: UrbanWear Su İtici Kapüşonlu Şehir Trençkotu | RENK: Bej
+PROMPT: Studio e-commerce product photograph (1:1 square, clean seamless soft off-white background, crisp natural studio lighting, no text, no logos, no watermarks). Product: "UrbanWear Su İtici Kapüşonlu Şehir Trençkotu" (Kadın Giyim category, distinct unique design #29). Exact color variant: "Bej". Visual/material details: Kumaş / Üst Yüzey: Su İtici Gabardin, Kalıp: Oversize. High-resolution commercial catalog photography.
+
+[058] DOSYA: p029-lacivert.jpg | ÜRÜN: UrbanWear Su İtici Kapüşonlu Şehir Trençkotu | RENK: Lacivert
+PROMPT: Studio e-commerce product photograph (1:1 square, clean seamless soft off-white background, crisp natural studio lighting, no text, no logos, no watermarks). Product: "UrbanWear Su İtici Kapüşonlu Şehir Trençkotu" (Kadın Giyim category, distinct unique design #29). Exact color variant: "Lacivert". Visual/material details: Kumaş / Üst Yüzey: Su İtici Gabardin, Kalıp: Oversize. High-resolution commercial catalog photography.
+
+[059] DOSYA: p030-bej.jpg | ÜRÜN: VeloStyle Modern Kesim Yün Karışım Kaban | RENK: Bej
+PROMPT: Studio e-commerce product photograph (1:1 square, clean seamless soft off-white background, crisp natural studio lighting, no text, no logos, no watermarks). Product: "VeloStyle Modern Kesim Yün Karışım Kaban" (Kadın Giyim category, distinct unique design #30). Exact color variant: "Bej". Visual/material details: Kumaş / Üst Yüzey: Yün Karışım, Kalıp: Regular Fit. High-resolution commercial catalog photography.
+
+[060] DOSYA: p030-lacivert.jpg | ÜRÜN: VeloStyle Modern Kesim Yün Karışım Kaban | RENK: Lacivert
+PROMPT: Studio e-commerce product photograph (1:1 square, clean seamless soft off-white background, crisp natural studio lighting, no text, no logos, no watermarks). Product: "VeloStyle Modern Kesim Yün Karışım Kaban" (Kadın Giyim category, distinct unique design #30). Exact color variant: "Lacivert". Visual/material details: Kumaş / Üst Yüzey: Yün Karışım, Kalıp: Regular Fit. High-resolution commercial catalog photography.
+
+[061] DOSYA: p031-lacivert.jpg | ÜRÜN: UrbanWear Klasik Kesim Erkek Mevsimlik Ceket | RENK: Lacivert
+PROMPT: Studio e-commerce product photograph (1:1 square, clean seamless soft off-white background, crisp natural studio lighting, no text, no logos, no watermarks). Product: "UrbanWear Klasik Kesim Erkek Mevsimlik Ceket" (Erkek Giyim category, distinct unique design #31). Exact color variant: "Lacivert". Visual/material details: Kumaş / Üst Yüzey: %100 Organik Pamuk, Kalıp: Regular Fit. High-resolution commercial catalog photography.
+
+[062] DOSYA: p031-bej.jpg | ÜRÜN: UrbanWear Klasik Kesim Erkek Mevsimlik Ceket | RENK: Bej
+PROMPT: Studio e-commerce product photograph (1:1 square, clean seamless soft off-white background, crisp natural studio lighting, no text, no logos, no watermarks). Product: "UrbanWear Klasik Kesim Erkek Mevsimlik Ceket" (Erkek Giyim category, distinct unique design #31). Exact color variant: "Bej". Visual/material details: Kumaş / Üst Yüzey: %100 Organik Pamuk, Kalıp: Regular Fit. High-resolution commercial catalog photography.
+
+[063] DOSYA: p031-siyah.jpg | ÜRÜN: UrbanWear Klasik Kesim Erkek Mevsimlik Ceket | RENK: Siyah
+PROMPT: Studio e-commerce product photograph (1:1 square, clean seamless soft off-white background, crisp natural studio lighting, no text, no logos, no watermarks). Product: "UrbanWear Klasik Kesim Erkek Mevsimlik Ceket" (Erkek Giyim category, distinct unique design #31). Exact color variant: "Siyah". Visual/material details: Kumaş / Üst Yüzey: %100 Organik Pamuk, Kalıp: Regular Fit. High-resolution commercial catalog photography.
+
+[064] DOSYA: p032-lacivert.jpg | ÜRÜN: VeloStyle Slim Fit Lacivert Şehir Ceketi | RENK: Lacivert
+PROMPT: Studio e-commerce product photograph (1:1 square, clean seamless soft off-white background, crisp natural studio lighting, no text, no logos, no watermarks). Product: "VeloStyle Slim Fit Lacivert Şehir Ceketi" (Erkek Giyim category, distinct unique design #32). Exact color variant: "Lacivert". Visual/material details: Kumaş / Üst Yüzey: Penye Pamuk, Kalıp: Slim Fit. High-resolution commercial catalog photography.
+
+[065] DOSYA: p032-bej.jpg | ÜRÜN: VeloStyle Slim Fit Lacivert Şehir Ceketi | RENK: Bej
+PROMPT: Studio e-commerce product photograph (1:1 square, clean seamless soft off-white background, crisp natural studio lighting, no text, no logos, no watermarks). Product: "VeloStyle Slim Fit Lacivert Şehir Ceketi" (Erkek Giyim category, distinct unique design #32). Exact color variant: "Bej". Visual/material details: Kumaş / Üst Yüzey: Penye Pamuk, Kalıp: Slim Fit. High-resolution commercial catalog photography.
+
+[066] DOSYA: p032-siyah.jpg | ÜRÜN: VeloStyle Slim Fit Lacivert Şehir Ceketi | RENK: Siyah
+PROMPT: Studio e-commerce product photograph (1:1 square, clean seamless soft off-white background, crisp natural studio lighting, no text, no logos, no watermarks). Product: "VeloStyle Slim Fit Lacivert Şehir Ceketi" (Erkek Giyim category, distinct unique design #32). Exact color variant: "Siyah". Visual/material details: Kumaş / Üst Yüzey: Penye Pamuk, Kalıp: Slim Fit. High-resolution commercial catalog photography.
+
+[067] DOSYA: p033-lacivert.jpg | ÜRÜN: UrbanWear Oversize Gabardin Erkek Trençkot | RENK: Lacivert
+PROMPT: Studio e-commerce product photograph (1:1 square, clean seamless soft off-white background, crisp natural studio lighting, no text, no logos, no watermarks). Product: "UrbanWear Oversize Gabardin Erkek Trençkot" (Erkek Giyim category, distinct unique design #33). Exact color variant: "Lacivert". Visual/material details: Kumaş / Üst Yüzey: %100 Organik Pamuk, Kalıp: Oversize. High-resolution commercial catalog photography.
+
+[068] DOSYA: p033-bej.jpg | ÜRÜN: UrbanWear Oversize Gabardin Erkek Trençkot | RENK: Bej
+PROMPT: Studio e-commerce product photograph (1:1 square, clean seamless soft off-white background, crisp natural studio lighting, no text, no logos, no watermarks). Product: "UrbanWear Oversize Gabardin Erkek Trençkot" (Erkek Giyim category, distinct unique design #33). Exact color variant: "Bej". Visual/material details: Kumaş / Üst Yüzey: %100 Organik Pamuk, Kalıp: Oversize. High-resolution commercial catalog photography.
+
+[069] DOSYA: p033-siyah.jpg | ÜRÜN: UrbanWear Oversize Gabardin Erkek Trençkot | RENK: Siyah
+PROMPT: Studio e-commerce product photograph (1:1 square, clean seamless soft off-white background, crisp natural studio lighting, no text, no logos, no watermarks). Product: "UrbanWear Oversize Gabardin Erkek Trençkot" (Erkek Giyim category, distinct unique design #33). Exact color variant: "Siyah". Visual/material details: Kumaş / Üst Yüzey: %100 Organik Pamuk, Kalıp: Oversize. High-resolution commercial catalog photography.
+
+[070] DOSYA: p034-lacivert.jpg | ÜRÜN: VeloStyle Günlük Pamuklu Erkek Ceket | RENK: Lacivert
+PROMPT: Studio e-commerce product photograph (1:1 square, clean seamless soft off-white background, crisp natural studio lighting, no text, no logos, no watermarks). Product: "VeloStyle Günlük Pamuklu Erkek Ceket" (Erkek Giyim category, distinct unique design #34). Exact color variant: "Lacivert". Visual/material details: Kumaş / Üst Yüzey: Penye Pamuk, Kalıp: Regular Fit. High-resolution commercial catalog photography.
+
+[071] DOSYA: p034-bej.jpg | ÜRÜN: VeloStyle Günlük Pamuklu Erkek Ceket | RENK: Bej
+PROMPT: Studio e-commerce product photograph (1:1 square, clean seamless soft off-white background, crisp natural studio lighting, no text, no logos, no watermarks). Product: "VeloStyle Günlük Pamuklu Erkek Ceket" (Erkek Giyim category, distinct unique design #34). Exact color variant: "Bej". Visual/material details: Kumaş / Üst Yüzey: Penye Pamuk, Kalıp: Regular Fit. High-resolution commercial catalog photography.
+
+[072] DOSYA: p034-siyah.jpg | ÜRÜN: VeloStyle Günlük Pamuklu Erkek Ceket | RENK: Siyah
+PROMPT: Studio e-commerce product photograph (1:1 square, clean seamless soft off-white background, crisp natural studio lighting, no text, no logos, no watermarks). Product: "VeloStyle Günlük Pamuklu Erkek Ceket" (Erkek Giyim category, distinct unique design #34). Exact color variant: "Siyah". Visual/material details: Kumaş / Üst Yüzey: Penye Pamuk, Kalıp: Regular Fit. High-resolution commercial catalog photography.

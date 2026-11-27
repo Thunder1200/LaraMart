@@ -29,10 +29,10 @@ Route::get('/magaza/{seller:slug}', [StoreController::class, 'show'])->name('sto
 Route::prefix('sepet')->name('cart.')->group(function () {
     Route::get('/', [CartController::class, 'index'])->name('index');
     Route::post('/ekle', [CartController::class, 'store'])->name('store');
-    Route::patch('/{cartItem}', [CartController::class, 'update'])->name('update');
-    Route::delete('/{cartItem}', [CartController::class, 'destroy'])->name('destroy');
     Route::post('/kupon', [CartController::class, 'applyCoupon'])->name('coupon.apply');
     Route::delete('/kupon', [CartController::class, 'removeCoupon'])->name('coupon.remove');
+    Route::patch('/{cartItem}', [CartController::class, 'update'])->whereNumber('cartItem')->name('update');
+    Route::delete('/{cartItem}', [CartController::class, 'destroy'])->whereNumber('cartItem')->name('destroy');
 });
 
 // 3D Secure iyzico dönüş adresi ve hata ekranı

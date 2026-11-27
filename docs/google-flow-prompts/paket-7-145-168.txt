@@ -1,0 +1,77 @@
+GOOGLE FLOW AGENT MODU — PAKET 7 (24 BENZERSİZ ÜRÜN / RENK GÖRSELİ: #145–#168)
+==========================================================================================
+
+Aşağıdaki listedeki her bir madde için 1:1 kare, temiz açık gri/beyaz stüdyo fonlu, metinsiz ve filigransız
+gerçekçi bir e-ticaret ürün fotoğrafı üret. Her ürün kendi tasarımına ve belirtilen tam renk varyantına uygun, benzersiz olsun:
+
+[145] DOSYA: p068-beyaz-lacivert.jpg | ÜRÜN: PeakFit RainShield Outdoor Koşu Ayakkabısı | RENK: Beyaz / Lacivert
+PROMPT: Studio e-commerce product photograph (1:1 square, clean seamless soft off-white background, crisp natural studio lighting, no text, no logos, no watermarks). Product: "PeakFit RainShield Outdoor Koşu Ayakkabısı" (Fitness & Koşu category, distinct unique design #68). Exact color variant: "Beyaz / Lacivert". Visual/material details: Taban Teknolojisi: Kaymaz Kauçuk, Su Koruması: Suya Dayanıklı. High-resolution commercial catalog photography.
+
+[146] DOSYA: p068-komur-gri.jpg | ÜRÜN: PeakFit RainShield Outdoor Koşu Ayakkabısı | RENK: Kömür Gri
+PROMPT: Studio e-commerce product photograph (1:1 square, clean seamless soft off-white background, crisp natural studio lighting, no text, no logos, no watermarks). Product: "PeakFit RainShield Outdoor Koşu Ayakkabısı" (Fitness & Koşu category, distinct unique design #68). Exact color variant: "Kömür Gri". Visual/material details: Taban Teknolojisi: Kaymaz Kauçuk, Su Koruması: Suya Dayanıklı. High-resolution commercial catalog photography.
+
+[147] DOSYA: p069-beyaz-lacivert.jpg | ÜRÜN: VeloStyle SprintX Ultra Hafif Koşu Ayakkabısı | RENK: Beyaz / Lacivert
+PROMPT: Studio e-commerce product photograph (1:1 square, clean seamless soft off-white background, crisp natural studio lighting, no text, no logos, no watermarks). Product: "VeloStyle SprintX Ultra Hafif Koşu Ayakkabısı" (Fitness & Koşu category, distinct unique design #69). Exact color variant: "Beyaz / Lacivert". Visual/material details: Taban Teknolojisi: Karbon Destekli EVA, Su Koruması: Nefes Alan Mesh. High-resolution commercial catalog photography.
+
+[148] DOSYA: p069-komur-gri.jpg | ÜRÜN: VeloStyle SprintX Ultra Hafif Koşu Ayakkabısı | RENK: Kömür Gri
+PROMPT: Studio e-commerce product photograph (1:1 square, clean seamless soft off-white background, crisp natural studio lighting, no text, no logos, no watermarks). Product: "VeloStyle SprintX Ultra Hafif Koşu Ayakkabısı" (Fitness & Koşu category, distinct unique design #69). Exact color variant: "Kömür Gri". Visual/material details: Taban Teknolojisi: Karbon Destekli EVA, Su Koruması: Nefes Alan Mesh. High-resolution commercial catalog photography.
+
+[149] DOSYA: p070-beyaz-lacivert.jpg | ÜRÜN: PeakFit Endurance Pro Uzun Mesafe Ayakkabısı | RENK: Beyaz / Lacivert
+PROMPT: Studio e-commerce product photograph (1:1 square, clean seamless soft off-white background, crisp natural studio lighting, no text, no logos, no watermarks). Product: "PeakFit Endurance Pro Uzun Mesafe Ayakkabısı" (Fitness & Koşu category, distinct unique design #70). Exact color variant: "Beyaz / Lacivert". Visual/material details: Taban Teknolojisi: Yüksek Yastıklamalı Köpük, Su Koruması: Suya Dayanıklı. High-resolution commercial catalog photography.
+
+[150] DOSYA: p070-komur-gri.jpg | ÜRÜN: PeakFit Endurance Pro Uzun Mesafe Ayakkabısı | RENK: Kömür Gri
+PROMPT: Studio e-commerce product photograph (1:1 square, clean seamless soft off-white background, crisp natural studio lighting, no text, no logos, no watermarks). Product: "PeakFit Endurance Pro Uzun Mesafe Ayakkabısı" (Fitness & Koşu category, distinct unique design #70). Exact color variant: "Kömür Gri". Visual/material details: Taban Teknolojisi: Yüksek Yastıklamalı Köpük, Su Koruması: Suya Dayanıklı. High-resolution commercial catalog photography.
+
+[151] DOSYA: p071-haki-yesil.jpg | ÜRÜN: PeakFit Summit 40L Su Geçirmez Trekking Çantası | RENK: Haki Yeşil
+PROMPT: Studio e-commerce product photograph (1:1 square, clean seamless soft off-white background, crisp natural studio lighting, no text, no logos, no watermarks). Product: "PeakFit Summit 40L Su Geçirmez Trekking Çantası" (Kamp Malzemeleri category, distinct unique design #71). Exact color variant: "Haki Yeşil". Visual/material details: Hacim / Kapasite: 40 Litre, Su Koruması: Tam Su Geçirmez. High-resolution commercial catalog photography.
+
+[152] DOSYA: p071-mat-siyah.jpg | ÜRÜN: PeakFit Summit 40L Su Geçirmez Trekking Çantası | RENK: Mat Siyah
+PROMPT: Studio e-commerce product photograph (1:1 square, clean seamless soft off-white background, crisp natural studio lighting, no text, no logos, no watermarks). Product: "PeakFit Summit 40L Su Geçirmez Trekking Çantası" (Kamp Malzemeleri category, distinct unique design #71). Exact color variant: "Mat Siyah". Visual/material details: Hacim / Kapasite: 40 Litre, Su Koruması: Tam Su Geçirmez. High-resolution commercial catalog photography.
+
+[153] DOSYA: p072-haki-yesil.jpg | ÜRÜN: PeakFit TrailPack 28L Günlük Outdoor Sırt Çantası | RENK: Haki Yeşil
+PROMPT: Studio e-commerce product photograph (1:1 square, clean seamless soft off-white background, crisp natural studio lighting, no text, no logos, no watermarks). Product: "PeakFit TrailPack 28L Günlük Outdoor Sırt Çantası" (Kamp Malzemeleri category, distinct unique design #72). Exact color variant: "Haki Yeşil". Visual/material details: Hacim / Kapasite: 28 Litre, Su Koruması: Suya Dayanıklı. High-resolution commercial catalog photography.
+
+[154] DOSYA: p072-mat-siyah.jpg | ÜRÜN: PeakFit TrailPack 28L Günlük Outdoor Sırt Çantası | RENK: Mat Siyah
+PROMPT: Studio e-commerce product photograph (1:1 square, clean seamless soft off-white background, crisp natural studio lighting, no text, no logos, no watermarks). Product: "PeakFit TrailPack 28L Günlük Outdoor Sırt Çantası" (Kamp Malzemeleri category, distinct unique design #72). Exact color variant: "Mat Siyah". Visual/material details: Hacim / Kapasite: 28 Litre, Su Koruması: Suya Dayanıklı. High-resolution commercial catalog photography.
+
+[155] DOSYA: p073-haki-yesil.jpg | ÜRÜN: UrbanWear Nomad 40L Seyahat & Kamp Çantası | RENK: Haki Yeşil
+PROMPT: Studio e-commerce product photograph (1:1 square, clean seamless soft off-white background, crisp natural studio lighting, no text, no logos, no watermarks). Product: "UrbanWear Nomad 40L Seyahat & Kamp Çantası" (Kamp Malzemeleri category, distinct unique design #73). Exact color variant: "Haki Yeşil". Visual/material details: Hacim / Kapasite: 40 Litre, Su Koruması: Tam Su Geçirmez. High-resolution commercial catalog photography.
+
+[156] DOSYA: p073-mat-siyah.jpg | ÜRÜN: UrbanWear Nomad 40L Seyahat & Kamp Çantası | RENK: Mat Siyah
+PROMPT: Studio e-commerce product photograph (1:1 square, clean seamless soft off-white background, crisp natural studio lighting, no text, no logos, no watermarks). Product: "UrbanWear Nomad 40L Seyahat & Kamp Çantası" (Kamp Malzemeleri category, distinct unique design #73). Exact color variant: "Mat Siyah". Visual/material details: Hacim / Kapasite: 40 Litre, Su Koruması: Tam Su Geçirmez. High-resolution commercial catalog photography.
+
+[157] DOSYA: p074-haki-yesil.jpg | ÜRÜN: PeakFit Expedition 55L Dağcılık Sırt Çantası | RENK: Haki Yeşil
+PROMPT: Studio e-commerce product photograph (1:1 square, clean seamless soft off-white background, crisp natural studio lighting, no text, no logos, no watermarks). Product: "PeakFit Expedition 55L Dağcılık Sırt Çantası" (Kamp Malzemeleri category, distinct unique design #74). Exact color variant: "Haki Yeşil". Visual/material details: Hacim / Kapasite: 55 Litre, Su Koruması: Tam Su Geçirmez. High-resolution commercial catalog photography.
+
+[158] DOSYA: p074-mat-siyah.jpg | ÜRÜN: PeakFit Expedition 55L Dağcılık Sırt Çantası | RENK: Mat Siyah
+PROMPT: Studio e-commerce product photograph (1:1 square, clean seamless soft off-white background, crisp natural studio lighting, no text, no logos, no watermarks). Product: "PeakFit Expedition 55L Dağcılık Sırt Çantası" (Kamp Malzemeleri category, distinct unique design #74). Exact color variant: "Mat Siyah". Visual/material details: Hacim / Kapasite: 55 Litre, Su Koruması: Tam Su Geçirmez. High-resolution commercial catalog photography.
+
+[159] DOSYA: p075-haki-yesil.jpg | ÜRÜN: PeakFit Ranger 28L Laptop Bölmeli Outdoor Çanta | RENK: Haki Yeşil
+PROMPT: Studio e-commerce product photograph (1:1 square, clean seamless soft off-white background, crisp natural studio lighting, no text, no logos, no watermarks). Product: "PeakFit Ranger 28L Laptop Bölmeli Outdoor Çanta" (Kamp Malzemeleri category, distinct unique design #75). Exact color variant: "Haki Yeşil". Visual/material details: Hacim / Kapasite: 28 Litre, Su Koruması: Suya Dayanıklı. High-resolution commercial catalog photography.
+
+[160] DOSYA: p075-mat-siyah.jpg | ÜRÜN: PeakFit Ranger 28L Laptop Bölmeli Outdoor Çanta | RENK: Mat Siyah
+PROMPT: Studio e-commerce product photograph (1:1 square, clean seamless soft off-white background, crisp natural studio lighting, no text, no logos, no watermarks). Product: "PeakFit Ranger 28L Laptop Bölmeli Outdoor Çanta" (Kamp Malzemeleri category, distinct unique design #75). Exact color variant: "Mat Siyah". Visual/material details: Hacim / Kapasite: 28 Litre, Su Koruması: Suya Dayanıklı. High-resolution commercial catalog photography.
+
+[161] DOSYA: p076-haki-yesil.jpg | ÜRÜN: UrbanWear ForestPro 40L Kamp Sırt Çantası | RENK: Haki Yeşil
+PROMPT: Studio e-commerce product photograph (1:1 square, clean seamless soft off-white background, crisp natural studio lighting, no text, no logos, no watermarks). Product: "UrbanWear ForestPro 40L Kamp Sırt Çantası" (Kamp Malzemeleri category, distinct unique design #76). Exact color variant: "Haki Yeşil". Visual/material details: Hacim / Kapasite: 40 Litre, Su Koruması: Suya Dayanıklı. High-resolution commercial catalog photography.
+
+[162] DOSYA: p076-mat-siyah.jpg | ÜRÜN: UrbanWear ForestPro 40L Kamp Sırt Çantası | RENK: Mat Siyah
+PROMPT: Studio e-commerce product photograph (1:1 square, clean seamless soft off-white background, crisp natural studio lighting, no text, no logos, no watermarks). Product: "UrbanWear ForestPro 40L Kamp Sırt Çantası" (Kamp Malzemeleri category, distinct unique design #76). Exact color variant: "Mat Siyah". Visual/material details: Hacim / Kapasite: 40 Litre, Su Koruması: Suya Dayanıklı. High-resolution commercial catalog photography.
+
+[163] DOSYA: p077-haki-yesil.jpg | ÜRÜN: PeakFit Alpine 55L Ergonomik Bel Destekli Çanta | RENK: Haki Yeşil
+PROMPT: Studio e-commerce product photograph (1:1 square, clean seamless soft off-white background, crisp natural studio lighting, no text, no logos, no watermarks). Product: "PeakFit Alpine 55L Ergonomik Bel Destekli Çanta" (Kamp Malzemeleri category, distinct unique design #77). Exact color variant: "Haki Yeşil". Visual/material details: Hacim / Kapasite: 55 Litre, Su Koruması: Tam Su Geçirmez. High-resolution commercial catalog photography.
+
+[164] DOSYA: p077-mat-siyah.jpg | ÜRÜN: PeakFit Alpine 55L Ergonomik Bel Destekli Çanta | RENK: Mat Siyah
+PROMPT: Studio e-commerce product photograph (1:1 square, clean seamless soft off-white background, crisp natural studio lighting, no text, no logos, no watermarks). Product: "PeakFit Alpine 55L Ergonomik Bel Destekli Çanta" (Kamp Malzemeleri category, distinct unique design #77). Exact color variant: "Mat Siyah". Visual/material details: Hacim / Kapasite: 55 Litre, Su Koruması: Tam Su Geçirmez. High-resolution commercial catalog photography.
+
+[165] DOSYA: p078-haki-yesil.jpg | ÜRÜN: UrbanWear CityTrail 28L Su Geçirmez Sırt Çantası | RENK: Haki Yeşil
+PROMPT: Studio e-commerce product photograph (1:1 square, clean seamless soft off-white background, crisp natural studio lighting, no text, no logos, no watermarks). Product: "UrbanWear CityTrail 28L Su Geçirmez Sırt Çantası" (Kamp Malzemeleri category, distinct unique design #78). Exact color variant: "Haki Yeşil". Visual/material details: Hacim / Kapasite: 28 Litre, Su Koruması: Tam Su Geçirmez. High-resolution commercial catalog photography.
+
+[166] DOSYA: p078-mat-siyah.jpg | ÜRÜN: UrbanWear CityTrail 28L Su Geçirmez Sırt Çantası | RENK: Mat Siyah
+PROMPT: Studio e-commerce product photograph (1:1 square, clean seamless soft off-white background, crisp natural studio lighting, no text, no logos, no watermarks). Product: "UrbanWear CityTrail 28L Su Geçirmez Sırt Çantası" (Kamp Malzemeleri category, distinct unique design #78). Exact color variant: "Mat Siyah". Visual/material details: Hacim / Kapasite: 28 Litre, Su Koruması: Tam Su Geçirmez. High-resolution commercial catalog photography.
+
+[167] DOSYA: p079-haki-yesil.jpg | ÜRÜN: PeakFit CampLite 40L Hafif Yürüyüş Çantası | RENK: Haki Yeşil
+PROMPT: Studio e-commerce product photograph (1:1 square, clean seamless soft off-white background, crisp natural studio lighting, no text, no logos, no watermarks). Product: "PeakFit CampLite 40L Hafif Yürüyüş Çantası" (Kamp Malzemeleri category, distinct unique design #79). Exact color variant: "Haki Yeşil". Visual/material details: Hacim / Kapasite: 40 Litre, Su Koruması: Suya Dayanıklı. High-resolution commercial catalog photography.
+
+[168] DOSYA: p079-mat-siyah.jpg | ÜRÜN: PeakFit CampLite 40L Hafif Yürüyüş Çantası | RENK: Mat Siyah
+PROMPT: Studio e-commerce product photograph (1:1 square, clean seamless soft off-white background, crisp natural studio lighting, no text, no logos, no watermarks). Product: "PeakFit CampLite 40L Hafif Yürüyüş Çantası" (Kamp Malzemeleri category, distinct unique design #79). Exact color variant: "Mat Siyah". Visual/material details: Hacim / Kapasite: 40 Litre, Su Koruması: Suya Dayanıklı. High-resolution commercial catalog photography.

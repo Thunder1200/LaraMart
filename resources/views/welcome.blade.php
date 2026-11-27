@@ -38,7 +38,7 @@
                         </p>
                         @if ($banner->url)
                             <div class="pt-2">
-                                <a href="{{ $banner->url }}" class="inline-flex items-center gap-2 rounded-lg bg-white px-5 py-2.5 text-sm font-bold text-slate-900 hover:bg-slate-100 transition">
+                                <a href="{{ $banner->url }}" class="inline-flex items-center gap-2 rounded-lg bg-white dark:bg-white px-5 py-2.5 text-sm font-bold text-slate-900 dark:text-slate-900 hover:bg-slate-100 dark:hover:bg-slate-100 transition">
                                     Kampanyayı Keşfet →
                                 </a>
                             </div>

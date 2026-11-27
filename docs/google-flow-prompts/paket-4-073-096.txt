@@ -1,0 +1,77 @@
+GOOGLE FLOW AGENT MODU — PAKET 4 (24 BENZERSİZ ÜRÜN / RENK GÖRSELİ: #073–#096)
+==========================================================================================
+
+Aşağıdaki listedeki her bir madde için 1:1 kare, temiz açık gri/beyaz stüdyo fonlu, metinsiz ve filigransız
+gerçekçi bir e-ticaret ürün fotoğrafı üret. Her ürün kendi tasarımına ve belirtilen tam renk varyantına uygun, benzersiz olsun:
+
+[073] DOSYA: p035-lacivert.jpg | ÜRÜN: UrbanWear Modern Dik Yaka Erkek Ceket | RENK: Lacivert
+PROMPT: Studio e-commerce product photograph (1:1 square, clean seamless soft off-white background, crisp natural studio lighting, no text, no logos, no watermarks). Product: "UrbanWear Modern Dik Yaka Erkek Ceket" (Erkek Giyim category, distinct unique design #35). Exact color variant: "Lacivert". Visual/material details: Kumaş / Üst Yüzey: %100 Organik Pamuk, Kalıp: Slim Fit. High-resolution commercial catalog photography.
+
+[074] DOSYA: p035-bej.jpg | ÜRÜN: UrbanWear Modern Dik Yaka Erkek Ceket | RENK: Bej
+PROMPT: Studio e-commerce product photograph (1:1 square, clean seamless soft off-white background, crisp natural studio lighting, no text, no logos, no watermarks). Product: "UrbanWear Modern Dik Yaka Erkek Ceket" (Erkek Giyim category, distinct unique design #35). Exact color variant: "Bej". Visual/material details: Kumaş / Üst Yüzey: %100 Organik Pamuk, Kalıp: Slim Fit. High-resolution commercial catalog photography.
+
+[075] DOSYA: p035-siyah.jpg | ÜRÜN: UrbanWear Modern Dik Yaka Erkek Ceket | RENK: Siyah
+PROMPT: Studio e-commerce product photograph (1:1 square, clean seamless soft off-white background, crisp natural studio lighting, no text, no logos, no watermarks). Product: "UrbanWear Modern Dik Yaka Erkek Ceket" (Erkek Giyim category, distinct unique design #35). Exact color variant: "Siyah". Visual/material details: Kumaş / Üst Yüzey: %100 Organik Pamuk, Kalıp: Slim Fit. High-resolution commercial catalog photography.
+
+[076] DOSYA: p036-beyaz.jpg | ÜRÜN: VeloStyle AirMesh Günlük Erkek Sneaker | RENK: Beyaz
+PROMPT: Studio e-commerce product photograph (1:1 square, clean seamless soft off-white background, crisp natural studio lighting, no text, no logos, no watermarks). Product: "VeloStyle AirMesh Günlük Erkek Sneaker" (Erkek Giyim category, distinct unique design #36). Exact color variant: "Beyaz". Visual/material details: Kumaş / Üst Yüzey: Nefes Alan Mesh, Kalıp: Anatomik Kalıp. High-resolution commercial catalog photography.
+
+[077] DOSYA: p036-komur-gri.jpg | ÜRÜN: VeloStyle AirMesh Günlük Erkek Sneaker | RENK: Kömür Gri
+PROMPT: Studio e-commerce product photograph (1:1 square, clean seamless soft off-white background, crisp natural studio lighting, no text, no logos, no watermarks). Product: "VeloStyle AirMesh Günlük Erkek Sneaker" (Erkek Giyim category, distinct unique design #36). Exact color variant: "Kömür Gri". Visual/material details: Kumaş / Üst Yüzey: Nefes Alan Mesh, Kalıp: Anatomik Kalıp. High-resolution commercial catalog photography.
+
+[078] DOSYA: p036-siyah.jpg | ÜRÜN: VeloStyle AirMesh Günlük Erkek Sneaker | RENK: Siyah
+PROMPT: Studio e-commerce product photograph (1:1 square, clean seamless soft off-white background, crisp natural studio lighting, no text, no logos, no watermarks). Product: "VeloStyle AirMesh Günlük Erkek Sneaker" (Erkek Giyim category, distinct unique design #36). Exact color variant: "Siyah". Visual/material details: Kumaş / Üst Yüzey: Nefes Alan Mesh, Kalıp: Anatomik Kalıp. High-resolution commercial catalog photography.
+
+[079] DOSYA: p037-beyaz.jpg | ÜRÜN: UrbanWear StreetRun Beyaz Sneaker Ayakkabı | RENK: Beyaz
+PROMPT: Studio e-commerce product photograph (1:1 square, clean seamless soft off-white background, crisp natural studio lighting, no text, no logos, no watermarks). Product: "UrbanWear StreetRun Beyaz Sneaker Ayakkabı" (Erkek Giyim category, distinct unique design #37). Exact color variant: "Beyaz". Visual/material details: Kumaş / Üst Yüzey: Nefes Alan Mesh, Kalıp: Regular Fit. High-resolution commercial catalog photography.
+
+[080] DOSYA: p037-komur-gri.jpg | ÜRÜN: UrbanWear StreetRun Beyaz Sneaker Ayakkabı | RENK: Kömür Gri
+PROMPT: Studio e-commerce product photograph (1:1 square, clean seamless soft off-white background, crisp natural studio lighting, no text, no logos, no watermarks). Product: "UrbanWear StreetRun Beyaz Sneaker Ayakkabı" (Erkek Giyim category, distinct unique design #37). Exact color variant: "Kömür Gri". Visual/material details: Kumaş / Üst Yüzey: Nefes Alan Mesh, Kalıp: Regular Fit. High-resolution commercial catalog photography.
+
+[081] DOSYA: p037-siyah.jpg | ÜRÜN: UrbanWear StreetRun Beyaz Sneaker Ayakkabı | RENK: Siyah
+PROMPT: Studio e-commerce product photograph (1:1 square, clean seamless soft off-white background, crisp natural studio lighting, no text, no logos, no watermarks). Product: "UrbanWear StreetRun Beyaz Sneaker Ayakkabı" (Erkek Giyim category, distinct unique design #37). Exact color variant: "Siyah". Visual/material details: Kumaş / Üst Yüzey: Nefes Alan Mesh, Kalıp: Regular Fit. High-resolution commercial catalog photography.
+
+[082] DOSYA: p038-beyaz.jpg | ÜRÜN: VeloStyle UrbanFlex Antrasit Spor Ayakkabı | RENK: Beyaz
+PROMPT: Studio e-commerce product photograph (1:1 square, clean seamless soft off-white background, crisp natural studio lighting, no text, no logos, no watermarks). Product: "VeloStyle UrbanFlex Antrasit Spor Ayakkabı" (Erkek Giyim category, distinct unique design #38). Exact color variant: "Beyaz". Visual/material details: Kumaş / Üst Yüzey: Nefes Alan Mesh, Kalıp: Anatomik Kalıp. High-resolution commercial catalog photography.
+
+[083] DOSYA: p038-komur-gri.jpg | ÜRÜN: VeloStyle UrbanFlex Antrasit Spor Ayakkabı | RENK: Kömür Gri
+PROMPT: Studio e-commerce product photograph (1:1 square, clean seamless soft off-white background, crisp natural studio lighting, no text, no logos, no watermarks). Product: "VeloStyle UrbanFlex Antrasit Spor Ayakkabı" (Erkek Giyim category, distinct unique design #38). Exact color variant: "Kömür Gri". Visual/material details: Kumaş / Üst Yüzey: Nefes Alan Mesh, Kalıp: Anatomik Kalıp. High-resolution commercial catalog photography.
+
+[084] DOSYA: p038-siyah.jpg | ÜRÜN: VeloStyle UrbanFlex Antrasit Spor Ayakkabı | RENK: Siyah
+PROMPT: Studio e-commerce product photograph (1:1 square, clean seamless soft off-white background, crisp natural studio lighting, no text, no logos, no watermarks). Product: "VeloStyle UrbanFlex Antrasit Spor Ayakkabı" (Erkek Giyim category, distinct unique design #38). Exact color variant: "Siyah". Visual/material details: Kumaş / Üst Yüzey: Nefes Alan Mesh, Kalıp: Anatomik Kalıp. High-resolution commercial catalog photography.
+
+[085] DOSYA: p039-beyaz.jpg | ÜRÜN: UrbanWear CloudStep Hafif Günlük Ayakkabı | RENK: Beyaz
+PROMPT: Studio e-commerce product photograph (1:1 square, clean seamless soft off-white background, crisp natural studio lighting, no text, no logos, no watermarks). Product: "UrbanWear CloudStep Hafif Günlük Ayakkabı" (Erkek Giyim category, distinct unique design #39). Exact color variant: "Beyaz". Visual/material details: Kumaş / Üst Yüzey: Nefes Alan Mesh, Kalıp: Regular Fit. High-resolution commercial catalog photography.
+
+[086] DOSYA: p039-komur-gri.jpg | ÜRÜN: UrbanWear CloudStep Hafif Günlük Ayakkabı | RENK: Kömür Gri
+PROMPT: Studio e-commerce product photograph (1:1 square, clean seamless soft off-white background, crisp natural studio lighting, no text, no logos, no watermarks). Product: "UrbanWear CloudStep Hafif Günlük Ayakkabı" (Erkek Giyim category, distinct unique design #39). Exact color variant: "Kömür Gri". Visual/material details: Kumaş / Üst Yüzey: Nefes Alan Mesh, Kalıp: Regular Fit. High-resolution commercial catalog photography.
+
+[087] DOSYA: p039-siyah.jpg | ÜRÜN: UrbanWear CloudStep Hafif Günlük Ayakkabı | RENK: Siyah
+PROMPT: Studio e-commerce product photograph (1:1 square, clean seamless soft off-white background, crisp natural studio lighting, no text, no logos, no watermarks). Product: "UrbanWear CloudStep Hafif Günlük Ayakkabı" (Erkek Giyim category, distinct unique design #39). Exact color variant: "Siyah". Visual/material details: Kumaş / Üst Yüzey: Nefes Alan Mesh, Kalıp: Regular Fit. High-resolution commercial catalog photography.
+
+[088] DOSYA: p040-beyaz.jpg | ÜRÜN: VeloStyle AeroStride Premium Sneaker | RENK: Beyaz
+PROMPT: Studio e-commerce product photograph (1:1 square, clean seamless soft off-white background, crisp natural studio lighting, no text, no logos, no watermarks). Product: "VeloStyle AeroStride Premium Sneaker" (Erkek Giyim category, distinct unique design #40). Exact color variant: "Beyaz". Visual/material details: Kumaş / Üst Yüzey: Nefes Alan Mesh, Kalıp: Anatomik Kalıp. High-resolution commercial catalog photography.
+
+[089] DOSYA: p040-komur-gri.jpg | ÜRÜN: VeloStyle AeroStride Premium Sneaker | RENK: Kömür Gri
+PROMPT: Studio e-commerce product photograph (1:1 square, clean seamless soft off-white background, crisp natural studio lighting, no text, no logos, no watermarks). Product: "VeloStyle AeroStride Premium Sneaker" (Erkek Giyim category, distinct unique design #40). Exact color variant: "Kömür Gri". Visual/material details: Kumaş / Üst Yüzey: Nefes Alan Mesh, Kalıp: Anatomik Kalıp. High-resolution commercial catalog photography.
+
+[090] DOSYA: p040-siyah.jpg | ÜRÜN: VeloStyle AeroStride Premium Sneaker | RENK: Siyah
+PROMPT: Studio e-commerce product photograph (1:1 square, clean seamless soft off-white background, crisp natural studio lighting, no text, no logos, no watermarks). Product: "VeloStyle AeroStride Premium Sneaker" (Erkek Giyim category, distinct unique design #40). Exact color variant: "Siyah". Visual/material details: Kumaş / Üst Yüzey: Nefes Alan Mesh, Kalıp: Anatomik Kalıp. High-resolution commercial catalog photography.
+
+[091] DOSYA: p041-inoks-celik.jpg | ÜRÜN: HomeCraft Barista Pro 15 Bar Espresso Makinesi | RENK: İnoks Çelik
+PROMPT: Studio e-commerce product photograph (1:1 square, clean seamless soft off-white background, crisp natural studio lighting, no text, no logos, no watermarks). Product: "HomeCraft Barista Pro 15 Bar Espresso Makinesi" (Mutfak Gereçleri category, distinct unique design #41). Exact color variant: "İnoks Çelik". Visual/material details: Materyal: Paslanmaz Çelik, Güç / Teknoloji: 15 Bar / 1450W, Garanti Süresi: 24 Ay. High-resolution commercial catalog photography.
+
+[092] DOSYA: p041-mat-siyah.jpg | ÜRÜN: HomeCraft Barista Pro 15 Bar Espresso Makinesi | RENK: Mat Siyah
+PROMPT: Studio e-commerce product photograph (1:1 square, clean seamless soft off-white background, crisp natural studio lighting, no text, no logos, no watermarks). Product: "HomeCraft Barista Pro 15 Bar Espresso Makinesi" (Mutfak Gereçleri category, distinct unique design #41). Exact color variant: "Mat Siyah". Visual/material details: Materyal: Paslanmaz Çelik, Güç / Teknoloji: 15 Bar / 1450W, Garanti Süresi: 24 Ay. High-resolution commercial catalog photography.
+
+[093] DOSYA: p042-inoks-celik.jpg | ÜRÜN: ZenLiving AromaMaster Filtre Kahve Makinesi | RENK: İnoks Çelik
+PROMPT: Studio e-commerce product photograph (1:1 square, clean seamless soft off-white background, crisp natural studio lighting, no text, no logos, no watermarks). Product: "ZenLiving AromaMaster Filtre Kahve Makinesi" (Mutfak Gereçleri category, distinct unique design #42). Exact color variant: "İnoks Çelik". Visual/material details: Materyal: Fırçalanmış Krom, Güç / Teknoloji: 1200W Filtre, Garanti Süresi: 24 Ay. High-resolution commercial catalog photography.
+
+[094] DOSYA: p042-mat-siyah.jpg | ÜRÜN: ZenLiving AromaMaster Filtre Kahve Makinesi | RENK: Mat Siyah
+PROMPT: Studio e-commerce product photograph (1:1 square, clean seamless soft off-white background, crisp natural studio lighting, no text, no logos, no watermarks). Product: "ZenLiving AromaMaster Filtre Kahve Makinesi" (Mutfak Gereçleri category, distinct unique design #42). Exact color variant: "Mat Siyah". Visual/material details: Materyal: Fırçalanmış Krom, Güç / Teknoloji: 1200W Filtre, Garanti Süresi: 24 Ay. High-resolution commercial catalog photography.
+
+[095] DOSYA: p043-inoks-celik.jpg | ÜRÜN: HomeCraft CremaMax 20 Bar Süt Köpürtücülü Espresso | RENK: İnoks Çelik
+PROMPT: Studio e-commerce product photograph (1:1 square, clean seamless soft off-white background, crisp natural studio lighting, no text, no logos, no watermarks). Product: "HomeCraft CremaMax 20 Bar Süt Köpürtücülü Espresso" (Mutfak Gereçleri category, distinct unique design #43). Exact color variant: "İnoks Çelik". Visual/material details: Materyal: Paslanmaz Çelik, Güç / Teknoloji: 20 Bar / 1600W, Garanti Süresi: 36 Ay. High-resolution commercial catalog photography.
+
+[096] DOSYA: p043-mat-siyah.jpg | ÜRÜN: HomeCraft CremaMax 20 Bar Süt Köpürtücülü Espresso | RENK: Mat Siyah
+PROMPT: Studio e-commerce product photograph (1:1 square, clean seamless soft off-white background, crisp natural studio lighting, no text, no logos, no watermarks). Product: "HomeCraft CremaMax 20 Bar Süt Köpürtücülü Espresso" (Mutfak Gereçleri category, distinct unique design #43). Exact color variant: "Mat Siyah". Visual/material details: Materyal: Paslanmaz Çelik, Güç / Teknoloji: 20 Bar / 1600W, Garanti Süresi: 36 Ay. High-resolution commercial catalog photography.
