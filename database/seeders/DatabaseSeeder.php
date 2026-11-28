@@ -268,6 +268,7 @@ class DatabaseSeeder extends Seeder
                             'status' => 'delivered',
                             'cargo_company' => 'Yurtiçi Kargo',
                             'tracking_number' => 'YK'.str_pad((string) ($order->id * 100 + $seller->id), 10, '0', STR_PAD_LEFT),
+                            'delivered_at' => now()->subDays(3),
                             'subtotal' => (float) $firstVariant->effectivePrice(),
                             'shipping_amount' => 0.00,
                             'commission_amount' => round((float) $firstVariant->effectivePrice() * ((float) $category->commission_rate / 100), 2),

@@ -2,13 +2,19 @@
 
 use App\Http\Controllers\Admin\CategoryController as AdminCategoryController;
 use App\Http\Controllers\Admin\DashboardController as AdminDashboardController;
+use App\Http\Controllers\Admin\ReviewController as AdminReviewController;
 use App\Http\Controllers\Customer\AccountController;
 use App\Http\Controllers\Customer\AddressController;
 use App\Http\Controllers\Customer\FavoriteController;
+use App\Http\Controllers\Customer\NotificationController as CustomerNotificationController;
 use App\Http\Controllers\Customer\OrderController as CustomerOrderController;
+use App\Http\Controllers\Customer\ReturnController as CustomerReturnController;
+use App\Http\Controllers\Customer\ReviewController as CustomerReviewController;
 use App\Http\Controllers\Seller\ApplicationController as SellerApplicationController;
 use App\Http\Controllers\Seller\DashboardController as SellerDashboardController;
+use App\Http\Controllers\Seller\OrderController as SellerOrderController;
 use App\Http\Controllers\Seller\ProductController as SellerProductController;
+use App\Http\Controllers\Seller\ReturnController as SellerReturnController;
 use App\Http\Controllers\Storefront\CartController;
 use App\Http\Controllers\Storefront\CategoryController as StorefrontCategoryController;
 use App\Http\Controllers\Storefront\CheckoutController;
@@ -54,6 +60,12 @@ Route::middleware(['auth', 'verified'])->group(function () {
 
     Route::get('/hesabim/siparisler', [CustomerOrderController::class, 'index'])->name('customer.orders.index');
     Route::get('/hesabim/siparisler/{order}', [CustomerOrderController::class, 'show'])->name('customer.orders.show');
+    Route::post('/hesabim/siparis-kalemleri/{orderItem}/iade', [CustomerReturnController::class, 'store'])->name('customer.returns.store');
+    Route::post('/urun/{product:slug}/yorum', [CustomerReviewController::class, 'store'])->name('customer.reviews.store');
+
+    Route::get('/hesabim/bildirimler', [CustomerNotificationController::class, 'index'])->name('customer.notifications.index');
+    Route::post('/hesabim/bildirimler/tumunu-oku', [CustomerNotificationController::class, 'markAllRead'])->name('customer.notifications.read-all');
+    Route::post('/hesabim/bildirimler/{notificationId}/oku', [CustomerNotificationController::class, 'markRead'])->name('customer.notifications.read');
 
     Route::prefix('hesabim/adresler')->name('customer.addresses.')->group(function () {
         Route::get('/', [AddressController::class, 'index'])->name('index');
@@ -81,6 +93,11 @@ Route::prefix('satici')
             ->name('products.toggle-status');
         Route::patch('urunler/{product}/stok', [SellerProductController::class, 'updateStock'])
             ->name('products.update-stock');
+        Route::get('siparisler', [SellerOrderController::class, 'index'])->name('orders.index');
+        Route::get('siparisler/{subOrder}', [SellerOrderController::class, 'show'])->name('orders.show');
+        Route::patch('siparisler/{subOrder}/durum', [SellerOrderController::class, 'updateStatus'])->name('orders.update-status');
+        Route::get('iadeler', [SellerReturnController::class, 'index'])->name('returns.index');
+        Route::patch('iadeler/{returnRequest}/karar', [SellerReturnController::class, 'decide'])->name('returns.decide');
     });
 
 Route::prefix('admin')
@@ -92,6 +109,9 @@ Route::prefix('admin')
             ->parameters(['kategoriler' => 'category'])
             ->names('categories')
             ->except(['show']);
+        Route::get('yorumlar', [AdminReviewController::class, 'index'])->name('reviews.index');
+        Route::patch('yorumlar/{review}/onayla', [AdminReviewController::class, 'approve'])->name('reviews.approve');
+        Route::delete('yorumlar/{review}', [AdminReviewController::class, 'destroy'])->name('reviews.destroy');
     });
 
 Route::middleware(['auth'])->group(function () {

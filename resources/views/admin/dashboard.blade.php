@@ -6,9 +6,14 @@
                 <h1 class="mt-2 text-2xl font-bold text-slate-900">LaraMart Admin Paneli</h1>
                 <p class="text-sm text-slate-600">Platform kategorilerini, kullanıcıları ve satıcıları buradan yönetebilirsiniz.</p>
             </div>
-            <a href="{{ route('admin.categories.index') }}" class="rounded-lg bg-indigo-600 px-4 py-2.5 text-sm font-semibold text-white hover:bg-indigo-700 transition">
-                Kategori Yönetimi →
-            </a>
+            <div class="flex flex-wrap items-center gap-2.5">
+                <a href="{{ route('admin.reviews.index') }}" class="rounded-lg border border-amber-300 bg-amber-50 px-4 py-2.5 text-sm font-semibold text-amber-800 hover:bg-amber-100 transition">
+                    Yorum Onayı ({{ $stats['pending_reviews'] ?? 0 }})
+                </a>
+                <a href="{{ route('admin.categories.index') }}" class="rounded-lg bg-indigo-600 px-4 py-2.5 text-sm font-semibold text-white hover:bg-indigo-700 transition">
+                    Kategori Yönetimi →
+                </a>
+            </div>
         </div>
 
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">

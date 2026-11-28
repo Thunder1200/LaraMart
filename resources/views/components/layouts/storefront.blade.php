@@ -185,6 +185,21 @@
                     </a>
 
                     @auth
+                        <a
+                            href="{{ route('customer.notifications.index') }}"
+                            aria-label="Bildirimlerim"
+                            class="relative inline-flex items-center justify-center rounded-lg border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 p-2 text-slate-700 dark:text-slate-200 hover:border-indigo-300 dark:hover:border-indigo-500 hover:text-indigo-700 dark:hover:text-indigo-300 transition"
+                        >
+                            <svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M14.857 17.082a23.848 23.848 0 005.454-1.31A8.967 8.967 0 0118 9.75v-.7V9A6 6 0 006 9v.75a8.967 8.967 0 01-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 01-5.714 0m5.714 0a3 3 0 11-5.714 0" />
+                            </svg>
+                            @if (($unreadNotificationCount ?? 0) > 0)
+                                <span class="absolute -top-1.5 -right-1.5 inline-flex h-5 min-w-5 items-center justify-center rounded-full bg-rose-600 px-1 text-[10px] font-bold text-white shadow">
+                                    {{ $unreadNotificationCount }}
+                                </span>
+                            @endif
+                        </a>
+
                         <div class="relative group">
                             <button
                                 type="button"
@@ -203,14 +218,23 @@
                                 </div>
                                 <a href="{{ route('customer.account') }}" class="block px-4 py-2 text-sm text-slate-700 hover:bg-slate-50">Hesabım (/hesabim)</a>
                                 <a href="{{ route('customer.orders.index') }}" class="block px-4 py-2 text-sm text-slate-700 hover:bg-slate-50">Siparişlerim</a>
+                                <a href="{{ route('customer.notifications.index') }}" class="block px-4 py-2 text-sm text-slate-700 hover:bg-slate-50">
+                                    Bildirimlerim
+                                    @if (($unreadNotificationCount ?? 0) > 0)
+                                        <span class="ml-1 rounded-full bg-rose-100 px-1.5 py-0.5 text-[10px] font-bold text-rose-700">{{ $unreadNotificationCount }}</span>
+                                    @endif
+                                </a>
                                 <a href="{{ route('customer.favorites.index') }}" class="block px-4 py-2 text-sm text-slate-700 hover:bg-slate-50">Favorilerim</a>
                                 <a href="{{ route('customer.addresses.index') }}" class="block px-4 py-2 text-sm text-slate-700 hover:bg-slate-50">Adres Defterim</a>
                                 @if (auth()->user()->hasRole('seller') && auth()->user()->seller?->status === 'approved')
                                     <a href="{{ route('seller.dashboard') }}" class="block px-4 py-2 text-sm text-emerald-700 font-medium hover:bg-emerald-50">Satıcı Paneli (/satici)</a>
+                                    <a href="{{ route('seller.orders.index') }}" class="block px-4 py-2 text-sm text-emerald-700 hover:bg-emerald-50">Satıcı Sipariş &amp; Kargo</a>
+                                    <a href="{{ route('seller.returns.index') }}" class="block px-4 py-2 text-sm text-emerald-700 hover:bg-emerald-50">Satıcı İade Talepleri</a>
                                 @endif
                                 @if (auth()->user()->hasRole('admin'))
                                     <a href="{{ route('admin.dashboard') }}" class="block px-4 py-2 text-sm text-indigo-700 font-medium hover:bg-indigo-50">Admin Paneli (/admin)</a>
                                     <a href="{{ route('admin.categories.index') }}" class="block px-4 py-2 text-sm text-indigo-700 hover:bg-indigo-50">Kategori Yönetimi</a>
+                                    <a href="{{ route('admin.reviews.index') }}" class="block px-4 py-2 text-sm text-indigo-700 hover:bg-indigo-50">Yorum Moderasyonu</a>
                                 @endif
                                 <a href="{{ route('settings.profile') }}" class="block px-4 py-2 text-sm text-slate-700 hover:bg-slate-50">Profil Ayarları</a>
                                 <form method="POST" action="{{ route('logout') }}" class="border-t border-slate-100 mt-1 pt-1">

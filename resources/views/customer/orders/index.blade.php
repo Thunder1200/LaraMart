@@ -44,8 +44,8 @@
                                         <p class="font-bold text-slate-900">{{ $subOrder->seller->store_name }}</p>
                                         <p class="text-slate-500">{{ $subOrder->items->sum('quantity') }} ürün</p>
                                     </div>
-                                    <span class="rounded-full bg-amber-100 px-2.5 py-1 font-bold text-amber-800">
-                                        {{ $subOrder->status === 'pending_approval' ? 'Onay Bekliyor' : ucfirst($subOrder->status) }}
+                                    <span class="rounded-full px-2.5 py-1 font-bold {{ $subOrder->status->badgeClass() }}">
+                                        {{ $subOrder->status->label() }}
                                     </span>
                                 </div>
                             @endforeach

@@ -57,11 +57,11 @@
         </div>
 
         {{-- Onaylı Müşteri Değerlendirmeleri --}}
-        <section class="rounded-2xl border border-slate-200 bg-white p-6 sm:p-8 shadow-sm space-y-5">
+        <section id="yorum-yaz" class="rounded-2xl border border-slate-200 bg-white p-6 sm:p-8 shadow-sm space-y-5">
             <div class="flex flex-wrap items-center justify-between gap-4 border-b border-slate-100 pb-4">
                 <div>
                     <h2 class="text-lg font-bold text-slate-900">Müşteri Değerlendirmeleri</h2>
-                    <p class="text-xs text-slate-500">Yalnızca doğrulanmış satın alma yapan müşterilerin onaylı yorumları</p>
+                    <p class="text-xs text-slate-500">Yalnızca teslim edilmiş ürünü satın alan müşterilerin onaylı yorumları yayınlanır</p>
                 </div>
                 <div class="flex items-center gap-2 rounded-xl bg-amber-50 border border-amber-200 px-4 py-2">
                     <span class="text-xl text-amber-500">★</span>
@@ -69,6 +69,81 @@
                     <span class="text-xs text-slate-600">({{ $product->approved_reviews_count ?? 0 }} değerlendirme)</span>
                 </div>
             </div>
+
+            @if (session('status'))
+                <div class="rounded-lg border border-emerald-200 bg-emerald-50 px-4 py-3 text-sm font-medium text-emerald-800">
+                    {{ session('status') }}
+                </div>
+            @endif
+
+            @if (session('error'))
+                <div class="rounded-lg border border-rose-200 bg-rose-50 px-4 py-3 text-sm font-medium text-rose-800">
+                    {{ session('error') }}
+                </div>
+            @endif
+
+            {{-- Yalnızca teslim edilmiş ürünü satın alan müşteri yorum formunu görebilir --}}
+            @if ($eligibleOrderItem)
+                <form
+                    method="POST"
+                    action="{{ route('customer.reviews.store', $product->slug) }}"
+                    data-test="review-form"
+                    x-data="{ rating: {{ (int) old('rating', 5) }} }"
+                    class="rounded-xl border border-indigo-200 bg-indigo-50/40 p-5 space-y-4"
+                >
+                    @csrf
+                    <input type="hidden" name="order_item_id" value="{{ $eligibleOrderItem->id }}">
+                    <input type="hidden" name="rating" :value="rating">
+
+                    <div class="flex flex-wrap items-center justify-between gap-2">
+                        <div>
+                            <h3 class="text-sm font-extrabold text-slate-900">Bu Ürünü Değerlendir</h3>
+                            <p class="text-xs text-slate-600">Doğrulanmış satın alma • Yorumunuz admin onayından sonra yayınlanır.</p>
+                        </div>
+                        <div class="flex items-center gap-1" role="radiogroup" aria-label="Puanınız">
+                            @for ($star = 1; $star <= 5; $star++)
+                                <button
+                                    type="button"
+                                    @click="rating = {{ $star }}"
+                                    :class="rating >= {{ $star }} ? 'text-amber-500 scale-110' : 'text-slate-300'"
+                                    class="text-2xl leading-none transition cursor-pointer"
+                                    aria-label="{{ $star }} yıldız"
+                                >
+                                    ★
+                                </button>
+                            @endfor
+                            <span class="ml-2 text-xs font-bold text-slate-700" x-text="rating + ' / 5'">5 / 5</span>
+                        </div>
+                    </div>
+
+                    <div>
+                        <label for="review-comment" class="block text-xs font-bold text-slate-700">Yorumunuz</label>
+                        <textarea
+                            id="review-comment"
+                            name="comment"
+                            rows="3"
+                            required
+                            minlength="10"
+                            placeholder="Ürün kalitesi, kargo süreci ve deneyiminizi paylaşın (en az 10 karakter)..."
+                            class="mt-1.5 w-full rounded-lg border border-slate-300 px-3 py-2 text-sm text-slate-800"
+                        >{{ old('comment') }}</textarea>
+                        @error('comment')
+                            <p class="mt-1 text-xs font-medium text-rose-600">{{ $message }}</p>
+                        @enderror
+                    </div>
+
+                    <button
+                        type="submit"
+                        class="rounded-lg bg-indigo-600 px-5 py-2 text-xs font-bold text-white hover:bg-indigo-700 transition cursor-pointer"
+                    >
+                        Değerlendirmeyi Gönder
+                    </button>
+                </form>
+            @elseif ($pendingUserReview)
+                <div class="rounded-xl border border-amber-200 bg-amber-50 px-4 py-3 text-xs font-semibold text-amber-800">
+                    Değerlendirmeniz alındı ({{ $pendingUserReview->rating }} ★). Yönetici onayının ardından burada yayınlanacaktır.
+                </div>
+            @endif
 
             @if ($product->approvedReviews->isNotEmpty())
                 <div class="divide-y divide-slate-100">

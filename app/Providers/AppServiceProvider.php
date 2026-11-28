@@ -42,10 +42,14 @@ class AppServiceProvider extends ServiceProvider
 
             $user = Auth::user();
             $cartItemCount = app(CartService::class)->totalItemCount($user);
+            $unreadNotificationCount = $user !== null
+                ? $user->unreadNotifications()->count()
+                : 0;
 
             $view->with([
                 'megaMenuCategories' => $megaMenuCategories,
                 'cartItemCount' => $cartItemCount,
+                'unreadNotificationCount' => $unreadNotificationCount,
             ]);
         });
 
