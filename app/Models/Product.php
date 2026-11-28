@@ -161,14 +161,16 @@ class Product extends Model implements HasMedia
         }
 
         $displayVariant = $this->displayVariant();
-        if ($displayVariant !== null && $displayVariant->imageUrl() !== null) {
-            return $displayVariant->imageUrl();
+        $displayThumb = $displayVariant?->thumbnailUrl();
+        if ($displayThumb !== null) {
+            return $displayThumb;
         }
 
         $variants = $this->relationLoaded('variants') ? $this->variants : $this->variants()->get();
         foreach ($variants as $variant) {
-            if ($variant->imageUrl() !== null) {
-                return $variant->imageUrl();
+            $thumb = $variant->thumbnailUrl();
+            if ($thumb !== null) {
+                return $thumb;
             }
         }
 
@@ -202,7 +204,7 @@ class Product extends Model implements HasMedia
             $swatches[] = [
                 'color' => $colorName,
                 'hex' => $variant->swatchHex(),
-                'image' => $variant->imageUrl() ?? $fallbackImage,
+                'image' => $variant->thumbnailUrl() ?? $fallbackImage,
                 'variant_id' => $variant->id,
             ];
         }
@@ -240,7 +242,7 @@ class Product extends Model implements HasMedia
             $variantImages[] = [
                 'id' => count($variantImages),
                 'url' => $url,
-                'thumb' => $url,
+                'thumb' => $variant->thumbnailUrl() ?? $url,
                 'color' => (string) ($variant->color ?? ''),
                 'variant_id' => $variant->id,
             ];

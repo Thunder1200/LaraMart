@@ -3,8 +3,13 @@
 namespace App\Providers;
 
 use App\Listeners\MergeGuestCartOnLogin;
+use App\Models\Banner;
+use App\Models\Brand;
 use App\Models\Category;
+use App\Models\Product;
+use App\Models\ProductVariant;
 use App\Services\CartService;
+use App\Support\CatalogCache;
 use Illuminate\Auth\Events\Login;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Event;
@@ -23,13 +28,17 @@ class AppServiceProvider extends ServiceProvider
     {
         Event::listen(Login::class, MergeGuestCartOnLogin::class);
 
+        $flushCatalogCache = static function (): void {
+            CatalogCache::flush();
+        };
+
+        foreach ([Category::class, Product::class, ProductVariant::class, Banner::class, Brand::class] as $modelClass) {
+            $modelClass::saved($flushCatalogCache);
+            $modelClass::deleted($flushCatalogCache);
+        }
+
         ViewFacade::composer('components.layouts.storefront', function (View $view): void {
-            $megaMenuCategories = Category::query()
-                ->whereNull('parent_id')
-                ->with('children')
-                ->orderBy('sort')
-                ->orderBy('name')
-                ->get();
+            $megaMenuCategories = CatalogCache::megaMenuCategories();
 
             $user = Auth::user();
             $cartItemCount = app(CartService::class)->totalItemCount($user);

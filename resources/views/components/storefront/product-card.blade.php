@@ -12,52 +12,14 @@
 @endphp
 
 <article
-    x-data="{
+    x-data="window.laramartProductCard({
         productId: {{ (int) $product->id }},
         activeImage: @js($initialImage),
         activeColor: @js($swatches[0]['color'] ?? ''),
         favorited: {{ $isFavorited ? 'true' : 'false' }},
-        favoriteLoading: false,
         favoriteUrl: @js(route('customer.favorites.toggle', $product, false)),
         loginUrl: @js(route('login', [], false)),
-        async toggleFavorite() {
-            if (this.favoriteLoading) {
-                return;
-            }
-            const previous = this.favorited;
-            this.favorited = !previous;
-            this.favoriteLoading = true;
-            try {
-                const token = document.querySelector('meta[name=csrf-token]')?.getAttribute('content') ?? '';
-                const response = await fetch(this.favoriteUrl, {
-                    method: 'POST',
-                    credentials: 'same-origin',
-                    headers: {
-                        'Accept': 'application/json',
-                        'X-Requested-With': 'XMLHttpRequest',
-                        'X-CSRF-TOKEN': token,
-                    },
-                });
-                if (response.status === 401 || response.status === 419 || response.redirected) {
-                    window.location.assign(this.loginUrl);
-                    return;
-                }
-                if (!response.ok) {
-                    this.favorited = previous;
-                    return;
-                }
-                const data = await response.json();
-                this.favorited = Boolean(data.favorited);
-                window.dispatchEvent(new CustomEvent('favorite-toggled', {
-                    detail: { productId: this.productId, favorited: this.favorited },
-                }));
-            } catch (error) {
-                this.favorited = previous;
-            } finally {
-                this.favoriteLoading = false;
-            }
-        }
-    }"
+    })"
     @favorite-toggled.window="if ($event.detail.productId === productId) favorited = Boolean($event.detail.favorited)"
     class="group flex flex-col overflow-hidden rounded-xl border border-slate-200 bg-white shadow-sm hover:border-indigo-300 hover:shadow-md transition"
 >
@@ -67,7 +29,10 @@
                 :src="activeImage"
                 src="{{ $initialImage }}"
                 alt="{{ $product->name }}"
+                width="420"
+                height="420"
                 loading="lazy"
+                decoding="async"
                 class="h-full w-full object-cover group-hover:scale-105 transition duration-300"
             >
         </a>

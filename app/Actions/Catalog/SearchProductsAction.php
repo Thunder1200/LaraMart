@@ -6,6 +6,7 @@ use App\Models\Brand;
 use App\Models\Category;
 use App\Models\Product;
 use App\Models\ProductVariant;
+use App\Support\CatalogCache;
 use App\Support\CategoryFilterSchema;
 use Illuminate\Contracts\Pagination\LengthAwarePaginator;
 use Illuminate\Database\Eloquent\Builder;
@@ -139,31 +140,15 @@ class SearchProductsAction
 
         $products = $query->paginate(24)->withQueryString();
 
-        $variantPairsQuery = ProductVariant::query()->select(['color', 'size'])->distinct();
-        if ($categoryIds !== null) {
-            $variantPairsQuery->whereHas('product', fn (Builder $p) => $p->active()->whereIn('category_id', $categoryIds));
-        }
-        $variantPairs = $variantPairsQuery->get();
-
-        $brandsQuery = Brand::query()->orderBy('name');
-        if ($categoryIds !== null) {
-            $brandsQuery->whereHas('products', fn (Builder $p) => $p->active()->whereIn('category_id', $categoryIds));
-        }
-
         return [
             'products' => $products,
-            'filterOptions' => [
-                'categories' => $scopedCategory === null
-                    ? Category::query()->orderBy('sort')->orderBy('name')->get()
-                    : collect(),
-                'brands' => $brandsQuery->get(),
-                'colors' => $variantPairs->pluck('color')->filter()->unique()->sort()->values()->all(),
-                'sizes' => $supportsSize
-                    ? $variantPairs->pluck('size')->filter(fn (mixed $s): bool => is_string($s) && $s !== '' && $s !== 'Standart')->unique()->sort()->values()->all()
-                    : [],
-                'supports_size' => $supportsSize,
-                'attribute_filters' => $attributeFilters,
-            ],
+            'filterOptions' => CatalogCache::filterOptions(
+                $targetCategory,
+                $categoryIds,
+                $scopedCategory === null,
+                $supportsSize,
+                $attributeFilters
+            ),
         ];
     }
 }

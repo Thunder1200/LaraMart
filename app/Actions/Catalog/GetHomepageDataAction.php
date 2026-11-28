@@ -5,6 +5,7 @@ namespace App\Actions\Catalog;
 use App\Models\Banner;
 use App\Models\Category;
 use App\Models\Product;
+use App\Support\CatalogCache;
 use Illuminate\Support\Collection;
 
 class GetHomepageDataAction
@@ -19,17 +20,9 @@ class GetHomepageDataAction
      */
     public function execute(): array
     {
-        $banners = Banner::query()
-            ->where('is_active', true)
-            ->orderBy('sort')
-            ->get();
+        $banners = CatalogCache::homepageBanners();
 
-        $featuredCategories = Category::query()
-            ->whereNull('parent_id')
-            ->with('children')
-            ->orderBy('sort')
-            ->limit(6)
-            ->get();
+        $featuredCategories = CatalogCache::megaMenuCategories()->take(6)->values();
 
         $bestSellers = Product::query()
             ->active()

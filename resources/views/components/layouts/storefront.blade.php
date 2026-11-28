@@ -50,6 +50,55 @@
             };
 
             applyTheme(resolveTheme());
+
+            window.laramartProductCard = function (config) {
+                return {
+                    productId: config.productId,
+                    activeImage: config.activeImage,
+                    activeColor: config.activeColor,
+                    favorited: Boolean(config.favorited),
+                    favoriteLoading: false,
+                    favoriteUrl: config.favoriteUrl,
+                    loginUrl: config.loginUrl,
+                    async toggleFavorite() {
+                        if (this.favoriteLoading) {
+                            return;
+                        }
+                        const previous = this.favorited;
+                        this.favorited = !previous;
+                        this.favoriteLoading = true;
+                        try {
+                            const token = document.querySelector('meta[name=csrf-token]')?.getAttribute('content') ?? '';
+                            const response = await fetch(this.favoriteUrl, {
+                                method: 'POST',
+                                credentials: 'same-origin',
+                                headers: {
+                                    'Accept': 'application/json',
+                                    'X-Requested-With': 'XMLHttpRequest',
+                                    'X-CSRF-TOKEN': token,
+                                },
+                            });
+                            if (response.status === 401 || response.status === 419 || response.redirected) {
+                                window.location.assign(this.loginUrl);
+                                return;
+                            }
+                            if (!response.ok) {
+                                this.favorited = previous;
+                                return;
+                            }
+                            const data = await response.json();
+                            this.favorited = Boolean(data.favorited);
+                            window.dispatchEvent(new CustomEvent('favorite-toggled', {
+                                detail: { productId: this.productId, favorited: this.favorited },
+                            }));
+                        } catch (error) {
+                            this.favorited = previous;
+                        } finally {
+                            this.favoriteLoading = false;
+                        }
+                    },
+                };
+            };
         })();
     </script>
     @vite(['resources/css/app.css', 'resources/js/app.js'])

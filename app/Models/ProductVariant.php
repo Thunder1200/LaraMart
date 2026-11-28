@@ -73,9 +73,11 @@ class ProductVariant extends Model
 
     public function hasUniqueImageFile(): bool
     {
-        return is_string($this->image_path)
-            && $this->image_path !== ''
-            && is_file(public_path($this->image_path));
+        if (! is_string($this->image_path) || $this->image_path === '') {
+            return false;
+        }
+
+        return self::publicFileExists($this->image_path);
     }
 
     public function imageUrl(): ?string
@@ -85,6 +87,61 @@ class ProductVariant extends Model
         }
 
         return asset((string) $this->image_path);
+    }
+
+    public function thumbnailUrl(): ?string
+    {
+        if (! $this->hasUniqueImageFile()) {
+            return null;
+        }
+
+        $path = (string) $this->image_path;
+        $dir = dirname($path);
+        $base = basename($path);
+        $thumbRel = "{$dir}/thumbs/{$base}";
+
+        if (self::publicFileExists($thumbRel)) {
+            return asset($thumbRel);
+        }
+
+        return asset($path);
+    }
+
+    private static function publicFileExists(string $relativePath): bool
+    {
+        $normalized = ltrim(str_replace('\\', '/', $relativePath), '/');
+        $request = request();
+
+        /** @var array<string, bool> $memo */
+        $memo = $request->attributes->get('laramart.public_file_exists', []);
+
+        if (array_key_exists($normalized, $memo)) {
+            return $memo[$normalized];
+        }
+
+        $dir = dirname($normalized);
+        $dirCacheKey = 'laramart.dir_index.'.$dir;
+
+        if (! $request->attributes->has($dirCacheKey)) {
+            $absDir = public_path($dir);
+            $entries = is_dir($absDir) ? (scandir($absDir) ?: []) : [];
+            $map = [];
+            foreach ($entries as $entry) {
+                if ($entry !== '.' && $entry !== '..') {
+                    $map[$entry] = true;
+                }
+            }
+            $request->attributes->set($dirCacheKey, $map);
+        }
+
+        /** @var array<string, bool> $dirMap */
+        $dirMap = $request->attributes->get($dirCacheKey, []);
+        $exists = isset($dirMap[basename($normalized)]) || is_file(public_path($normalized));
+
+        $memo[$normalized] = $exists;
+        $request->attributes->set('laramart.public_file_exists', $memo);
+
+        return $exists;
     }
 
     /**

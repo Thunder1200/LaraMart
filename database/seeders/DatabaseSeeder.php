@@ -213,7 +213,7 @@ class DatabaseSeeder extends Seeder
                 $productCode = 'p'.str_pad((string) $productIndex, 3, '0', STR_PAD_LEFT);
                 foreach ($item['variants'] as $vIndex => $variantSpec) {
                     $colorSlug = Str::slug((string) ($variantSpec['color'] ?? 'standart'));
-                    $variantImagePath = "images/products/variants/{$productCode}-{$colorSlug}.jpg";
+                    $variantImagePath = "images/products/variants/{$productCode}-{$colorSlug}.webp";
 
                     $variant = ProductVariant::create([
                         'product_id' => $product->id,

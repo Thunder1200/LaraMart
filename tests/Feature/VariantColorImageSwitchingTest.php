@@ -72,7 +72,7 @@ test('seeder assigns deterministic unique image_path per product and color varia
     $pathsByProduct = [];
     foreach ($variants as $variant) {
         expect($variant->image_path)->toStartWith('images/products/variants/p');
-        expect($variant->image_path)->toEndWith('.jpg');
+        expect($variant->image_path)->toEndWith('.webp');
         $pathsByProduct[$variant->product_id][$variant->image_path] = true;
     }
 
